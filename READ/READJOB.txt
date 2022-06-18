@@ -1,0 +1,57 @@
+### FAANG
+https://www.reddit.com/r/leetcode/comments/seqrmd/is_blind_75_enough_for_faang_interview_got_one/
+Amazon/Microsoft ask a broad range of questions
+Google likes graph related questions
+Meta focusses on speed
+
+https://www.youtube.com/watch?v=HYK5lpkKBPo
+
+
+
+
+### Amazon
+https://www.geeksforgeeks.org/amazon-interview-experience-for-sde-1-22/
+priority queue
+map
+binary search
+DP binary tree
+https://www.geeksforgeeks.org/next-greater-element/
+DP
+First question was OOPs concept based question, I was given with some features which needed to add in the amazon alexa, and asked to implement the generic and maintainable code, using different oops concept.
+https://www.geeksforgeeks.org/the-celebrity-problem/
+LRU based
+https://www.geeksforgeeks.org/find-top-k-or-most-frequent-numbers-in-a-stream/
+
+https://www.youtube.com/watch?v=baT3OzbOg5s
+SDE I is rare
+phone screen 45m-> two sum, 5m-10m to ask question
+onsite have to fly -> 
+14 leaderships -> 
+first onsite -> usually have 1 bar raiser with highest power, from different team. OOP design. 
+saying leadership principle by name is a bonus
+second onsite -> leetcode (graph shortest path between 2 nodes), forget Dijkstraso use normal DFS.
+highest standard -> code review  
+third onsite -> buy and sell
+dive deep ->
+bias for action -> 
+fourth onsite -> ... and dynamic programming 2,5 whiteboard. "Do you want me to write pseudo-code" "No, just jump in"
+learn and be curious -> 
+have a backbone -> 
+
+https://www.youtube.com/watch?v=f9YFXYonPQQ
+read video description 
+40 days to prepare, 
+assessment -> phone -> onsite
+
+
+
+### Google
+https://igotanoffer.com/blogs/tech/google-software-engineer-interview
+phone -> write to Google Docs, no IDE
+4 grading rubric
+Graphs / Trees (39% of questions, most frequent)
+Arrays / Strings (26%)
+Dynamic programming (12%)
+Recursion (12%)
+Geometry / Maths (11% of questions, least frequent)
+

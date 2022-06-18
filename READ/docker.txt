@@ -1,0 +1,7 @@
+real-life example
+docker
+Jenkins
+Kubernetes
+CI/CD:
+advanced
+

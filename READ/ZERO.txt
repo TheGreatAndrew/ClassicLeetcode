@@ -1,0 +1,68 @@
+
+############################## FAQ 
+
+
+############### CURRENTLY DOING
+https://leetcode.com/study-plan/dynamic-programming/
+https://leetcode.com/problem-list/top-google-questions/
+https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+
+### HOW MANY DONE SO FAR 
+a
+
+### HOW TO PREPARE LEETCODE
+https://leetcode.com/discuss/interview-experience/552835/how-i-found-a-new-bay-area-faang-job-in-1-34-months
+did 180 questions
+doing 4-10 a day after work
+study methodology ->
+    solve 3-4 questions, and google different methods for already solved ones
+    if stuck, look at solutions, then replace with yr code snippet
+    study all the tags 
+
+https://leetcode.com/discuss/career/449135/How-to-effectively-use-LeetCode-to-prepare-for-interviews
+do bfs for Easy 
+while solving, read the theory before of during 
+
+
+
+
+
+### HOW MANY LEETCODE IS ENOUGH
+https://www.reddit.com/r/cscareerquestionsEU/comments/g7bc48/how_much_leetcode_practice_is_enough_for_fang/
+    doing a couple of related problems like this for 8 weeks should be enough for FAANG
+    20 easy, 70 medium and 10 hard are enough for FAANG internships
+    It depends greatly, but 100 is a good rough approximation.
+    FB's interview format is 2 medium-ish problems in 45 minutes and besides coding you need some spare time for chit chat
+
+
+https://www.teamblind.com/post/Average-number-of-leetcode-for-FANG-gWXKiKNf
+    it's mostly luck that you don't get some kuck with a huge ego interviewing you
+    For Amazon -> 2, For FG -> 400+
+    Like someone else said, it’s 110% the kind of interviewer you get, as long as you can easily solve LC medium
+
+
+
+
+### HOW TO SOLVE LEETCODE 
+start with brute force
+O(2^n) -> when we have 2 choices each recursion, and we do it n times
+    https://www.youtube.com/watch?v=AQp1OG7aSwg 1 recursive has 2 small recursives so 2^n
+O(logn) -> when n keep dividing by 2 to reach 1, n/(2^i)<=1 is n <= 2^i is log2n<=1
+    https://stackoverflow.com/questions/9152890/what-would-cause-an-algorithm-to-have-olog-n-complexity?rq=1
+Big O https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly?rq=1
+    O(logn) binary search
+    O(nlogn) sorting
+When read solutions
+    read explanation and trying to pseudo code, then read solution code 
+Most subarray problems are solved using Sliding Window or Two Pointers or through DP. Check Grokking the Coding Interview - designgurus.org
+
+
+### WHAT IS THE CODING RUBRIC
+edge case : heavily discounted 
+
+### WHAT QUESTIONS GOOGLE ASK 
+https://leetcode.com/discuss/interview-experience/1724410/google-jan-2022
+5 rounds. i can maybe solve 1.1 and 2.2 
+https://leetcode.com/discuss/interview-question/1718834/Google-Interview-question-2022
+
+

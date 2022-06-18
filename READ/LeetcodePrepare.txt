@@ -1,0 +1,11 @@
+### articles
+https://www.quora.com/What-graph-topics-should-I-study-in-order-to-be-adequately-prepared-for-a-Google-software-engineer-interview-Would-it-be-worthwhile-to-also-study-algorithms-for-minimum-spanning-trees-maximum-network-flows-bipartite-matching-etc/answer/Gayle-Laakmann-McDowell
+only BFS and DFS. no advanced graph. higher standards about your ability to solve new problems with basic CS knowledge.
+
+### guide 
+start coding guide
+10 minutes whiteboard, if stuck go read hints
+30 minutes coding, if stuck go read solution 
+if read solution, later come back and solve
+if brute force O(n^2), first technique you can try is sorting inputs
+

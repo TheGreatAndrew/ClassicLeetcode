@@ -1,0 +1,217 @@
+############### GENERAL
+https://leetcode.com/problems/task-scheduler
+https://leetcode.com/problems/is-subsequence/discuss/385275/Easiest-python-solution-(beats-98-%2B-explanation)
+    # interesting way of traversal 2 lists
+
+
+
+
+
+
+
+
+############### ARRAY
+### ARRAY GUIDE
+patterns : prefix sum, subset backtracking (permutation), sliding window 
+### subset backtracking 
+https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/780232/Backtracking-Python-problems%2B-solutions-interview-prep list
+
+#### sliding window
+https://leetcode.com/problems/find-all-anagrams-in-a-string/
+https://leetcode.com/problems/minimum-window-substring/ hard
+
+############### MATH 
+https://leetcode.com/problems/basic-calculator
+    # https://leetcode.com/problems/basic-calculator/discuss/546092/Simple-Python-Solution-using-stack-with-explanation-inline
+    # Simple Example: 2 - 3
+    # Initially res will have 2,i.e. res = 2
+    # then store '-' in sign. it will be used when 3 comes. ie. sign = -1
+    # Now 3 comes => res = res + num*sign
+    # for (, move to stack
+    # for ), 2-(3+4), Here res=3, num=4, sign=1 stack [2, -] 
+https://leetcode.com/problems/string-to-integer-atoi/solution/ don't want to do this
+
+
+############### BINARY SEARCH 
+
+
+
+
+############### DYNAMIC PROGRAMMING GUIDE 
+### dynamic programming guide
+# use DP whenever you have to make 'choices'
+top-down with memoization : recursion 
+bottom-up with tabluation 
+patterns 
+    0/1 knapsack 
+    unbounded knapsack 
+    fib
+    palindromic subsequence
+    longest common substring 
+    Minimum (Maximum) Path to Reach a Target : min to reach a target -> Coin Change
+    Distinct Ways : distinct ways to reach target -> Unique Path 
+    Merging Intervals : given a set of numbers find an optimal solution for a problem considering the current number and the best you can get from the left and right sides.
+    DP on Strings -> given two strings s1 and s2, return some result.
+    Decision Making -> state machine -> Buy Sell Stock
+
+
+### dynamic programming guide https://www.youtube.com/watch?v=r4-cftqTcdI&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=25
+SRTBOT sub-problems, relations, topological order, base case, original problem, and time. // check blackboard on video 
+DP = recursion + memo
+memoization : remember and reuse 
+DAG shortest path 30:00
+// stop 31 
+
+
+### dynamic programming guide freecodecamp
+algorithm whiteboard is hard, translating it into code is the hard part
+students have habit of picture something in their mind
+base cases don’t branch anymore
+try to find familiar in new problem
+fib
+    time O(2^n)
+    dp time O(2n)
+gridTraveller memoization
+    // stop 41
+
+
+############### DYNAMIC PROGRAMMING CODE 
+### general
+https://leetcode.com/problems/maximum-subarray/ do it myself 
+https://leetcode.com/problems/pascals-triangle/ do it myself
+
+### greedy
+greedy is a specific kind of DP, and DP is a general greedy.
+### 0-1 knapsack either pick or don't pick
+https://leetcode.com/problems/maximum-profit-in-job-scheduling/ binary search with dynamic programming knapsack bounded. 
+    # # https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/996255/Python-using-DP-%2B-Binary-Search-(not-using-bisect-built-in)
+    # 2 problems 0-1 knapsack and non overlapping 
+    # sorted by endTime
+    # binary search with (dpEndTime, start) as (right, target), find nonoverlapping time
+    # dp -> if it's bigger profit, add endTime and add profit 
+
+### 0/1 bounded knapsack items can't be repeated
+https://leetcode.com/problems/partition-equal-subset-sum/
+    https://www.youtube.com/watch?v=IsvocB5BJhw 6:00 very good O(n) analyze, last minute also have optimization
+
+### unbounded knapsack
+
+
+
+### minimum/ maximum path to reach a target (a type of unbounded knapsack)
+https://leetcode.com/problems/coin-change do it myself
+
+
+### distinct ways 
+https://leetcode.com/problems/unique-paths do it myself
+https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/discuss/355894/Python-DP-with-memoization-explained
+
+
+
+### decision making (State Machine, a type of 0/1 knapsack)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/803206/PythonJSGoC%2B%2B-O(n)-by-DP-w-Visualization redo, knapsack 0/1, decision making
+    # cur_hold : we bought and waiting to sell 
+    # everytime we buy something it's negative 
+    # either we buy it previously, or we buy current price
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75928/Share-my-DP-solution-(By-State-Machine-Thinking) 
+    # s1 : did buy, can sell
+    # best example of State Machine
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solution/
+    # what to do if better prices 10 later
+    # -> basically the more buy/ sell the better
+    # -> remeber we don't sell yet, we only testing which one better
+    # -> most importantly, we buy 1 sell at 9, immediately buy that 9 again and it's not that good
+        
+
+
+
+### dp on strings
+https://leetcode.com/problems/is-subsequence/
+
+
+############### MATRIX
+### techniques
+rotate change first column to first row, and so on -> list( zip(*matrix) )
+rotate rotate y-axis -> matrix[::-1]
+rotate counter clock-wise -> (list(zip(*matrix)))[::-1]
+https://leetcode.com/problems/spiral-matrix/
+
+### BFS 
+https://leetcode.com/submissions/detail/653475011/ 
+    # second attempt -> solved it myself 
+
+############### KNAPSACK
+### unbounded knapsack item can be repeated
+https://leetcode.com/problems/coin-change/
+
+
+############### 2 pointers
+https://leetcode.com/problems/container-with-most-water/ two pointers
+
+############### Graph
+possible paths/permutations/ways.., then its dfs+back tracking
+On the other hand, if the question is like shortest path and the graph is not weighted, use bfs
+
+############### BINARY TREE
+# bfs
+# https://leetcode.com/problems/binary-tree-level-order-traversal solve it myself but take 1 hint and 2 hours
+    # https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/458315/Python-99-speed-100-memory-*Simple-Solution*-with-comments memorize this, how to get all elements of that one level
+# https://leetcode.com/problems/binary-tree-right-side-view solve it myself with 1 hint
+    # https://leetcode.com/problems/binary-tree-right-side-view/discuss/56064/5-9-Lines-Python-48%2B-ms much faster code
+
+
+
+############### BINARY SEARCH TREE
+### basic 
+https://leetcode.com/problems/validate-binary-search-tree do it myself
+https://leetcode.com/problems/kth-smallest-element-in-a-bst do it myself
+    # approach 1 : use Stack for traversal, and also stop at k -> Speed is O(H+k), H can be balanced tree or skewed tree
+    # approach optimized : (do it late) 
+
+############### DICTIONARY
+https://leetcode.com/problems/lru-cache/ do it myself
+    # 
+
+############### STACK 
+### bar
+https://leetcode.com/problems/trapping-rain-water hard
+    # approach 1 : for each element, left side minus the element's height
+        # do it for right side too. and min them.
+    # approach 2 : DP version of approach 1,  
+    # approach 3 : Stack. add bar to the front, smaller or equal bar doesn't matter, if the latest bar is bigger than first bar. Then add to water.
+    # approach 4 : 2 pointers. 
+    # approach 5 : https://leetcode.com/problems/trapping-rain-water/discuss/17528/Easy-to-understand-Python-10-line-60ms-O(n)
+        # over-fill left max, then drain on right min
+https://leetcode.com/problems/largest-rectangle-in-histogram/
+    # approach 1 Stack https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/452612/Thinking-Process-for-Stack-Solution
+        # why Stack -> because bars are in order
+        # because of bar 1, bar 2 is useless because max height is 1  
+        # don't understand how he calculates width -> (look at code, not tutorial)
+        # i−stack[−1]−1 is newestIndex - top index in the stack (after popping 6)
+
+        
+    # approach 2 DP https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/440433/Python-Detailed-Explanation-for-DP-O(n)-Solution-Beats-99.9-RunTime-100-Memory
+        # 
+
+############### HEAP  
+https://leetcode.com/problems/merge-k-sorted-lists do it myself using brute force
+    # approach 2 : compare between k pointers, which one is smaller go to 'res' linked list 
+    # approach 3 : optimized approach 2 with priority queue. optimized the comparison process. 
+    # approach 4 : merge lists one by one
+    # approach 5 : optimized approach 4, merge by divide and conqueor 
+https://leetcode.com/problems/find-median-from-data-stream/discuss/74047/JavaPython-two-heap-solution-O(log-n)-add-O(1)-find
+    # first half max heap to the front, second half min heap to the front
+    # [] and [6]
+    # [-6] and [10]
+    # [-2] and [6, 10]
+
+############### BACKTRACKING
+zero padding : can't be just 1, has to be 0001
+https://leetcode.com/problems/subsets/solution/
+    can do cascading, backtracking or BITMASK
+    cascading is about keep adding numbers to old set 
+    backtracking is about length keep expending
+    bitmask is about 
+
+############### BITMASK
+

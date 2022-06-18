@@ -1,0 +1,27 @@
+############### PYTHON
+### GENERAL
+zip() : pair elements in same position in 2 list
+hash() : 
+sign = [-1, 1][ss=="+"] -> same as sign = 1 if ss=='+' else -1
+@cache : cache the results of functions
+generator expression and sum :
+
+
+### MATH
+eval()
+
+
+### COPY
+shadow copy and deep copy 
+deep copy : change to 2nd do not reflect on original
+shadow copy : 
+
+
+### STAR *
+star
+    unpacks tuple and put them as positional arguments for function
+    *args for rest arguments 
+    **kwargs passing a lit 
+
+### bisect
+bisect : binary search algorithm
