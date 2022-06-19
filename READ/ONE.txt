@@ -149,15 +149,32 @@ https://leetcode.com/problems/coin-change/
 https://leetcode.com/problems/container-with-most-water/ two pointers
 
 ############### Graph
-possible paths/permutations/ways.., then its dfs+back tracking
-On the other hand, if the question is like shortest path and the graph is not weighted, use bfs
+dfs patterns
+    possible paths/permutations/ways.., then its dfs+back tracking
+    lowest common ancestor 
+
+bfs patterns 
+    On the other hand, if the question is like shortest path and the graph is not weighted, use bfs
+
+
 
 ############### BINARY TREE
-# bfs
+### bfs
 # https://leetcode.com/problems/binary-tree-level-order-traversal solve it myself but take 1 hint and 2 hours
     # https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/458315/Python-99-speed-100-memory-*Simple-Solution*-with-comments memorize this, how to get all elements of that one level
 # https://leetcode.com/problems/binary-tree-right-side-view solve it myself with 1 hint
     # https://leetcode.com/problems/binary-tree-right-side-view/discuss/56064/5-9-Lines-Python-48%2B-ms much faster code
+
+
+### dfs
+https://leetcode.com/problems/find-duplicate-subtrees do it myself, with 5 hours and bad big O
+    https://leetcode.com/problems/find-duplicate-subtrees/discuss/1571352/Python-solution-explained-in-two-steps-for-beginners serialize postorder, put it in dict, if duplicated in dict then it's result 
+    https://leetcode.com/problems/find-duplicate-subtrees/discuss/1178526/Easy-%2B-Clean-%2B-Straightforward-Python-Recursive simple dfs, print 'sub' to understand 
+    https://leetcode.com/problems/find-duplicate-subtrees/discuss/106020/Python-easy-understand-solution inorder can create same serialization for symmetric trees
+
+### serialize
+https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+
 
 
 
@@ -214,4 +231,15 @@ https://leetcode.com/problems/subsets/solution/
     bitmask is about 
 
 ############### BITMASK
+
+############### TRIE
+
+
+############### TRIE 
+### GUIDE 
+# trie (prefix tree) is type of tree, often for characters
+### TRIE 
+# https://leetcode.com/problems/implement-trie-prefix-tree/ solve half of it myself
+# insert trie : get node/or create node, replace it, and move on
+
 
