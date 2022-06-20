@@ -6,6 +6,9 @@ sign = [-1, 1][ss=="+"] -> same as sign = 1 if ss=='+' else -1
 @cache : cache the results of functions
 generator expression and sum :
 nonlocal
+@lru_cache(maxsize=None) : cache the result of your function with LRU (if maxsize=None then no more LRU)
+s[::-1] : reverse s 
+
 
 ### MATH
 eval()

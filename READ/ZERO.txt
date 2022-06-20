@@ -69,4 +69,4 @@ https://leetcode.com/discuss/interview-question/1718834/Google-Interview-questio
 ### CONTEST
 5242. Greatest English Letter in Upper and Lower Case do it myself
 5218. Sum of Numbers With Units Digit K not done 
-
+https://leetcode.com/discuss/interview-question/1803238/Amazon-or-OA-or-sum-of-cache-optimization-power-for-all-sub-arrays

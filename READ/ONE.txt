@@ -1,4 +1,5 @@
 ############### GENERAL
+Using monotonic stack and prefix sum array we can solve it in O(N).
 https://leetcode.com/problems/task-scheduler
 https://leetcode.com/problems/is-subsequence/discuss/385275/Easiest-python-solution-(beats-98-%2B-explanation)
     # interesting way of traversal 2 lists
@@ -81,7 +82,8 @@ https://leetcode.com/problems/maximum-subarray/ do it myself
 https://leetcode.com/problems/pascals-triangle/ do it myself
 
 ### greedy
-greedy is a specific kind of DP, and DP is a general greedy.
+guide
+    greedy is a specific kind of DP, and DP is a general greedy.
 ### 0-1 knapsack either pick or don't pick
 https://leetcode.com/problems/maximum-profit-in-job-scheduling/ binary search with dynamic programming knapsack bounded. 
     # # https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/996255/Python-using-DP-%2B-Binary-Search-(not-using-bisect-built-in)
@@ -95,20 +97,29 @@ https://leetcode.com/problems/partition-equal-subset-sum/
     https://www.youtube.com/watch?v=IsvocB5BJhw 6:00 very good O(n) analyze, last minute also have optimization
 
 ### unbounded knapsack
+guide 
 
 
 
-### minimum/ maximum path to reach a target (a type of unbounded knapsack)
-https://leetcode.com/problems/coin-change do it myself
+
+### minimum/ maximum path to reach a target
+guide
+    a 
+https://leetcode.com/problems/coin-change do it myself, unbounded knapsack
 
 
 ### distinct ways 
+guide 
+    2 pointers moving forward
 https://leetcode.com/problems/unique-paths do it myself
 https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/discuss/355894/Python-DP-with-memoization-explained
 
 
 
 ### decision making (State Machine, a type of 0/1 knapsack)
+guide
+    draw state machine
+
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/803206/PythonJSGoC%2B%2B-O(n)-by-DP-w-Visualization redo, knapsack 0/1, decision making
     # cur_hold : we bought and waiting to sell 
     # everytime we buy something it's negative 
@@ -127,6 +138,8 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-f
 
 ### dp on strings
 https://leetcode.com/problems/is-subsequence/
+https://leetcode.com/problems/longest-common-subsequence/discuss/598508/Python-DP-solution-with-Explanation-%2B-Thinking-process-%2B-Diagram
+    DP on strings by move forward 2 pointers
 
 
 ############### MATRIX
@@ -238,8 +251,9 @@ https://leetcode.com/problems/subsets/solution/
 ############### TRIE 
 ### GUIDE 
 # trie (prefix tree) is type of tree, often for characters
+# insert trie : get node/or create node, replace it, and move on
+
 ### TRIE 
 # https://leetcode.com/problems/implement-trie-prefix-tree/ solve half of it myself
-# insert trie : get node/or create node, replace it, and move on
 
 
