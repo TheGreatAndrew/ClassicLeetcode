@@ -8,11 +8,33 @@ generator expression and sum :
 nonlocal
 @lru_cache(maxsize=None) : cache the result of your function with LRU (if maxsize=None then no more LRU)
 s[::-1] : reverse s 
+Strings are immutable, variables can point at whatever they want.
+hash function : key->hash function->hash
+hashing : good hasing function is one-way. we can avoid collisions. hash (or hash value) becomes index for hash table
+generator
+reduce()
+mul()
+set : unchangable, but can add and remove items
 
+
+
+
+
+### regex
+a
+
+### lambda 
+a 
+
+## pass arguments
+
+
+
+### error 
+unhashable type : immutable objects such as tuples are hashable since they have a single unique value that never changes, list can't 
 
 ### MATH
 eval()
-
 
 ### COPY
 shadow copy and deep copy 
@@ -28,3 +50,8 @@ star
 
 ### bisect
 bisect : binary search algorithm
+
+
+### dict
+max(lst,key=lst.count) : 
+max(word_count.items(), key=operator.itemgetter(1))[0] : get items() key-value, then sort by 'value', and return first one 

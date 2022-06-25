@@ -1,8 +1,47 @@
+############### GUIDE 
+A monotonic stack is a stack whose elements are monotonically increasing or descreasing.
+format
+    how to do, mistakes, hidden tricks 
+Array, Trie, Union Find, sparse table, seg tree, Fenwick tree, Vectors, bit manipulation
+
 ############### GENERAL
-Using monotonic stack and prefix sum array we can solve it in O(N).
 https://leetcode.com/problems/task-scheduler
 https://leetcode.com/problems/is-subsequence/discuss/385275/Easiest-python-solution-(beats-98-%2B-explanation)
     # interesting way of traversal 2 lists
+Greatest English Letter in Upper and Lower Case do it myself
+https://leetcode.com/problems/happy-number
+    my fail -> inteprete the question wrong 
+    approach 1 -> just keep going until the set is repeated 
+    approach 2 -> niche. Floyd's Cycle-Finding Algorithm. 
+
+
+
+############### BIG O
+https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists 
+    set is O(1) because position of an element is determined by hashing set, when you retrieve you hash element again.
+    sets aren't faster than lists in general -- membership test is faster for sets, and so is removing an element
+
+
+
+############### STRING 
+general
+    subsequence -> add or remove letters -> 
+    anagram -> same letters, different orders -> 
+    palindrom -> reverse string and it is the same -> 
+    permutation, palindrome, superset -> 
+    can be 2 pointers, sliding window
+
+
+https://leetcode.com/problems/reverse-string/
+    for loop. reverse(). [::-1] 
+https://leetcode.com/problems/group-anagrams do it myself
+    '''
+    for each string, we store all letters as Key in Dict to group them 
+    speed O(n*l) where n is all strings, l is length of each string + O(n) 
+    space O(2n) for dict, res
+    '''  
+    https://leetcode.com/problems/group-anagrams/discuss/664252/Python-3-solution-detailed-explanation-faster-than-97.5 exatly same solution, but faster and cool technique, and look at comment    
+
 
 
 
@@ -17,9 +56,47 @@ patterns : prefix sum, subset backtracking (permutation), sliding window
 ### subset backtracking 
 https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/780232/Backtracking-Python-problems%2B-solutions-interview-prep list
 
+
+
+
+
+
+############## LINKED LIST  
+### general 
+https://leetcode.com/problems/merge-two-sorted-lists/ do it myself 
+https://leetcode.com/problems/linked-list-cycle do it myself. use two pointers for linked list. 
+https://leetcode.com/problems/remove-nth-node-from-end-of-list
+
+https://leetcode.com/problems/reorder-list
+    my try -> fast go to near last element (not last but we need to severe the next pointer). slow will replace next will fast.next -> failed cause too long 
+    https://leetcode.com/problems/reorder-list/discuss/801971/Python-O(n)-by-two-pointers-w-Visualization
+        solution 1 -> turn into array to make manipulation much easier. go spiral just like the image 
+        solution 2 -> split into mid, match first half with reversed second half -> cool technique to get mid point
+
+
+
+############### TWO POINTERS 
+### 2 pointers 
+https://leetcode.com/problems/container-with-most-water/
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+    # thought process
+    # fast reaches the end
+    # slow reaches size-n
 #### sliding window
 https://leetcode.com/problems/find-all-anagrams-in-a-string/
 https://leetcode.com/problems/minimum-window-substring/ hard
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+    left buy pointer, right sell pointer
+https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1074783/Python-Interview-Thought-Process%3A-O(2n)-greater-O(n)
+    how to do -> base case get max window. If no duplicate, increase MAX. If duplicate, remove from FIFO until duplicate is out.
+
+
+
+
+
+
+############### DICTIONARY or HASHMAP
+aa
 
 ############### MATH 
 https://leetcode.com/problems/basic-calculator
@@ -29,42 +106,69 @@ https://leetcode.com/problems/basic-calculator
     # then store '-' in sign. it will be used when 3 comes. ie. sign = -1
     # Now 3 comes => res = res + num*sign
     # for (, move to stack
-    # for ), 2-(3+4), Here res=3, num=4, sign=1 stack [2, -] 
-https://leetcode.com/problems/string-to-integer-atoi/solution/ don't want to do this
+    # for ), 2-(3+4), Here res=3, num=4, sign=1 stack [2, -]     
+https://leetcode.com/problems/2-keys-keyboard/solution/
+    code -> all prime numbers input is same output. if can be divided by 'd' do it, increase 'd', until reaches prime number
+    how to do -> basically (CPP)(CPPPPP) it's prime 3*5
+https://leetcode.com/problems/string-to-integer-atoi/solution/ redo
+    approach 1 ->
+    approach 2 -> 
+    Deterministic Finite Automaton -> 
+    TOC (Theory Of Computation) -> state machines either transition to new stay or stay the same. 
+
 
 
 ############### BINARY SEARCH 
+a
+
+
+
+
+
+
+
 
 
 
 
 ############### DYNAMIC PROGRAMMING GUIDE 
 ### dynamic programming guide
-# use DP whenever you have to make 'choices'
+use DP whenever you have to make 'choices'
 top-down with memoization : recursion 
 bottom-up with tabluation 
+If all subproblems must be solved at least once, bottom-up better
+
+
+
 patterns 
+    greedy
+        greedy is a specific kind of DP, and DP is a general greedy.
     0/1 knapsack 
     unbounded knapsack 
     fib
     palindromic subsequence
     longest common substring 
-    Minimum (Maximum) Path to Reach a Target : min to reach a target -> Coin Change
+    Minimum (Maximum) Path to Reach a Target
+        min to reach a target -> Coin Change
     Distinct Ways : distinct ways to reach target -> Unique Path 
     Merging Intervals : given a set of numbers find an optimal solution for a problem considering the current number and the best you can get from the left and right sides.
-    DP on Strings -> given two strings s1 and s2, return some result.
-    Decision Making -> state machine -> Buy Sell Stock
+    DP on Strings :  given two strings s1 and s2, return some result
+    Decision Making/ State Machine : Buy Sell Stock
 
 
-### dynamic programming guide https://www.youtube.com/watch?v=r4-cftqTcdI&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=25
+
+
+
+
+### dynamic programming guide 
+#https://www.youtube.com/watch?v=r4-cftqTcdI&list=PLUl4u3cNGP63EdVPNLG3ToM6LaEUuStEY&index=25
 SRTBOT sub-problems, relations, topological order, base case, original problem, and time. // check blackboard on video 
 DP = recursion + memo
 memoization : remember and reuse 
 DAG shortest path 30:00
 // stop 31 
 
-
-### dynamic programming guide freecodecamp
+#freecodecamp
 algorithm whiteboard is hard, translating it into code is the hard part
 students have habit of picture something in their mind
 base cases don’t branch anymore
@@ -75,18 +179,24 @@ fib
 gridTraveller memoization
     // stop 41
 
+#https://www.youtube.com/watch?v=mBNrRy2_hVs&s
+longest common subsequence
+
+
+
+
 
 ############### DYNAMIC PROGRAMMING CODE 
 ### general
 https://leetcode.com/problems/maximum-subarray/ do it myself 
 https://leetcode.com/problems/pascals-triangle/ do it myself
 
+
 ### greedy
-guide
-    greedy is a specific kind of DP, and DP is a general greedy.
+a
 ### 0-1 knapsack either pick or don't pick
 https://leetcode.com/problems/maximum-profit-in-job-scheduling/ binary search with dynamic programming knapsack bounded. 
-    # # https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/996255/Python-using-DP-%2B-Binary-Search-(not-using-bisect-built-in)
+    # https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/996255/Python-using-DP-%2B-Binary-Search-(not-using-bisect-built-in)
     # 2 problems 0-1 knapsack and non overlapping 
     # sorted by endTime
     # binary search with (dpEndTime, start) as (right, target), find nonoverlapping time
@@ -103,9 +213,26 @@ guide
 
 
 ### minimum/ maximum path to reach a target
-guide
-    a 
 https://leetcode.com/problems/coin-change do it myself, unbounded knapsack
+https://leetcode.com/problems/minimum-path-sum/ do it myself 
+    update matrix in-place with previous 
+    https://leetcode.com/problems/minimum-path-sum/discuss/825410/Python3-Dynamic-Programming-90-w-Explaination small things but can improve big O
+https://leetcode.com/problems/minimum-falling-path-sum/ do it myself
+https://leetcode.com/problems/minimum-cost-for-tickets do it myself, unbounded knapsack  
+    how to do -> each 'days', we buy 1-day 7-day and 30-day. Some days maybe not optimized but we only need last day.
+    took me 4 hours -> 2 algorithm wrong, 358 wrong, and 'continue' wrong
+    approach 1 -> recursion bottom-up go over everything 
+    approach 2 -> ...
+    https://leetcode.com/submissions/detail/727138197/ best overall, current = current-1 7 30 or 0
+https://leetcode.com/problems/perfect-squares
+    my try -> 225 / 588 because i used brute force even with memo
+    https://leetcode.com/problems/perfect-squares/discuss/275311/Python-DP-and-BFS
+    solution 1 -> Build up tabulation using min. relation is dp[i-j*j] so not [i-1] or [i-2]
+    solution 2 -> BFS. layer. 
+https://leetcode.com/problems/triangle/ do it myself in 40 minutes 
+    how to do -> normal Minimum Failing Path but with Triangle 
+    my try -> i tried 'directions' technique but it was messy
+
 
 
 ### distinct ways 
@@ -115,11 +242,21 @@ https://leetcode.com/problems/unique-paths do it myself
 https://leetcode.com/problems/number-of-dice-rolls-with-target-sum/discuss/355894/Python-DP-with-memoization-explained
 
 
+### merging intervals 
+guide
+    keep removing min/ max of intervals
+https://leetcode.com/problems/minimum-cost-tree-from-leaf-values/discuss/1510611/Greedy-Approach-oror-97-faster-oror-Well-Explained 
+    # how to do : non-leaf is product of biggest leaves, sum is all non-leaf, find min sum -> just greedy 
+    # code -> with min leaf node, we calculate non-leaf and add it to sum, then remove min.
+
+https://leetcode.com/problems/unique-binary-search-trees/discuss/31761/Python-with-explanation.-I-guess-you-could-call-this-%22DP%22...
+    # how to do -> go from 1->n with 'i' as middle. loop 'middle' and all combinations of left * combinations of right
+    # my try -> i figure out some solutions, but i pass whole left array rather than left index. I did not figure out the relation 
+
 
 ### decision making (State Machine, a type of 0/1 knapsack)
 guide
-    draw state machine
-
+    draw state machine 
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/803206/PythonJSGoC%2B%2B-O(n)-by-DP-w-Visualization redo, knapsack 0/1, decision making
     # cur_hold : we bought and waiting to sell 
     # everytime we buy something it's negative 
@@ -133,17 +270,40 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-f
     # -> remeber we don't sell yet, we only testing which one better
     # -> most importantly, we buy 1 sell at 9, immediately buy that 9 again and it's not that good
         
+### dp on strings I palindromic subsequence 
+guide
+    expand from small precomputed to bigger. use left, right pointers and know the differences of odd and even
+https://leetcode.com/problems/palindromic-substrings do it myself 128/130 cases 
+    use precomputed palindrom to compute larger palindrom 
+    https://leetcode.com/problems/palindromic-substrings/discuss/392119/Solution-in-Python-3-(beats-~94)-(six-lines)-(With-Detaiiled-Explanation)
+        # expand around center. 
+        # (b - a - 1) is length of palindrome
+        # length of palindrome has a pattern to predict how many palindrom with the same center inside (L+1)//2
+        # (b-a)//2 is total palindrome  
+        # for a,b in [(i,i),(i,i+1)] palindrom can be center in middle (odd) and center with 2 medians (even)
+https://leetcode.com/problems/longest-palindromic-substring/ redo 
 
 
 
-### dp on strings
+### dp on strings II longest common subsequence
+guide
+    2 pointers for 2 strings, then branch.
+    or use tabulation. Only move bottom, right, or bottom right diagonally 
 https://leetcode.com/problems/is-subsequence/
 https://leetcode.com/problems/longest-common-subsequence/discuss/598508/Python-DP-solution-with-Explanation-%2B-Thinking-process-%2B-Diagram
     DP on strings by move forward 2 pointers
+    0/1 knapsack 
+
+
+
+############## prefix sum 
+guide
+    prefix sum : is the sum of all previous index
+
 
 
 ############### MATRIX
-### techniques
+### guide 
 rotate change first column to first row, and so on -> list( zip(*matrix) )
 rotate rotate y-axis -> matrix[::-1]
 rotate counter clock-wise -> (list(zip(*matrix)))[::-1]
@@ -153,13 +313,9 @@ https://leetcode.com/problems/spiral-matrix/
 https://leetcode.com/submissions/detail/653475011/ 
     # second attempt -> solved it myself 
 
-############### KNAPSACK
-### unbounded knapsack item can be repeated
-https://leetcode.com/problems/coin-change/
 
 
-############### 2 pointers
-https://leetcode.com/problems/container-with-most-water/ two pointers
+
 
 ############### Graph
 dfs patterns
@@ -168,6 +324,15 @@ dfs patterns
 
 bfs patterns 
     On the other hand, if the question is like shortest path and the graph is not weighted, use bfs
+
+############### UNION FIND 
+###guide
+union find (disjoint set)
+union find are useful in graph problem
+each union has a representaitive, as tree root
+find(4) = root
+union(1,2) merge find(1) and find(2)
+
 
 
 
@@ -203,6 +368,11 @@ https://leetcode.com/problems/lru-cache/ do it myself
     # 
 
 ############### STACK 
+###guide
+can implemented with list, collections.deque, queue.LifoQueue
+
+### general
+https://leetcode.com/problems/valid-parentheses do it myself
 ### bar
 https://leetcode.com/problems/trapping-rain-water hard
     # approach 1 : for each element, left side minus the element's height
@@ -218,10 +388,27 @@ https://leetcode.com/problems/largest-rectangle-in-histogram/
         # because of bar 1, bar 2 is useless because max height is 1  
         # don't understand how he calculates width -> (look at code, not tutorial)
         # i−stack[−1]−1 is newestIndex - top index in the stack (after popping 6)
-
-        
     # approach 2 DP https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/440433/Python-Detailed-Explanation-for-DP-O(n)-Solution-Beats-99.9-RunTime-100-Memory
         # 
+https://leetcode.com/problems/daily-temperatures do it myself 
+    my try -> some algo error, use list for stack so it's slow 
+    approach 1 -> monotonic stack, same as mine 
+    approach 2 -> go backward in 'temperatures'. if it's hottest, update 'hottest', if it's smaller, use 'result' to compute -> it's faster because approach 1 Stack have to go forward, then go backward.
+
+https://leetcode.com/problems/car-fleet
+    my try : too many variables, should have zip() and sorted() to simplify 
+    https://leetcode.com/problems/car-fleet/discuss/255589/Python-Code-with-Explanations-and-Visualization-Beats-95
+        how to do ->
+            dist/vel is the key
+            dist/vel is to calculate ideal arrival time. If new car has smaller ideal arrival time than Top Stack, meaning it's faster and we ignore it, incrase 'fleet' by 1 
+    https://leetcode.com/problems/car-fleet/discuss/1299193/Python-Greedy-pattern-explained
+        nice DP explanation for pattern "allocating resources to overlapping events"
+        how to do -> 
+            similar to above ...
+
+
+
+
 
 ############### HEAP  
 https://leetcode.com/problems/merge-k-sorted-lists do it myself using brute force
@@ -236,24 +423,67 @@ https://leetcode.com/problems/find-median-from-data-stream/discuss/74047/JavaPyt
     # [-2] and [6, 10]
 
 ############### BACKTRACKING
+### guide 
 zero padding : can't be just 1, has to be 0001
+backtracking is about exploring all possible outcomes, if the outcome is not desirable we go back
+
+### general 
+https://leetcode.com/problems/combination-sum/discuss/16510/Python-dfs-solution.
+    very basic backtracking 
+    how to do ->  
+        backtracking - we need to explore all possibilities since they are no limit, we don't need to find min/max, and we can use 'input' multiple times
+        just run it until 'target' is negative, that's wrong, if 'target' == 0 then add to 'result'
+
 https://leetcode.com/problems/subsets/solution/
-    can do cascading, backtracking or BITMASK
-    cascading is about keep adding numbers to old set 
-    backtracking is about length keep expending
-    bitmask is about 
+    approach 1 -> cascading. for every new number. add all new number to all previous list. 
+    approach 2 -> backtracking. for expanding length. we add remaining number, backtrack, then add remaining number
+    approach 3 -> Lexicographic (Binary Sorted) Subsets
 
-############### BITMASK
+https://leetcode.com/submissions/detail/673764853/
+    how to do ->
+        similar to /combination-sum/ 
+        base case if len(permutation) == len(input) then we are good 
+        add all numbers with Set
 
-############### TRIE
+https://leetcode.com/problems/subsets/ do it myself cascading, 
+    https://leetcode.com/problems/subsets-ii/discuss/30305/Simple-python-solution-(DFS) DFS without using Set
+
+
+
+############### BITMASK and BIT MANIPULATION 
+guide
+The integers are first converted into binary and then operations are performed on bit by bit
+bitmas 
+    & AND 
+    | OR 
+    ~ NOT one complement 
+    ^ XOR 
+        if same, then it's 0 (false)
+        if different, then it's 1
+        if both are integer, XOR will compare each bit
+    100 >> n right shift divide by 2**n
+    100 << n left shift multiple by 2**n
+technique
+    n&(n-1) will remove the rightmost
+
+operator overloading : same symbol, different meanings in different classes 
+https://leetcode.com/problems/sum-of-two-integers/discuss/84278/a-summary-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently
+    a  
+
+
+### general 
+https://leetcode.com/problems/number-of-1-bits/discuss/1044775/Python-n-and-(n-1)-trick-%2B-even-faster-explained
+    solution 1 -> keep removing rightmost until 'n' is zero (number of bit stay the same, only value of bit changed)
+    solution 2 -> work with group of 2, then 4, then 8
 
 
 ############### TRIE 
 ### GUIDE 
-# trie (prefix tree) is type of tree, often for characters
-# insert trie : get node/or create node, replace it, and move on
+trie (prefix tree) is type of tree, often for characters
+store 'character' by storing as 'key' or  
+
 
 ### TRIE 
-# https://leetcode.com/problems/implement-trie-prefix-tree/ solve half of it myself
-
+https://leetcode.com/problems/implement-trie-prefix-tree/ solve half of it myself
+https://leetcode.com/problems/design-add-and-search-words-data-structure/
 

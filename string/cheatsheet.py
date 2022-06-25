@@ -1,1 +1,0 @@
-# Strings are immutable, variables can point at whatever they want.

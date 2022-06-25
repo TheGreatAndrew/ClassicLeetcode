@@ -54,6 +54,7 @@ Big O https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly?
 When read solutions
     read explanation and trying to pseudo code, then read solution code 
 Most subarray problems are solved using Sliding Window or Two Pointers or through DP. Check Grokking the Coding Interview - designgurus.org
+https://www.reddit.com/r/leetcode/comments/vjlvwz/comment/idk1los/?utm_source=reddit&utm_medium=web2x&context=3
 
 
 ### WHAT IS THE CODING RUBRIC
@@ -65,8 +66,17 @@ list and don't prepare for google
 https://leetcode.com/discuss/interview-experience/1724410/google-jan-2022
 5 rounds. i can maybe solve 1.1 and 2.2 
 https://leetcode.com/discuss/interview-question/1718834/Google-Interview-question-2022
+https://leetcode.com/discuss/career/368612/Folks-who-cracked-google-what-of-LC-hard-problems-were-you-able-to-solve-on-your-own
+https://leetcode.com/discuss/interview-experience/1737487/Google-or-L3-ML-SWE-or-Mountain-View-or-Feb-2022-Offez
+
 
 ### CONTEST
-5242. Greatest English Letter in Upper and Lower Case do it myself
 5218. Sum of Numbers With Units Digit K not done 
 https://leetcode.com/discuss/interview-question/1803238/Amazon-or-OA-or-sum-of-cache-optimization-power-for-all-sub-arrays
+
+
+https://leetcode.com/problems/subtree-of-another-tree/discuss/386209/Python-98-speed-with-comments
+https://leetcode.com/problems/most-common-word/solution/
+https://leetcode.com/problems/group-anagrams/
+https://leetcode.com/problems/valid-anagram/ do it myself
+https://leetcode.com/problems/longest-repeating-character-replacement don't understand 
