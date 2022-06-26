@@ -69,6 +69,13 @@ https://leetcode.com/discuss/interview-question/1718834/Google-Interview-questio
 https://leetcode.com/discuss/career/368612/Folks-who-cracked-google-what-of-LC-hard-problems-were-you-able-to-solve-on-your-own
 https://leetcode.com/discuss/interview-experience/1737487/Google-or-L3-ML-SWE-or-Mountain-View-or-Feb-2022-Offez
 
+### GOOGLE 
+https://www.youtube.com/watch?v=rw4s4M3hFfs
+google interview on Google Doc 
+4:52
+
+
+
 
 ### CONTEST
 5218. Sum of Numbers With Units Digit K not done 
@@ -80,3 +87,11 @@ https://leetcode.com/problems/most-common-word/solution/
 https://leetcode.com/problems/group-anagrams/
 https://leetcode.com/problems/valid-anagram/ do it myself
 https://leetcode.com/problems/longest-repeating-character-replacement don't understand 
+
+segment 
+
+
+### TODO 
+regex, string, split 
+graph traverse adjancency list 
+bit manipulation

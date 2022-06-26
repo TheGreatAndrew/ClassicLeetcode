@@ -13,6 +13,7 @@ https://leetcode.com/problems/happy-number
     my fail -> inteprete the question wrong 
     approach 1 -> just keep going until the set is repeated 
     approach 2 -> niche. Floyd's Cycle-Finding Algorithm. 
+https://leetcode.com/problems/count-asterisks/ do it myself 
 
 
 
@@ -310,20 +311,85 @@ rotate counter clock-wise -> (list(zip(*matrix)))[::-1]
 https://leetcode.com/problems/spiral-matrix/
 
 ### BFS 
-https://leetcode.com/submissions/detail/653475011/ 
-    # second attempt -> solved it myself 
+https://leetcode.com/problems/number-of-islands/ do it myself  
+https://leetcode.com/problems/rotting-oranges do it myself 
 
 
 
 
 
 ############### Graph
+
+### guide 
+https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
+    complete path : there are direct edges betwee any pairs of vertices  
+    connected graph : can get from every vertices to another vertices through a series of edges (path)
+    weighted graph : edges with number (weight)
+    Dijkstra's algorithm : finding the shortest paths between nodes in a graph
+    union-find : disjoint-set or merge-find set. store non-overlapping sets -> help find numbers of connected components
+    minimum spanning tree : check ###
+    topological sort : linear ordering from vertext u to v, and u comes first
+    Bellman Ford : for weighted graph, calculate shortest path from a single source vertext to all others
+    Floyd Warshall : for directed weighted graph, finding shortest paths with positive of negative edge weights 
+    Eulearian Path : finds a path that uses every edge in a graph only once.
+  
+
+
+    
+ 
+
 dfs patterns
     possible paths/permutations/ways.., then its dfs+back tracking
     lowest common ancestor 
 
 bfs patterns 
     On the other hand, if the question is like shortest path and the graph is not weighted, use bfs
+
+
+
+
+### general 
+https://leetcode.com/problems/count-unreachable-pairs-of-nodes-in-an-undirected-graph/
+    we have group
+    match element of other group to remaining groups
+    (2,3) same as (3,2)
+    my try -> I don't remember how to buildgraph or traverse adjancency list
+https://leetcode.com/problems/find-the-town-judge do it myself 
+    my try : find all 'potential judge' and check them later -> take too long to check them later
+
+https://leetcode.com/problems/surrounded-regions/ do it myself in 30m
+    how to do : 
+        get all border O 
+        4-directions that border
+        if they are in 4-directions, add it to NONCHANGING set 
+        then traverse matrix to change all CHANGING SET 
+    speed : get all border O(logn) + bfs O(n) + last loop O(n)
+    space : borderZero logn + nonchanging n + visited n O(n)
+    SPEED and SPACE : check Discord, because it will grow according O(border) which is O(square(total element))
+
+
+
+
+############### MINIMUM SPANNING TREE
+### guide
+spanning tree : given undirected, connected graph G. Spanning tree is a subgraph of G, includes all vertices with min possible number of edges 
+minimum spanning tree : 
+    spanning tree with weights, sum of the weights of edges is as min as possible 
+    if n vertices, n-1 edges 
+Prim's Algorithm : 
+    programiz.com/dsa/prim-algorithm great website 
+    greedy algo
+    start with smallest edges
+    keep adding smallest edges to previous 
+Kruskal's Algorithm : 
+    greedy algo 
+    start with smallest edges 
+    get smallest edges, but it doesn't need to connect with previous 
+    if new edge forming a cycle, don't 
+    speed O(n^2)
+    with min heap it's O(nlogn)
+
+
 
 ############### UNION FIND 
 ###guide
@@ -336,13 +402,15 @@ union(1,2) merge find(1) and find(2)
 
 
 
+
 ############### BINARY TREE
 ### bfs
-# https://leetcode.com/problems/binary-tree-level-order-traversal solve it myself but take 1 hint and 2 hours
-    # https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/458315/Python-99-speed-100-memory-*Simple-Solution*-with-comments memorize this, how to get all elements of that one level
-# https://leetcode.com/problems/binary-tree-right-side-view solve it myself with 1 hint
-    # https://leetcode.com/problems/binary-tree-right-side-view/discuss/56064/5-9-Lines-Python-48%2B-ms much faster code
-
+https://leetcode.com/problems/binary-tree-level-order-traversal do it myself but take 1 hint and 2 hours
+    https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/458315/Python-99-speed-100-memory-*Simple-Solution*-with-comments memorize this, how to get all elements of that one level
+https://leetcode.com/problems/binary-tree-right-side-view/ do it myself 
+    speed O(n) since we have to traverse all nodes 
+    space O(logn) because only need to store right-hand  
+    https://leetcode.com/problems/binary-tree-right-side-view/discuss/56064/5-9-Lines-Python-48%2B-ms much faster code
 
 ### dfs
 https://leetcode.com/problems/find-duplicate-subtrees do it myself, with 5 hours and bad big O
