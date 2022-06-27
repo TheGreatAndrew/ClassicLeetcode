@@ -326,7 +326,7 @@ https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-pr
     connected graph : can get from every vertices to another vertices through a series of edges (path)
     weighted graph : edges with number (weight)
     Dijkstra's algorithm : finding the shortest paths between nodes in a graph
-    union-find : disjoint-set or merge-find set. store non-overlapping sets -> help find numbers of connected components
+    union-find : check ### -> help find numbers of connected components
     minimum spanning tree : check ###
     topological sort : linear ordering from vertext u to v, and u comes first
     Bellman Ford : for weighted graph, calculate shortest path from a single source vertext to all others
@@ -335,8 +335,7 @@ https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-pr
   
 
 
-    
- 
+
 
 dfs patterns
     possible paths/permutations/ways.., then its dfs+back tracking
@@ -367,8 +366,17 @@ https://leetcode.com/problems/surrounded-regions/ do it myself in 30m
     space : borderZero logn + nonchanging n + visited n O(n)
     SPEED and SPACE : check Discord, because it will grow according O(border) which is O(square(total element))
 
-
-
+https://leetcode.com/problems/redundant-connection/ do it myself in 30m
+    how to do : 
+        run intially to collect all nodes 
+        keep remove edges, and see if we can still reach all 
+        (keep removing the last edges, if we can reach all, than return True immediately)  
+    speed : initial loop O(edges) and for each edges, run entire edges again O(edges*edges)
+    space : 
+    approach 1 -> look at comment. Doing Cycle Prevention, build a graph one edge at at time, if there already a path, then the new edge will create cycle 
+    approach 2 -> 
+    https://leetcode.com/problems/redundant-connection/discuss/1295728/JS-Python-Java-C%2B%2B-or-Simple-Union-Find-Solution-w-Explanation
+    solution 1 -> look at comment from my submission
 
 ############### MINIMUM SPANNING TREE
 ### guide
@@ -382,6 +390,7 @@ Prim's Algorithm :
     start with smallest edges
     keep adding smallest edges to previous 
 Kruskal's Algorithm : 
+    purpose -> detect cycle
     greedy algo 
     start with smallest edges 
     get smallest edges, but it doesn't need to connect with previous 
@@ -390,17 +399,43 @@ Kruskal's Algorithm :
     with min heap it's O(nlogn)
 
 
-
 ############### UNION FIND 
 ###guide
-union find (disjoint set)
-union find are useful in graph problem
-each union has a representaitive, as tree root
-find(4) = root
-union(1,2) merge find(1) and find(2)
+https://www.youtube.com/watch?v=ayW5B2W9hfo
+    union find (disjoint set)
+    union find are useful in graph problem
+    each union has a representaitive, as tree root
+    find(4) = root
+    union(1,2) merge find(1) and find(2)
+https://www.youtube.com/watch?v=wU6udHRIkcc
+    weight and rank is better 
+    disjoint set : sets that dont connect
+    detecting cycles ->
+        set have (1,2,3), for (1,3) edge, 1 and 3 already in set, so don't include this edge or we will have cycle
+        if different set, perform Union()
+    graph representation -> Union() keep adding set
+    array representation -> 
+        value -2 is parent 
+        value n will have n as parent 
+        value more negative is a bigger parent 
+    collapsing find
+        make all nodes link with the root parent 
 
 
 
+############### topological sorting 
+### guide 
+https://www.youtube.com/watch?v=eL-KzMXSXXI
+    topological ordering -> in directed graph, ordering of nodes so that for A->B, print node A first 
+    topological sort -> can find topological ordering in (V+E) time 
+    directed cycle : can't have topological 
+    directed acycle graph : don't have cycle 
+    Tarjan's strongly connected component algorithm : detect if there are cycles 
+    algo ->
+        pick unvisited node 
+        DFS 
+        get leaf node first, and then reverse order  
+        // 7
 
 
 ############### BINARY TREE

@@ -77,6 +77,8 @@ google interview on Google Doc
 
 
 
+
+
 ### CONTEST
 5218. Sum of Numbers With Units Digit K not done 
 https://leetcode.com/discuss/interview-question/1803238/Amazon-or-OA-or-sum-of-cache-optimization-power-for-all-sub-arrays
@@ -89,6 +91,13 @@ https://leetcode.com/problems/valid-anagram/ do it myself
 https://leetcode.com/problems/longest-repeating-character-replacement don't understand 
 
 segment 
+
+
+### AMORTIZE 
+explained
+    ArrayList can grow. And insertion is O(1), but once it hits the capacity, it will create a new array with O(n) time
+    ArrayList grow 2x, it will create 2x array size, and copy x elements from old array, and destroy old array 
+    X insertions take 0(2X) time. The amortized time for each insertion is 0( 1) .... 
 
 
 ### TODO 
