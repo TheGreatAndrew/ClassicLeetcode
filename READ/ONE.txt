@@ -9,6 +9,7 @@ https://leetcode.com/problems/task-scheduler
 https://leetcode.com/problems/is-subsequence/discuss/385275/Easiest-python-solution-(beats-98-%2B-explanation)
     # interesting way of traversal 2 lists
 Greatest English Letter in Upper and Lower Case do it myself
+    how to do -> 
 https://leetcode.com/problems/happy-number
     my fail -> inteprete the question wrong 
     approach 1 -> just keep going until the set is repeated 
@@ -36,6 +37,7 @@ general
 https://leetcode.com/problems/reverse-string/
     for loop. reverse(). [::-1] 
 https://leetcode.com/problems/group-anagrams do it myself
+    how to do -> store all anagram combo in Dictionary  
     '''
     for each string, we store all letters as Key in Dict to group them 
     speed O(n*l) where n is all strings, l is length of each string + O(n) 
@@ -65,7 +67,10 @@ https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/7802
 ############## LINKED LIST  
 ### general 
 https://leetcode.com/problems/merge-two-sorted-lists/ do it myself 
-https://leetcode.com/problems/linked-list-cycle do it myself. use two pointers for linked list. 
+    how to do -> keep comparing 
+https://leetcode.com/problems/linked-list-cycle do it myself
+    how to do -> use fast and slow pointers 
+
 https://leetcode.com/problems/remove-nth-node-from-end-of-list
 
 https://leetcode.com/problems/reorder-list
@@ -190,8 +195,9 @@ longest common subsequence
 ############### DYNAMIC PROGRAMMING CODE 
 ### general
 https://leetcode.com/problems/maximum-subarray/ do it myself 
+    how to do -> if number before is negative, remove them 
 https://leetcode.com/problems/pascals-triangle/ do it myself
-
+    how to do -> 
 
 ### greedy
 a
@@ -216,9 +222,10 @@ guide
 ### minimum/ maximum path to reach a target
 https://leetcode.com/problems/coin-change do it myself, unbounded knapsack
 https://leetcode.com/problems/minimum-path-sum/ do it myself 
-    update matrix in-place with previous 
+    how to do -> update matrix in-place with previous 
     https://leetcode.com/problems/minimum-path-sum/discuss/825410/Python3-Dynamic-Programming-90-w-Explaination small things but can improve big O
 https://leetcode.com/problems/minimum-falling-path-sum/ do it myself
+    how to do -> update matrix 
 https://leetcode.com/problems/minimum-cost-for-tickets do it myself, unbounded knapsack  
     how to do -> each 'days', we buy 1-day 7-day and 30-day. Some days maybe not optimized but we only need last day.
     took me 4 hours -> 2 algorithm wrong, 358 wrong, and 'continue' wrong
@@ -332,7 +339,8 @@ https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-pr
     Bellman Ford : for weighted graph, calculate shortest path from a single source vertext to all others
     Floyd Warshall : for directed weighted graph, finding shortest paths with positive of negative edge weights 
     Eulearian Path : finds a path that uses every edge in a graph only once.
-  
+    maximum network flows 
+    biparte matching 
 
 
 
@@ -377,6 +385,30 @@ https://leetcode.com/problems/redundant-connection/ do it myself in 30m
     approach 2 -> 
     https://leetcode.com/problems/redundant-connection/discuss/1295728/JS-Python-Java-C%2B%2B-or-Simple-Union-Find-Solution-w-Explanation
     solution 1 -> look at comment from my submission
+
+https://leetcode.com/problems/clone-graph/
+    how to do : 
+        dictionary to make sure you store correct cloned node, and can be reuse -> very creative 
+https://leetcode.com/problems/pacific-atlantic-water-flow/
+    my try -> i only go 2-directions so it's wrong, i did not understand questions correctly, i also only traverse matrix normally 
+    https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/543988/Easy-understand-DFS-solution-beat-97
+        how to do ->
+            loop 4 borders, dfs, if newR newC is bigger than current then we keep dfs
+        lesson -> with dfs, we don't need to worry about which row, column comes first 
+https://leetcode.com/problems/course-schedule
+    https://leetcode.com/problems/course-schedule/discuss/58586/Python-20-lines-DFS-solution-sharing-with-explanation look at first comment 
+    how to do dfs ->
+        graph[take these after] = [prerequisites]
+        3 states not visited, currently visiting, and visisted 
+        visited is dictionary 
+    https://leetcode.com/problems/course-schedule/discuss/441722/Python-99-time-and-100-space.-Collection-of-solutions-with-explanation
+    how to do topological ->
+        0 incoming edges, incoming from prerequisites to course 
+        1 vertex, with number of incoming edges 
+        2 queue, with vertex with no incoming edges 
+        3 
+        
+
 
 ############### MINIMUM SPANNING TREE
 ### guide
@@ -435,7 +467,9 @@ https://www.youtube.com/watch?v=eL-KzMXSXXI
         pick unvisited node 
         DFS 
         get leaf node first, and then reverse order  
-        // 7
+    algo ->
+        get leaf node
+        then backtrack 
 
 
 ############### BINARY TREE
@@ -514,6 +548,10 @@ https://leetcode.com/problems/car-fleet
 
 
 ############### HEAP  
+https://leetcode.com/problems/kth-largest-element-in-a-stream/discuss/482591/Simple-Python-Solution-or-Maintain-Min-Heap-whose-size-is-always-kept-at-k
+    my try -> pass 9/10 but time limit exceed 
+
+
 https://leetcode.com/problems/merge-k-sorted-lists do it myself using brute force
     # approach 2 : compare between k pointers, which one is smaller go to 'res' linked list 
     # approach 3 : optimized approach 2 with priority queue. optimized the comparison process. 

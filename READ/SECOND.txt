@@ -21,7 +21,20 @@ set : unchangable, but can add and remove items
 
 
 ### regex
-a
+https://www.youtube.com/watch?v=K8L6KVGG-7o 6:00
+import re 
++ : 1 or more 
+(option1|option2)
+r'' for raw string 
+re.search("[a-zA-Z0-9]+@[a-zA-Z]+\.(com|edu|net)", "andrewvu22@gmail.com")
+re.sub("(\d\d)-(\d\d)-(\d\d\d\d)", r"\1\2\3", "21-03-1999")
+
+pattern = re.compile(r'abc')
+matches = pattern.finditer(data)
+for match in matches : 
+    print(match)
+
+
 
 ### lambda 
 a 

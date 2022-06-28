@@ -99,8 +99,22 @@ explained
     ArrayList grow 2x, it will create 2x array size, and copy x elements from old array, and destroy old array 
     X insertions take 0(2X) time. The amortized time for each insertion is 0( 1) .... 
 
+### google 
+https://www.youtube.com/watch?v=XOtrOSatBoY
+"You know, you don't need to be an expert at algorithms; you just need to be good at them"
+
+https://igotanoffer.com/blogs/tech/google-software-engineer-interview
+technical phone screen -> 30-60m, leetcode, Google Doc. some behavior.
+onsite -> 4-6 interviews, 45m, coding and system, 3 coding, 1-2 system 
+// coding rubric 
+// sample questions 
+// google  values 
+
+https://careers.google.com/how-we-hire/
+a
+
 
 ### TODO 
-regex, string, split 
-graph traverse adjancency list 
 bit manipulation
+Python OOP 
+special graph -> learn graph algo
