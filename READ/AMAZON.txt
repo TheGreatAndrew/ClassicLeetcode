@@ -1,0 +1,17 @@
+### amazon technical interview 
+https://leetcode.com/discuss/interview-experience/2210092/amazon-sde-1-selected-full-time-interview-experience all
+    phone 
+    detecting cycle in linkedlist
+    sort 012 array
+
+    round 2 
+    container with most water
+    spiral Matrix
+
+    round 3 
+    behavior
+    Serialize and Deserialize Binary Tree
+
+
+### tips 
+https://www.amazon.jobs/en/landing_pages/in-person-interview

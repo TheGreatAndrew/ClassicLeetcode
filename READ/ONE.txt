@@ -1,7 +1,7 @@
 ############### GUIDE 
 A monotonic stack is a stack whose elements are monotonically increasing or descreasing.
 format
-    how to do, mistakes, hidden tricks 
+    how to do, my try, what's cool about this 
 Array, Trie, Union Find, sparse table, seg tree, Fenwick tree, Vectors, bit manipulation
 
 ############### GENERAL
@@ -46,8 +46,14 @@ https://leetcode.com/problems/group-anagrams do it myself
     https://leetcode.com/problems/group-anagrams/discuss/664252/Python-3-solution-detailed-explanation-faster-than-97.5 exatly same solution, but faster and cool technique, and look at comment    
 
 
-
-
+############### REGEX 
+###guide 
+aa
+###general 
+https://leetcode.com/problems/valid-palindrome/
+    how to do -> isalnum, or two pointers 
+    https://leetcode.com/problems/valid-palindrome/discuss/350929/Solution-in-Python-3-(beats-~100)-(two-lines)-(-O(1)-solution-as-well-)
+        solution 2 -> two pointers ...
 
 
 
@@ -59,7 +65,50 @@ patterns : prefix sum, subset backtracking (permutation), sliding window
 ### subset backtracking 
 https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/780232/Backtracking-Python-problems%2B-solutions-interview-prep list
 
+### general
+https://leetcode.com/problems/insert-interval/
+    https://leetcode.com/problems/insert-interval/discuss/21809/Python-O(n)-and-O(nlgn)-solutions
+        what's cool -> 
+        how to do -> 
+            if newInterval before current 
+            if newInterval after current -> update new interval to current one (normally we add current to 'res', but now new will be added to 'res', current for later)
+            else overlap -> create even Newer Interval 
+https://leetcode.com/problems/longest-consecutive-sequence do it myself in 30 minutes 
+    how to do -> have a Set. keep removing number+1 number-1
+    https://leetcode.com/problems/longest-consecutive-sequence/solution/
+        approach 3 -> same as my method, just start at 0 and work up
+        what's cool -> can loop Set
+https://leetcode.com/problems/product-of-array-except-self/ do it myself with 2 hints 
+    how to do -> similar to 2 pointers 
+    https://leetcode.com/problems/product-of-array-except-self/discuss/65848/Concise-Python-solution-constant-space-(left-to-right-then-right-to-left). 
+        how to do -> same idea but no need for extra array
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted do it myself but took me a lot of time to improve 
+    how to do -> binary search 
+    https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/discuss/51249/Python-different-solutions-(two-pointer-dictionary-binary-search).
+        look at comment for big O 
+        solution 1 -> 2 pointers to find the sum 
+        solution 2 -> simple dict 
+        solution 3 -> binary search to find the other 
+https://leetcode.com/problems/generate-parentheses/solution/
+    what's cool -> learn how to keep track of parentheses
+    approach 1 -> keep add ( or ) to explore all possibilities, base case check if it's valid to add to 'res'
+        speed -> 
+    approach 2 -> backtracking. add all ( 
+        speed -> need to read 
+    approach 3 -> look in comment for explanation
 
+
+
+
+### sum
+https://leetcode.com/problems/3sum/discuss/725950/Python-5-Easy-Steps-Beats-97.4-Annotated
+    what's cool -> they have to turn list to tuple for hashable 
+    almost do it myself, i have correct concept
+
+
+############## ENCODING, SERIALIZATION 
+https://www.lintcode.com/problem/659/description 
+    explain -> turn list into string, and string can be sent over network much easier, then decode 
 
 
 
@@ -78,12 +127,20 @@ https://leetcode.com/problems/reorder-list
     https://leetcode.com/problems/reorder-list/discuss/801971/Python-O(n)-by-two-pointers-w-Visualization
         solution 1 -> turn into array to make manipulation much easier. go spiral just like the image 
         solution 2 -> split into mid, match first half with reversed second half -> cool technique to get mid point
+https://leetcode.com/problems/add-two-numbers/
+    my try 1160/1568 
+    what's cool : many edge cases. 
+    https://leetcode.com/problems/add-two-numbers/discuss/1835217/Python3-DUMMY-CARRY-(-**-)-Explained 
+        same concept but better soilution
+        how to do : keep adding value as traversing, and have 'carry'
+
 
 
 
 ############### TWO POINTERS 
 ### 2 pointers 
 https://leetcode.com/problems/container-with-most-water/
+    how to do -> 
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
     # thought process
     # fast reaches the end
@@ -127,8 +184,10 @@ https://leetcode.com/problems/string-to-integer-atoi/solution/ redo
 ############### BINARY SEARCH 
 a
 
-
-
+### general 
+https://leetcode.com/problems/binary-search/ 
+https://leetcode.com/problems/search-a-2d-matrix/ do it myself 1 hours with failed submissions 
+    how to do -> binary search which row, and later binary search which column of that row 
 
 
 
@@ -141,7 +200,7 @@ a
 ### dynamic programming guide
 use DP whenever you have to make 'choices'
 top-down with memoization : recursion 
-bottom-up with tabluation 
+bottom-up with tabluation : tabulation
 If all subproblems must be solved at least once, bottom-up better
 
 
@@ -152,17 +211,17 @@ patterns
     0/1 knapsack 
     unbounded knapsack 
     fib
-    palindromic subsequence
-    longest common substring 
+    1D dynamic programming 
+    2D dynamic programming
+    greedy
     Minimum (Maximum) Path to Reach a Target
         min to reach a target -> Coin Change
     Distinct Ways : distinct ways to reach target -> Unique Path 
     Merging Intervals : given a set of numbers find an optimal solution for a problem considering the current number and the best you can get from the left and right sides.
-    DP on Strings :  given two strings s1 and s2, return some result
+    palindromic subsequence : given two strings s1 and s2, return some result
+    longest common substring  : given two strings s1 and s2, return some result
     Decision Making/ State Machine : Buy Sell Stock
-
-
-
+    
 
 
 
@@ -198,6 +257,20 @@ https://leetcode.com/problems/maximum-subarray/ do it myself
     how to do -> if number before is negative, remove them 
 https://leetcode.com/problems/pascals-triangle/ do it myself
     how to do -> 
+https://leetcode.com/problems/race-car/
+    https://leetcode.com/problems/race-car/discuss/762584/Python-C%2B%2B-3-Simple-Steps-(BFS) 
+        what's cool -> Race-car is a BFS problem, since we are given a target and have to find the shortest distance to reach there
+        how to do -> 
+            always move forward 
+            only consider changing the direction if 2 conditions : drive pass and go furthur, go back and go way back 
+            then ...
+
+    https://leetcode.com/problems/race-car/discuss/1512080/Greedy-Approach-oror-Normal-conditions-oror-94-faster-oror-Well-Coded
+        similar idea to above solution 
+
+
+
+
 
 ### greedy
 a
@@ -265,6 +338,7 @@ https://leetcode.com/problems/unique-binary-search-trees/discuss/31761/Python-wi
 ### decision making (State Machine, a type of 0/1 knapsack)
 guide
     draw state machine 
+
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/803206/PythonJSGoC%2B%2B-O(n)-by-DP-w-Visualization redo, knapsack 0/1, decision making
     # cur_hold : we bought and waiting to sell 
     # everytime we buy something it's negative 
@@ -312,14 +386,28 @@ guide
 
 ############### MATRIX
 ### guide 
-rotate change first column to first row, and so on -> list( zip(*matrix) )
-rotate rotate y-axis -> matrix[::-1]
+rotate zip() -> list(zip(*matrix))
+rotate reverse -> matrix[::-1]
 rotate counter clock-wise -> (list(zip(*matrix)))[::-1]
 https://leetcode.com/problems/spiral-matrix/
+
+
+### general
+https://leetcode.com/problems/valid-sudoku/ do it myself in 30 minutes
+    how to do -> brute force check 3 different things
+    what's cool -> i douby myself and don't even think my brute force will work 
+    https://leetcode.com/problems/valid-sudoku/discuss/729180/Python-solutions-or-Single-Traversal-or-Single-Dictionary
+        how to do -> add position of all occurences of a number. Then check if (same row) or (same column) or (same box)
+        what's cool -> do 3 checks with single traversal 
+    https://leetcode.com/problems/valid-sudoku/discuss/511365/Simple-Intuitive-Python-Approach
+        how to do -> array of set, 'k subbox' with 9 areas 
+        what's cool -> array of set 
 
 ### BFS 
 https://leetcode.com/problems/number-of-islands/ do it myself  
 https://leetcode.com/problems/rotting-oranges do it myself 
+
+
 
 
 
@@ -395,19 +483,10 @@ https://leetcode.com/problems/pacific-atlantic-water-flow/
         how to do ->
             loop 4 borders, dfs, if newR newC is bigger than current then we keep dfs
         lesson -> with dfs, we don't need to worry about which row, column comes first 
-https://leetcode.com/problems/course-schedule
-    https://leetcode.com/problems/course-schedule/discuss/58586/Python-20-lines-DFS-solution-sharing-with-explanation look at first comment 
-    how to do dfs ->
-        graph[take these after] = [prerequisites]
-        3 states not visited, currently visiting, and visisted 
-        visited is dictionary 
-    https://leetcode.com/problems/course-schedule/discuss/441722/Python-99-time-and-100-space.-Collection-of-solutions-with-explanation
-    how to do topological ->
-        0 incoming edges, incoming from prerequisites to course 
-        1 vertex, with number of incoming edges 
-        2 queue, with vertex with no incoming edges 
-        3 
         
+############### Dijkstra's algorithm
+https://leetcode.com/list/53js48ke/ 
+
 
 
 ############### MINIMUM SPANNING TREE
@@ -455,7 +534,7 @@ https://www.youtube.com/watch?v=wU6udHRIkcc
 
 
 
-############### topological sorting 
+############### TOPOLOGICAL  
 ### guide 
 https://www.youtube.com/watch?v=eL-KzMXSXXI
     topological ordering -> in directed graph, ordering of nodes so that for A->B, print node A first 
@@ -470,9 +549,32 @@ https://www.youtube.com/watch?v=eL-KzMXSXXI
     algo ->
         get leaf node
         then backtrack 
+### general 
+https://leetcode.com/problems/course-schedule
+    https://leetcode.com/problems/course-schedule/discuss/58586/Python-20-lines-DFS-solution-sharing-with-explanation look at first comment 
+    how to do dfs ->
+        graph[take these after] = [prerequisites]
+        3 states not visited, currently visiting, and visisted 
+        visited is dictionary 
+    https://leetcode.com/problems/course-schedule/discuss/441722/Python-99-time-and-100-space.-Collection-of-solutions-with-explanation
+    how to do topological ->
+        geeksforgeeks.org/topological-sorting-indegree-based-solution/ 
+        0 incoming edges, incoming from prerequisites to course 
+        1 vertex, with number of incoming edges 
+        2 queue, with vertex with no incoming edges 
+        3 
+
 
 
 ############### BINARY TREE
+### general
+https://leetcode.com/problems/invert-binary-tree/ do it myself 
+    what's cool -> passing node reference 
+https://leetcode.com/problems/maximum-depth-of-binary-tree do it myself 
+
+
+
+
 ### bfs
 https://leetcode.com/problems/binary-tree-level-order-traversal do it myself but take 1 hint and 2 hours
     https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/458315/Python-99-speed-100-memory-*Simple-Solution*-with-comments memorize this, how to get all elements of that one level
@@ -489,6 +591,8 @@ https://leetcode.com/problems/find-duplicate-subtrees do it myself, with 5 hours
 
 ### serialize
 https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+
+
 
 
 
@@ -562,6 +666,17 @@ https://leetcode.com/problems/find-median-from-data-stream/discuss/74047/JavaPyt
     # [] and [6]
     # [-6] and [10]
     # [-2] and [6, 10]
+
+https://leetcode.com/problems/top-k-frequent-elements/ do it myself 
+    how to do -> dict then heap 
+    speed -> pop heap k times O(klogn), read everything into dict O(n)
+    https://www.youtube.com/watch?v=YPTqKIgVk-k BUCKET SORT 
+        how to do O(klogn) -> use heap
+        how to do O(n) ->
+            bucket sort // 3:40
+    https://leetcode.com/problems/top-k-frequent-elements/discuss/484980/Python-Explained-Two-Simple-Heap-solutions 
+        how to do -> if it's over k, then pop min
+
 
 ############### BACKTRACKING
 ### guide 

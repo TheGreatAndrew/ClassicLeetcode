@@ -1,0 +1,91 @@
+### google which questions
+PDF PDF PDF 
+open ended question
+Python, APIs, OOP  
+algo 
+    sorting/searching/ binary searching
+    divide-and-conquer
+    DP 
+    greedy 
+    recursion
+    algorithms of a data structure 
+    Dijkstra
+    in exceptional cases, insertion-sort or radix-sort are much better than the generic QuickSort/MergeSort/HeapSort answers.
+data structure 
+    arrays, linked lists, stacks, queues, hash-sets, hash-maps, hash-tables, dictionary, trees and binary trees, heaps and graphs
+Mathematics: S ome interviewers ask basic discrete math questions. This is more prevalent at Google than
+at other companies because counting problems, probability problems and other Discrete Math 101
+situations surround us. Spend some time before the interview refreshing your memory on (or teaching
+yourself) the essentials of elementary probability theory and combinatorics. You should be familiar with
+n-choose-k problems and their ilk
+graph 
+    distance, search, connectivity, cycle-detection
+    three basic ways to represent a graph in memory (objects and pointers, matrix, and adjacency list)
+    basic graph traversal algorithms, breadth-first search and depth-first search. knows their tradeoffs 
+system 
+    process, thread 
+    OOP
+    internet 
+    and more 
+
+https://www.teamblind.com/post/LeetCode-Google-Interview-Prep-in-2022-kKdpN0F7
+    a
+
+
+### google technical interview  
+https://leetcode.com/discuss/interview-question/2206756/google-phone-technical-interview-first-round-45-mins-us-2022 phone, L3
+    string processing 
+    a bit of math 
+
+https://leetcode.com/discuss/interview-question/1478198/google-phone-interview phone, L3
+    one question 
+
+https://leetcode.com/discuss/interview-question/1293144/f-me-interview-question-from-failed-google-phone-screen phone 
+    very niche quesiton  
+
+https://leetcode.com/discuss/interview-experience/1724410/google-jan-2022 all 
+    6 months to prepare leetcode 
+
+
+
+
+
+
+
+
+### google tips 
+https://www.youtube.com/watch?v=6ZZX9iIgFoo onsite 
+speak out loud 
+computational complexity, improving later is valuable
+"You won't be expected to answer questions requiring some obscure and highly domain-specific algorithm."
+simple, correct input. test boundary input. malformed input 
+best practice -> explain thought, open-ended question have to verify, practice on whiteboard 
+
+
+
+https://www.youtube.com/watch?v=XOtrOSatBoY
+"You know, you don't need to be an expert at algorithms; you just need to be good at them"
+
+https://igotanoffer.com/blogs/tech/google-software-engineer-interview
+technical phone screen -> 30-60m, leetcode, Google Doc. some behavior.
+onsite -> 4-6 interviews, 45m, coding and system, 3 coding, 1-2 system 
+// coding rubric 
+// sample questions 
+// google  values 
+
+https://www.youtube.com/watch?v=rw4s4M3hFfs
+google interview on Google Doc 
+4:52
+
+https://careers.google.com/how-we-hire/
+a
+
+https://www.reddit.com/r/leetcode/comments/lf94m4/top_100_recent_asked_google_interview_questions/ 
+list and don't prepare for google 
+https://leetcode.com/discuss/interview-experience/1724410/google-jan-2022
+5 rounds. i can maybe solve 1.1 and 2.2 
+https://leetcode.com/discuss/interview-question/1718834/Google-Interview-question-2022
+https://leetcode.com/discuss/career/368612/Folks-who-cracked-google-what-of-LC-hard-problems-were-you-able-to-solve-on-your-own
+https://leetcode.com/discuss/interview-experience/1737487/Google-or-L3-ML-SWE-or-Mountain-View-or-Feb-2022-Offez
+
+
