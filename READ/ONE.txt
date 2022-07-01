@@ -1,7 +1,11 @@
 ############### GUIDE 
 A monotonic stack is a stack whose elements are monotonically increasing or descreasing.
 format
-    how to do, my try, what's cool about this 
+    what's hard 
+    my try 
+    why this pattern 
+    how to do
+    what's cool about this 
 Array, Trie, Union Find, sparse table, seg tree, Fenwick tree, Vectors, bit manipulation
 
 ############### GENERAL
@@ -188,11 +192,33 @@ a
 https://leetcode.com/problems/binary-search/ 
 https://leetcode.com/problems/search-a-2d-matrix/ do it myself 1 hours with failed submissions 
     how to do -> binary search which row, and later binary search which column of that row 
+    https://leetcode.com/problems/search-a-2d-matrix/discuss/26201/A-Python-binary-search-solution-O(logn)
+        how to do -> 
+    https://leetcode.com/problems/search-a-2d-matrix/discuss/1175274/Find-what's-difficult-in-a-problem-and-think-how-to-get-rid-of-it
+        how to do -> 
+https://leetcode.com/problems/koko-eating-bananas/
+    my try -> I come up with brute force and a little binary search, but too scared to implement it
+    why this pattern -> cause left too smal, right too big but can be right 
+    https://leetcode.com/problems/koko-eating-bananas/solution/
+        appproach 1 : brute force so it's not expected to pass all test cases. basically trying all options of 'k'
+        appproach 2 : 
+            how to do -> binary search with speed, base case left = right we stop and return
+            what's cool -> they don't need to sort the array, they only need left, right, hours_spent 
+            speed -> O(n) for traverse whole array each seach. O(logm) with m as maximum number of banana in a pile, so we have to binary search 1 to m -> total O(n*log(m))
+            space -> O(1)
 
-
-
-
-
+https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
+    what's cool ->
+        maybe don't think of examples, think abstract increase->decrease->increase
+    https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/solution/
+        approach 1 -> binary search. only compare 'mid' and '0'
+https://leetcode.com/problems/median-of-two-sorted-arrays/
+    what's hard -> i gave up when i see 'Hard' 
+    https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/798913/Python-Simple-Two-Pointer-Solution-Time%3A-O(n%2Bm)-Space%3A-O(1)
+        what's cool -> Hard problem but easy approach  
+        how to do -> two pointers. combine lengths of both lists to LEN. traverse, get list1 if list1 item is smaller, get until we reach LEN//2 
+    https://leetcode.com/problems/median-of-two-sorted-arrays/discuss/2511/Intuitive-Python-O(log-(m%2Bn))-solution-by-kth-smallest-in-the-two-sorted-arrays-252ms
+        how to do ->
 
 
 
