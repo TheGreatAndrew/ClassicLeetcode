@@ -1,0 +1,74 @@
+### system design interview 
+ask clarifying questions
+
+
+### topics  
+race condition occurs when two or more threads can access shared data
+relational database 
+internet-focused network concepts & technologies such as DNS, BGP, routing tables, reverse proxies, IPv4/IPv6, TCP/UDP, TLS/HTTP/QUIC
+Scalability engineering
+Distributed systems
+static typing 
+Read Lockings
+
+
+### OOP vs Functional
+OOP has state 
+language paradigm : remove and constraint some of our freedom 
+https://www.youtube.com/watch?v=wyABTfR9UTU
+structured programming : constraint the flow of control 
+function programming ->
+    constrains assignment, write code with no side effects (from input to output, no changing anything)
+
+
+
+############### Design Patterns
+singleton, factory, adapter, bridge, visitor, command, proxy, observer
+
+
+############### design a thing
+https://www.youtube.com/watch?v=Gg318hR5JY0 google
+no coding 
+time constraints 
+"we're not looking for one specific answer"
+design to scale -> is there a bottleneck. sharded large data set into multiple work machines 
+latency, throughput, storage 
+costs from operations -> read from disk, read from memory, LAn round-trip, cross-continental 
+solution patterns -> sharding data, replication types, write ahead logging, separateing data and metadata storage, load distrubiton 
+trade-offs
+best practices -> 
+
+
+Design Reservation and Payment System for Parking Garage  
+    https://www.youtube.com/watch?v=NtMvNh0WFVM
+        API public endpoints 
+            /reserve with garage_id, start_end, end_time -> return spot_id, reservation_id 
+            /payment with reservation_id -> external Payment API 
+            /cancel with reservation_id
+        API internal endpoints 
+            /calculate_payment with reservation_id 
+            /freespots
+            /allocate_spot
+            /create_account email, hashed password, name and Social Media Login APIs
+            /login 
+        scale not much data to scale 
+        data schema 
+            reservation garage_id (foreign key), spot_id (foreign key), start (timestamp), end (timestamp), paid (bool)
+            garage zipcode (varchar) rate_compact rate_reg rate_large
+            spot garage_id vehicle_type (enum)
+                there is a trade-off when you use enum -> in Postgre once you have enum you can't never change it 
+            user email password (varchar note that this is probably SHA-256 hash)
+            vehicle user_id license vehicle_type (enum)
+        Design 
+            web and mobile and backend (PostgreSQL, third-party payment) 
+            read more than write -> read replicas for the DB 
+            we have read replicas -> so we have load balancer in-between to balance 
+            so Write to PostgreSQL 
+            and Read from 2 read replicas 
+            Strong Consistency over Eventual Consistency in this case 
+            trade-off will have higher latency when you have Strong Consistency 
+            Shared Read Replicas by Location 
+        Thoughts
+            explain your opinion on your choices 
+            people love people with opinions
+            say if you are not confident in some choice 

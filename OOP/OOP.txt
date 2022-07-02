@@ -1,0 +1,14 @@
+### OOP
+composition : combine classes, unlike inheritance get from a base class
+    example -> 
+abstraction : exposing only the relevant details
+    example -> abstract class, interface  
+encapsulation : sensitive data hidden 
+    example -> private, get, set
+inheritance : reuseability of code
+    example -> class inheritance 
+polymorphism : one name, many forms
+    example -> Overloading, overriding and dynamic method binding 
+instance : object is called instance sometimes
+
+

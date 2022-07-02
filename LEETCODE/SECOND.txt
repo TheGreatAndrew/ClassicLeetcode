@@ -1,5 +1,7 @@
 ############### PYTHON
 ### GENERAL
+technique
+    how to pass list to a function, but only deepcopy() style 
 zip() : pair elements in same position in 2 list
 hash() : 
 sign = [-1, 1][ss=="+"] -> same as sign = 1 if ss=='+' else -1
@@ -53,6 +55,7 @@ eval()
 shadow copy and deep copy 
 deep copy : change to 2nd do not reflect on original
 shadow copy : 
+shallow list -> 
 
 
 ### STAR *

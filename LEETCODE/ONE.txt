@@ -730,6 +730,24 @@ https://leetcode.com/submissions/detail/673764853/
 https://leetcode.com/problems/subsets/ do it myself cascading, 
     https://leetcode.com/problems/subsets-ii/discuss/30305/Simple-python-solution-(DFS) DFS without using Set
 
+https://leetcode.com/problems/n-queens/ do it myself. first hard problem.
+    how to do ->
+        recursive backtrack 
+        when place a Queen, mark all 'attacked path' as forbidden. continue doing that 
+    https://leetcode.com/problems/n-queens/discuss/19810/Fast-short-and-easy-to-understand-python-solution-11-lines-76ms
+        what's cool -> check diagonally 
+        how to do ->
+            TODO 
+            read the comment 
+            we are checking previous diagnoally, so check 2 slopes left up -1 and right up +1 
+            
+
+            p + q same as y + x = b
+            p -> row number 
+            q -> column number 
+            xy_dif -> 
+
+
 
 
 ############### BITMASK and BIT MANIPULATION 

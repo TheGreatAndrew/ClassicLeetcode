@@ -1,0 +1,301 @@
+### Sliding Window
+# when -> subarray in array satisfying some conditions
+# how -> window resize and move that window
+# subset of DP 
+# https://medium.com/leetcode-patterns/leetcode-pattern-2-sliding-windows-for-strings-e19af105316b
+# question 1 -> calculate firstWindow, then move forward. Instead of brute force. 
+
+# https://leetcode.com/problems/minimum-window-substring/ Counter(t). get first window satisfys condition, then resize, then move
+
+
+### leetcode random
+# prefix sum : is when i is sum of all previous index i-1,i-2,...
+# https://leetcode.com/problems/k-closest-points-to-origin/discuss/1578232/All-possible-3-Python-solutions-%2B-interviewer-expectations heap, quick select
+
+
+### rebind
+# assign (in other languages) : assign 5 to variable a -> variable b is a different box
+# name/ identifier (in Python) : variable a, b bound to same object. can reassign
+# assign : var will refer to another object value. assignment never copies value
+# assign/ binding/ reassign/ rebinding
+# Immutable values : numbers, strings, and tuples -> it doesn’t change, it creates a new value 
+# Mutable : the rest, including lists, dicts, and user-defined objects
+# assignment for immutable values will return new value, so there won't be any surprise
+
+
+### function 
+# default paramter values -> function default value is evaluated at function definition time, not everytime you call a function -> solution is to create initial value inside function at runtime
+# argument are passed by assignment
+    # mutable : can mutate, can rebind but not outer scope
+    # immutable : can rebind but not outer scope  
+
+
+### 4 collection data types
+# List is a collection which is ordered and changeable. Allows duplicate members.
+# Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+# Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+# Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+
+### lambda 
+# lambda : small anonymous function 
+
+
+#### WERID CODE
+# https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/discuss/64963/3-lines-with-O(1)-space-1-Liners-Alternatives
+root = (root.left, root.right)[p.val > root.val]
+
+# check if any items in the list is True
+mylist = [False, True, False]
+x = any(mylist)
+
+# operators
+print(5/2 == 2.5)
+print(5//2 == 2)
+print(5)  
+
+
+
+
+##### BITE 
+# x, y = oldX, oldY
+    # no need for holder 
+
+# * asterisk 
+# is multiply list, unpacking list, *args for any arguments
+ 
+# queue = collections.deque([(root)])
+# queue = collections.deque()
+# queue.append(root)
+
+#### SPEED
+# https://leetcode.com/problems/3sum/discuss/725950/Python-5-Easy-Steps-Beats-97.4-Annotated set is faster and itertools
+
+
+
+
+
+
+# https://www.geeksforgeeks.org/analysis-of-different-sorting-techniques/ remember this
+# buble sort, insertion sort -> worst O(n^2) when array is reversed sorted 
+# selection sort -> all O(n^2)
+# merge sort -> all O(nlogn), but space is n
+# heap sort -> all O(nlogn)
+# quick sort (divide conquer) -> 
+# radix sort -> nk
+# count sort -> n+k
+# bucket sort -> best n+k, worst nk if all elements n same bucket 
+
+
+# prepare mergesort, quicksort, insertionsort
+
+
+# quicksort
+# pick pivot random (but avoid first or last element), then left pointer-right pointer compare and switch place. then compare [0, pivot] [pivot, n]
+# O(nlogn) go through n element, with logn swap
+
+# memoization top-down
+# recursion
+# Generally, the bottom-up approach uses the tabulation technique, while the top-down approach uses the recursion (with memorization) technique.
+# when to use -> max/ min counting quantities 
+
+# tips on how to deal with it
+# DP is simply optimization technique to solve subproblem, and to store result
+# step 1 -> changing params
+# step 2 -> recurrence relation
+# step 3 -> base cases
+# step 4 -> tabulation or memo
+
+
+# tabulation 
+# https://leetcode.com/problems/coin-change/discuss/2058537/Python-Easy-2-DP-approaches
+
+# memo 
+# https://leetcode.com/problems/coin-change/discuss/2058537/Python-Easy-2-DP-approaches
+
+# heap
+# insert -> insert next element top-bottom, left-right. then heapify up
+# pop -> pop min root, swapped with last added element. then heapify down
+# heapify -> bubble up until parent is no longer smaller. or bubble down the element 
+# can be array  
+
+# https://stackoverflow.com/questions/38806202/whats-the-time-complexity-of-functions-in-heapq-library speed
+# https://leetcode.com/problems/k-closest-points-to-origin/solution/
+    # https://leetcode.com/problems/k-closest-points-to-origin/discuss/294389/Easy-to-read-Python-min-heap-solution-(-beat-99-python-solutions-) redo
+
+
+### topological sort
+# topological sort
+    # topological sorting is only for Directed Acylic Graph (directed and no cycle)
+    # topological print nodes that come first, the first vertex is always a vertex with no incoming edges
+    # purpose -> schedule system where first task comes before second task
+    # how -> temporary stack, a vertex is pushed into the stack when all of its adjacent vertices (and their adjacent vertices and so on) are already in the stack
+# https://leetcode.com/problems/minimum-height-trees/ topological. very short buildGraph
+    # centroids of the circle, i.e. nodes that is close to all the peripheral nodes (leaf nodes).
+    # step base cases input only 2 nodes 
+    # step 1 -> get all leaves
+    # step 2 -> queue until only 2 nodes left. remove leaf from adjancency list (bi-directional). add new leaf.
+    # 
+
+# bfs
+# https://leetcode.com/problems/01-matrix/ bfs, matrix 
+# https://leetcode.com/problems/rotting-oranges/ bfs, materix
+    # thought process 
+    # rottenQueue collect rottens, freshSet for disconnect graph
+    # second attempt -> for _ in range(len(q)): is for starting all rottens  
+# https://leetcode.com/problems/max-area-of-island/
+    # solved in 10 minutes
+
+
+# dfs
+# https://leetcode.com/submissions/detail/648109742/ dfs, matrix
+    # first attempt : dfs inside function, and grid doesn't change so grid[r][c] = '0' doesn't maintain 
+    #   
+# https://leetcode.com/problems/course-schedule/ dfs, matrix
+# https://leetcode.com/problems/word-search/ dfs, matrix
+# why 'if not dfs' is more optimized -> 
+
+
+# DFS
+# https://structy.net/problems/undirected-path DFS, graph, adjacency list 
+# https://leetcode.com/problems/accounts-merge/ DFS, graph, adjacency list 
+# https://leetcode.com/problems/pacific-atlantic-water-flow sea inward, need to redot
+    # https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/543988/Easy-understand-DFS-solution-beat-97
+    # my solution brute force, check each coor to see if it can reach both oceans
+    # better solution is from water to land
+    # step 1 -> from 4-sides of seaside, dfs all possible coor where seaHeight < coorHeight
+    #  
+
+
+# BFS
+# https://leetcode.com/problems/word-ladder/discuss/346920/Python3-Breadth-first-search
+    # step 1 -> build "h*t" adjacency list
+    # step 2 -> normal BFS 
+
+
+# most-general guide
+# bfs : queue 
+# dfs : recursion. iterative stack
+# graph : adjancency list. visited set().
+# matrix : 4-directions
+# binary tree : root, left, right
+
+### all graphs
+# https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
+# Dijkstra's algorithm: Is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks
+# Union–find data structure or disjoint-set data structure or merge–find set, is a data structure that stores a collection of disjoint (non-overlapping) sets. Equivalently, it stores a partition of a set into disjoint subsets.
+# minimum spanning tree (MST) : is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
+# Topological sort : is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.
+# Bellman Ford : Is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph.
+# Floyd Warshall : Is an algorithm for finding shortest paths in a directed weighted graph with positive or negative edge weights.
+# Eulearian Path : Is an algorithm that finds a path that uses every edge in a graph only once.
+
+# graph build graph
+def buildGraph() : 
+    adjList = {i:[] for i in range(n)}
+    for start, end in edges:
+        adjList[start].append(end)
+        adjList[end].append(start)
+
+# graph bfs 
+# https://leetcode.com/problems/clone-graph/discuss/494246/Python-Simple-BFS-and-DFS-with-detailed-explanation
+
+# graph dfs recursion or stack
+# https://leetcode.com/problems/clone-graph/discuss/494246/Python-Simple-BFS-and-DFS-with-detailed-explanation
+
+    
+
+# matrix bfs 
+def numIslands(self, grid: List[List[str]]) -> int:
+        if not grid: return 0
+        row, col = len(grid), len(grid[0])
+        islands = 0
+        for i in range(row):
+            for j in range(col):
+                if grid[i][j] == '1':
+                    q = collections.deque([(i, j)])
+                    grid[i][j] = '2'
+
+                    while q:
+                        x, y = q.popleft()
+                        for dx, dy in (0, 1), (0, -1), (1, 0), (-1, 0):
+                            xx, yy = x+dx, y+dy
+                            if 0 <= xx and 0 <= yy and xx < row and yy < col and grid[xx][yy] == '1':
+                                q.append((xx, yy))
+                                grid[xx][yy] = '2'
+                    islands += 1            
+        return islands
+
+# matrix dfs
+class Solution:
+    def dfs(self, grid, r, c):
+        grid[r][c] = 0
+        lst = [(r-1, c), (r+1, c), (r, c-1), (r, c+1)]
+        for row, col in lst:
+            if row>=0 and col>=0 and row<len(grid) and col<len(grid[row]) and grid[row][col] == "1" :
+                self.dfs(grid, row, col)
+    
+        
+    def numIslands(self, grid: List[List[str]]) -> int:
+        islands = 0
+        for r in range(len(grid)):
+            for c in range(len(grid[r])):
+                if grid[r][c] == '1':
+                    self.dfs(grid, r, c)
+                    islands +=1
+        return islands
+
+# matrix stack
+def numIslands(self, grid: List[List[str]]) -> int:
+        visited = set()
+        islands = 0
+        for r in range(len(grid)):
+            for c in range(len(grid[0])):    
+                if (r,c) in visited or grid[r][c] == '0':
+                    continue	
+                islands += 1
+                stack = [(r,c)]  
+                while stack:       
+                    newR, newY = stack.pop()        
+                    if 0 <= newR < len(grid) and 0 <= newY < len(grid[0]) and grid[newR][newY] == '1' and (newR,newY) not in visited:
+                        visited.add((newR,newY))
+                        stack.append((newR+1,newY))
+                        stack.append((newR-1,newY))
+                        stack.append((newR,newY+1))
+                        stack.append((newR,newY-1))
+        return islands
+
+
+# topological sort
+# https://leetcode.com/problems/minimum-height-trees/ not basic, so don't include full code
+
+# Height: Imagine measuring a person's height, we do it from toe to head (leaf to root)
+# Depth: Imagine measuring depth of a sea, we do it from earth's surface to ocean bed (root to leaf)
+# Level : 
+
+# depth first search : use stack (recursion stack, or stack)
+    # inorder traversal (Left-Root-Right)
+    # preorder traversal (Root-Left-Right)
+    # postorder traversal (Left-Right-Root)
+    # best for path finding, building path, determing path
+# breath first search (level order traversal) : use queue 
+
+
+#dfs 
+# https://structy.net/problems/depth-first-values why '*', basic dfs
+# https://structy.net/problems/max-root-to-leaf-path-sum sum of path is root.val
+# https://leetcode.com/problems/diameter-of-binary-tree/ do 2 tasks inside recursion
+# https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree interesting recursion 
+# https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ medium but actually hard. redo
+# https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ hard but actually medium. how to build a binary tree.
+    # https://www.youtube.com/watch?v=u4JAi2JJhI8
+    # 
+
+
+#bfs
+# https://structy.net/problems/breadth-first-values basic bfs
+# https://leetcode.com/problems/invert-binary-tree/ bfs 
+# https://leetcode.com/problems/balanced-binary-tree/ recursion
+# https://leetcode.com/problems/invert-binary-tree/submissions/ my two submission has different speed
+
+
