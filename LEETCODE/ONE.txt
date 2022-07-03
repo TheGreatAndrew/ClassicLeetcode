@@ -239,7 +239,6 @@ patterns
     fib
     1D dynamic programming 
     2D dynamic programming
-    greedy
     Minimum (Maximum) Path to Reach a Target
         min to reach a target -> Coin Change
     Distinct Ways : distinct ways to reach target -> Unique Path 
@@ -299,7 +298,11 @@ https://leetcode.com/problems/race-car/
 
 
 ### greedy
-a
+guide  
+    dp use previously computed results, greedy don't
+
+
+
 ### 0-1 knapsack either pick or don't pick
 https://leetcode.com/problems/maximum-profit-in-job-scheduling/ binary search with dynamic programming knapsack bounded. 
     # https://leetcode.com/problems/maximum-profit-in-job-scheduling/discuss/996255/Python-using-DP-%2B-Binary-Search-(not-using-bisect-built-in)
@@ -511,7 +514,52 @@ https://leetcode.com/problems/pacific-atlantic-water-flow/
         lesson -> with dfs, we don't need to worry about which row, column comes first 
         
 ############### Dijkstra's algorithm
+### guide 
+Dijkstra's algorithm : shortest path from one node to every other nodes  
+    step 1 -> priority queue with distance_from_source, and node 
+    step 2 -> init distance to infinity 
+    step 3 -> pick node with smallest distance, consider its neighbours
+/network-delay-time uses all 3 patterns 
 https://leetcode.com/list/53js48ke/ 
+https://www.youtube.com/watch?v=XB4MIexjvY0
+    Dijkstra is greedy
+    can work on directed, undirected graph 
+    relaxation : update vertex's cost 
+    also work with negative weights
+
+
+### general 
+https://leetcode.com/problems/network-delay-time/solution/
+    approach 1 -> dfs. 
+    approach 2 -> bfs queue. 
+    approach 3 -> priority queue. Dijkstra.
+        TODO 
+        time -> O(N+ElogN)
+        space -> 
+
+
+
+############### Bellman-Ford
+### guide 
+Bellman-Ford algorithm
+    similar to BFS 
+why use Bellman-Ford -> because it has at most 'k' stops
+speed -> O(Edges*k)
+it can deal with negative weights
+
+### general
+https://leetcode.com/problems/cheapest-flights-within-k-stops
+    https://www.youtube.com/watch?v=5eIK3zUdYmE 
+        what's cool -> traverse graph without using adjancency list or neighbours
+        how to do -> 
+            have prices[] and temp[]
+            first layer k=0, prices[B] is infinity, temp[B] is 100. We still use infinity so temp[C] will have the bad 500 value
+            update prices[] with temp[]
+            second layer k=1, go all nodes of the graph again, this time prices[B] = 100 so we use that to calculate temp[C] = 200
+        time -> 
+            with k stops. 
+
+
 
 
 
@@ -708,6 +756,14 @@ https://leetcode.com/problems/top-k-frequent-elements/ do it myself
 ### guide 
 zero padding : can't be just 1, has to be 0001
 backtracking is about exploring all possible outcomes, if the outcome is not desirable we go back
+steps to solve pattern ->
+    /subset has great backtracking solution
+    choose -> recursive what 
+    constraint -> 
+    goal -> 
+https://www.geeksforgeeks.org/backtracking-introduction/
+    back tracking algorithm is not as good as DP or Greedy, but there are cases when backtracking is great 
+    can be used for Knapsack problem
 
 ### general 
 https://leetcode.com/problems/combination-sum/discuss/16510/Python-dfs-solution.
@@ -715,6 +771,7 @@ https://leetcode.com/problems/combination-sum/discuss/16510/Python-dfs-solution.
     how to do ->  
         backtracking - we need to explore all possibilities since they are no limit, we don't need to find min/max, and we can use 'input' multiple times
         just run it until 'target' is negative, that's wrong, if 'target' == 0 then add to 'result'
+
 
 https://leetcode.com/problems/subsets/solution/
     approach 1 -> cascading. for every new number. add all new number to all previous list. 
@@ -737,15 +794,35 @@ https://leetcode.com/problems/n-queens/ do it myself. first hard problem.
     https://leetcode.com/problems/n-queens/discuss/19810/Fast-short-and-easy-to-understand-python-solution-11-lines-76ms
         what's cool -> check diagonally 
         how to do ->
-            TODO 
+            TODO : repeat learn 
             read the comment 
-            we are checking previous diagnoally, so check 2 slopes left up -1 and right up +1 
-            
-
-            p + q same as y + x = b
+            recursively calculate board, each row have one, check for column/left diagonal/ right diagnoal -> build board later
+            we are checking previous diagonally, so check 2 slopes left up -1 and right up +1 
+            p + q same as y + x = b, look for b (y-intercept) cause we have m (slope)
+            slope m is going up +1 or down -1
             p -> row number 
             q -> column number 
-            xy_dif -> 
+            xy_sum -> 
+            xy_dif ->
+    https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/ 
+        how to do ->
+            backtrack
+https://leetcode.com/problems/palindrome-partitioning
+    how to do -> backtracking with splicing [start:end] and get all possible combination of substrings 
+    my try -> i can think of backtracking, even backtracking with DP. But my code is wrong 
+    https://leetcode.com/problems/palindrome-partitioning/solution/
+        approach 1 -> backtracking and DFS. same concept with mine.
+            time complexity -> 
+                total O(N*2^N)
+                N is length of string
+                O(2^N) for worst case keep having palindrome tree
+                O(n) to generate each substring 
+        approach 2 -> backtracking with Dynamic Programming. instead of isPalindrome(), we use DP() for palindrome 
+            end - start <= 2 is ...
+    ALL SUBMISSIONS 
+        recursive without backtracking -> https://leetcode.com/submissions/detail/736764814/
+        recursion with backtracking -> 
+        recursion with DP https://leetcode.com/submissions/detail/736785203/ 
 
 
 

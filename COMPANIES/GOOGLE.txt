@@ -28,29 +28,6 @@ system
     internet 
     and more 
 
-https://www.teamblind.com/post/LeetCode-Google-Interview-Prep-in-2022-kKdpN0F7
-    a
-
-
-### google technical interview  
-https://leetcode.com/discuss/interview-question/2206756/google-phone-technical-interview-first-round-45-mins-us-2022 phone, L3
-    string processing 
-    a bit of math 
-
-https://leetcode.com/discuss/interview-question/1478198/google-phone-interview phone, L3
-    one question 
-
-https://leetcode.com/discuss/interview-question/1293144/f-me-interview-question-from-failed-google-phone-screen phone 
-    very niche quesiton  
-
-https://leetcode.com/discuss/interview-experience/1724410/google-jan-2022 all 
-    6 months to prepare leetcode 
-
-
-
-
-
-
 
 
 ### google tips 
@@ -60,7 +37,6 @@ computational complexity, improving later is valuable
 "You won't be expected to answer questions requiring some obscure and highly domain-specific algorithm."
 simple, correct input. test boundary input. malformed input 
 best practice -> explain thought, open-ended question have to verify, practice on whiteboard 
-
 
 
 https://www.youtube.com/watch?v=XOtrOSatBoY
@@ -87,5 +63,36 @@ https://leetcode.com/discuss/interview-experience/1724410/google-jan-2022
 https://leetcode.com/discuss/interview-question/1718834/Google-Interview-question-2022
 https://leetcode.com/discuss/career/368612/Folks-who-cracked-google-what-of-LC-hard-problems-were-you-able-to-solve-on-your-own
 https://leetcode.com/discuss/interview-experience/1737487/Google-or-L3-ML-SWE-or-Mountain-View-or-Feb-2022-Offez
+https://www.youtube.com/watch?v=Iz2pxCHcNkA&t=549s
+    45m-1 hour discuss resume, behavioral, coding
+    1-2 coding questions
 
 
+
+
+### google technical interview phone 
+https://leetcode.com/discuss/interview-question/2206756/google-phone-technical-interview-first-round-45-mins-us-2022 phone, L3
+    string processing 
+    a bit of math 
+
+https://leetcode.com/discuss/interview-question/1478198/google-phone-interview phone, L3
+    one question 
+
+https://leetcode.com/discuss/interview-question/1293144/f-me-interview-question-from-failed-google-phone-screen phone 
+    very niche quesiton  
+
+
+https://leetcode.com/discuss/interview-question/2129259/Google-or-Screening 
+
+
+### google technical interview onsite 
+
+https://leetcode.com/discuss/interview-experience/1724410/google-jan-2022 all 
+    6 months to prepare leetcode 
+
+https://leetcode.com/discuss/interview-question/2220965/Google-Onsite-2022-USA-or-L3-Interview-questions-%2B-discussion 
+    binary search 
+
+https://www.teamblind.com/post/LeetCode-Google-Interview-Prep-in-2022-kKdpN0F7
+    GnXq81 -> read advices 
+    BenP11 -> Google loves bfs, dfs, backtracking, greedy.

@@ -1,0 +1,42 @@
+### general
+test build deploy
+Continous Integration : commit code to a shared repo frequently
+work flow 
+    commit codes with CI 
+    CI Server notifies if it's success or fail
+    avoid git merge hell
+Github Actions : automate CI services 
+work flow 
+    Github Actions use deploy.yml to detects changes 
+    it will run on Linux container 
+    build steps : get codes, set up, run build deploy
+Docker : package software into containers
+    Docker file (Dockerfile): how to build an image. Setup environment, image 
+    Docker image
+    Docker container 
+virtual machine : bulky and slow
+container : conceptually similar to virtual machine with 1 key difference. Virtual machine virtualize software, containers only virtualize OS. All apps (containers) run in shared kernel
+image : snapshot of your software and dependencies. Images is immutable, and can be use for multiple containers 
+Kubernetes : manage and automate containerized workloads on the cloud 
+    Kubernetes is like a conductor, manage Containers 
+    can auto-heal 
+    cluster : a system that is deployed on Kubernetes
+    Control Plane : brain of operations
+    ETCD : Kubernetes's kye-value database 
+    nodes : worker machines 
+    each node runs a kubelet, tiny application to communicates back with Control Plane 
+    each node has multiple Pods, which is smallest deployable unit
+    Kubernetes do networking, secret management and persistence storage 
+    yaml [Objects]: describe desired state of your Cluster 
+    
+
+
+
+
+real-life example
+docker
+Jenkins
+Kubernetes
+CI/CD:
+advanced
+
