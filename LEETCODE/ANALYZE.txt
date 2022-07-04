@@ -3,8 +3,3 @@ https://www.reddit.com/r/cscareerquestions/comments/8aofxg/big_4_discussion_apri
 https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly#:~:text=O(log%20n)%20intuitively%20means,com%2Fquestions%2F471199%2F%E2%80%A6
 
 
-### how to study
-https://www.youtube.com/watch?v=SVvr3ZjtjI8
-    https://docs.google.com/spreadsheets/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/edit#gid=0
-    https://leetcode.com/discuss/interview-question?currentPage=1&orderBy=hot&query=
-    memorize patterns, memorize 1-2 sentences 

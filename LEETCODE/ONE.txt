@@ -143,8 +143,10 @@ https://leetcode.com/problems/add-two-numbers/
 
 ############### TWO POINTERS 
 ### 2 pointers 
-https://leetcode.com/problems/container-with-most-water/
-    how to do -> 
+https://leetcode.com/problems/container-with-most-water/ do it myself 
+    how to do -> two pointers start, end. We are greedily getting max so the Bar smaller will be removed
+    my try -> hard to deal with edge case where same bar length -> actually that edge case doesn't matter cause we will always use Lesser Height Bar to calculate
+    what's interesting -> Water 
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
     # thought process
     # fast reaches the end
@@ -153,11 +155,41 @@ https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 https://leetcode.com/problems/find-all-anagrams-in-a-string/
 https://leetcode.com/problems/minimum-window-substring/ hard
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-    left buy pointer, right sell pointer
-https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1074783/Python-Interview-Thought-Process%3A-O(2n)-greater-O(n)
-    how to do -> base case get max window. If no duplicate, increase MAX. If duplicate, remove from FIFO until duplicate is out.
+    explain -> we only need to buy once, and sell once 
+    how to do -> discuss/884314 is the standard state machine 
+    https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/1735550/Python-Javascript-Easy-solution-with-very-clear-Explanation
+        how to do -> 2 pointers. left sell, right buy. if sell > buy, then we move left 
+    https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/39049/Easy-O(n)-Python-solution
+        how to do -> min_price is the lowest possible buying price in the array BEFORE price
+    https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/884314/Python-3-greater-Very-simple-solution.-Explanation-added 
+        how to do -> a little like state machine 
+    https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/273395/Python-Greedy
+        how to do -> a little like state machine too
+    https://leetcode.com/problems/best-time-to-buy-and-sell-stock/discuss/1144842/Several-solutions-in-Python
+        kadane's algorithm
 
 
+https://leetcode.com/problems/longest-substring-without-repeating-characters/ do it myself
+    how to do -> first get window, then keep moving/ expanding window 
+    speed -> get all char O(n), worst case we have to pop n-1 character. And we only pop it once so it's O(2n)
+    space -> worst case set is O(n)
+    what's cool -> i don't need 'queue', instead i use 'firstIdx'
+    https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1074783/Python-Interview-Thought-Process%3A-O(2n)-greater-O(n)
+        how to do -> same idea, but better. base case get window. use queue to keep popping until same. 
+
+https://leetcode.com/problems/permutation-in-string do it myself 
+    my try -> did not regconize this is 'sliding window' so have a lot of troubles with edge case 
+    speed -> first dictionary is O(s1), second dictionary is O(s2), and we have to keep compare dicitonary and ...
+    space -> 2 dictionary so O(s1+s2)
+    https://leetcode.com/problems/permutation-in-string/solution/
+        approach 4 -> 
+            what's cool -> store occurences in array s1map[s1.charAt(i) - 'a']++;
+            how to do -> instead of using dictionary, we store occurences in array. 2 loop, for each word, we loop s1 length 
+        approach 5 -> sliding window ...
+        approach 6 -> optimized sliding window ... 
+
+
+            
 
 
 
@@ -689,14 +721,34 @@ can implemented with list, collections.deque, queue.LifoQueue
 ### general
 https://leetcode.com/problems/valid-parentheses do it myself
 ### bar
-https://leetcode.com/problems/trapping-rain-water hard
-    # approach 1 : for each element, left side minus the element's height
-        # do it for right side too. and min them.
-    # approach 2 : DP version of approach 1,  
-    # approach 3 : Stack. add bar to the front, smaller or equal bar doesn't matter, if the latest bar is bigger than first bar. Then add to water.
-    # approach 4 : 2 pointers. 
-    # approach 5 : https://leetcode.com/problems/trapping-rain-water/discuss/17528/Easy-to-understand-Python-10-line-60ms-O(n)
-        # over-fill left max, then drain on right min
+https://leetcode.com/problems/trapping-rain-water do it myself, second hard problem I solved
+    my try : monotonic stack with first bar as max. loop all height. At the end, when first bar is actually max then we do more computation.
+        speed : O(n) + O(n)
+    approach 1 : brute force for each bar, check with both sides 
+        speed O(n^2) cause traverse*traverse
+    approach 2 : find max height from left-end view, right-end view. Then use min()
+        speed O(n) cause 2 for-loop, then last min for-loop
+        space O(n)
+    approach 3 : Stack  
+        monotonic decreasing bar 
+        if newBar is bigger. We have 3 vairables (newBar as bound right, newly popped stack waterArea, and top of the stack as bound left)
+        distance * min(bound right, bound left)
+        then we add newBar to stack 
+        speed -> O(n)
+    approach 4 : 2 pointers
+        for any Bar, there are always 2 Borders max_left and max_right
+        if we are going from left-to-right, then we alwaysk now what is max_left 
+        vice versa for right-to-left 
+        but we have height[left] < height[right] : left_pointer += 1
+        for example -> if last Bar is highest, then max_right is last bar and we will keep moving left_pointer
+        speed -> O(n) cause single iteration
+    approach 5 : https://leetcode.com/problems/trapping-rain-water/discuss/17528/Easy-to-understand-Python-10-line-60ms-O(n)
+        over-fill left max, then drain on right min
+    https://leetcode.com/problems/trapping-rain-water/discuss/1005489/Python-Two-pointer-approach-with-explanation-O(n)-time-O(1)-space
+        approach 3 but in Python
+
+
+
 https://leetcode.com/problems/largest-rectangle-in-histogram/
     # approach 1 Stack https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/452612/Thinking-Process-for-Stack-Solution
         # why Stack -> because bars are in order

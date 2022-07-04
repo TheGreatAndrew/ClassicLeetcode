@@ -84,11 +84,17 @@ explained
 
 
 ### TODO 
-bit manipulation
+@standardquestion 
+    leave it here cause these are topics i stuck on, it's easier to manage, and not get lost 
+    bit manipuation -> 
+    state machine -> 
+    sliding window -> https://leetcode.com/problems/longest-substring-without-repeating-characters/
+    serialize tree ->
+    serialize/ decode -> 
+
+
 Python OOP 
 special graph -> learn graph algo
-python function
+python lambda function
 geometry or segment trees
-serialize tree 
-each day 10 questions 
 This analysis is outside the scope of this article, but it turns out this is the n-th Catalan number 
