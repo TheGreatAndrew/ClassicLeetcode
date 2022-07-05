@@ -1,0 +1,228 @@
+############### Flutter TOPICS 
+### General  
+only snapshots() provide realtime change -> Stream
+AsyncSnapshot<QuerySnapshot> -> snapshot.data!.docs.map(doc=>doc.data()! as Map<String, dynamic>)
+listen() and includeMetadataChanges
+querySnapshot.docs.forEach((doc) => doc[‘name’])
+documentSnapshot even if no document, snapshot still return, so check
+documentSnapshot.data() return Map<String, dynamic>
+FieldPath helps with nested fields, rather than keep get()
+startAt() or startAtDocument() for start/stop querying location
+withConverter -> to help type-safe
+bytes.buffer.asUint8List() for image
+Transactions : only write at the end, when have latest data. If the value changes whilst the transaction is executing, it will retry, ensuring the value on the server is used
+batch write : multiple write operations as a single batch 
+offline -> enablePersistence. cache size. enableNetwork.
+inflate
+runtimeType
+a var can store anything, its runtimeType helps us find out what var stores
+FutureBuilder : one time. 
+StreamBuilder : continuous. 
+application gets compiled using the arm C/C++ library, making it closer to machine code and enabling it to run more quickly.
+The Flutter application is built directly into the machine code, which eliminates any performance issues associated with the interpretation process
+Flutter has 3 layers : framework, engine, embedder
+3 modes : debug, profile, release mode
+widget
+widget tree : root is also widget
+stateless : reredner externally
+stateful : have its state 
+app state : can shared state across app
+ephemeral state : for single widget
+Key : for identifier, and for preserving the state of statefull widgets
+Container : manager multiple widgets
+Flutter Inspector : debug layout issue
+Ticker : to tell how often Flutter is refreshed
+Mixins : for multiple inheritances
+hot reload : to update changes, state is not destroyed
+hot restart : state is destroyed
+BuildContext : are used to identify widget. Each BuildContext per widget. Also for talking to parent.
+pubspec.yaml : like package.json
+tween animation : the shortened version of in-between animation is 
+Flutter Provider : manage state
+null-aware operator
+??= if it’s null, then assign
+?? return whichever is not null
+?. chain check for null
+
+### Question 
+closure
+avoid rebuild
+const
+async_memoizer
+separate into different widget, so setState doesnt effect
+didUpdateWidget is called when the widget changes, you can compare the old and new widget to determine if re-loading something is necessary
+State object
+Context object
+hat make a StatefulWidget rerender -> 
+if Future and State is defined before build(), how will it know update
+Positional arguments must occur before named arguments -> (_, index) uses the index also 
+Navigator operation requested with a context that does not include a Navigator -> link wrong BuildContext 
+'Future<void>', is a potentially non-nullable type -> return null but it needs a void
+non-nullable -> can’t have null unless you specify 
+The following LateError was thrown building ImageCapture -> it’s late and non-nullable already, i can’t check if null
+
+### SMALL OTHERS  
+    didUpdateWidget
+    https://api.flutter.dev/flutter/widgets/State/didUpdateWidget.html 
+    if same runtimeType and key, update to refer to new widget
+
+    Key
+    https://api.flutter.dev/flutter/widgets/Widget/key.html
+    if same runtimeType and key is same, Element.update() for underlying element. If not, same 
+
+    StatefulWidget
+    https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html
+    when State changes, StatefulWidget calls setState
+    
+    BuildContext
+    https://api.flutter.dev/flutter/widgets/BuildContext-class.html
+
+    Navigation
+    push() create a Route 
+    Async
+    http.get returns a Future<http.Response>
+    Streams : stream of data in async
+    Broadcast Stream
+    Performance 
+
+
+    Scrolling
+    Sliver -> scrollable area for custom scrolling effect. Sliver widget is a slice of the viewport. We can implement all of the scrollable views, such as ListView, GridView using slivers.
+    Error
+    bottom overflow -> use SingleChild 
+    Assessment 
+    initState -> only called once when each State object is created
+    starting point -> main()
+    setState -> change state and schedule a ‘build’ for this State object -> update UI
+    CameraPosition -> target : LatLng
+    flutter doctor -> check setup
+    flutter analyze -> test the code
+    flutter pub upgrade -> update dependencies 
+    prevent OS instruction flutter -> SafeArea
+    IOS -> import 'package:flutter/cupertino.dart';
+
+
+    Builder
+    https://stackoverflow.com/questions/52249578/how-to-deal-with-unwanted-widget-build
+    build() needs to be pure, without side effects. Because many external factors can trigger rebuild
+    build() should not trigger an http call or modify any state
+    how to prevent rebuild
+    use const
+    closure
+    individual Stateful class
+    ValueListenableBuilder : listen particular value
+
+    interview questions
+    Sliver
+    SliverAppBar : for app bar
+    SliverList and SliverGrid for complex
+    SliverList : with SliverChildBuilderDelegate
+
+
+    Layout
+    AspectRatio : to ratio a child. put Expanded outside and AspectRatio must follow
+
+
+    Animation
+    TweenAnimationBuilder : in between. has begin and end. 
+    AnimationController : create custom animation, controller.dispose()
+    ListView
+    itemBuilder. separated. childrenDelegate.
+
+
+https://www.youtube.com/watch?v=rIaaH87z1-g
+Elements keep track widget, with a reference to that widget they represent. Elements from NodeTree.
+Element is just a type of BuildContext
+
+https://stackoverflow.com/questions/58371874/what-is-the-difference-between-didchangedependencies-and-initstate 
+didChangeDependencies : initState->context available->didChangeDependencies 
+
+
+
+firebase
+collection -> document -> key-value, subcollection, or object
+set() has more controls than add()
+QuerySnapshot -> is returned from collection query 
+snapshot : downloaded data
+passwordless login
+https://github.com/bizz84/firebase_auth_demo_flutter/blob/master/docs/sign-in-email-link.md 
+https://firebase.flutter.dev/docs/auth/usage/#email-link-authentication 
+verify send correct links -> 
+watch and receive link -> https://firebase.flutter.dev/docs/dynamic-links/receive 
+
+stream
+AsyncSnapshot : unchanging representation of latest communication
+https://medium.com/flutter-community/flutter-stream-basics-for-beginners-eda23e44e32f
+
+
+
+code error
+https://stackoverflow.com/questions/70315632/how-to-update-picture-in-storage-and-refresh-streambuilder-to-show-the-new-pictu
+maybe subscribe to Stream change, when it changed just loadImage() again 
+https://stackoverflow.com/questions/63192482/how-to-know-if-a-stream-has-changed-something-has-been-added
+https://stackoverflow.com/questions/63622284/is-there-a-way-to-get-notified-when-a-dart-stream-gets-its-first-result
+
+
+
+https://www.youtube.com/watch?v=vl_AaCgudcY 
+does Flutter run FIFO. So if the FutureBuilder is not done, the code stuck
+does Future updates if there are new changes -> 
+Flutter -> single-thread, reactive.
+isolate -> in other languages, threads share the same memory. in Flutter, threads has its own memory. Parent isolate can’t access child isolate.
+event loop -> single-thread, FIFO. 
+Future -> whenComplete() no matter value or error
+FutureBuilder -> auto rebuild when children completes. Future gives u one and stop
+Stream -> holds on to value until there is listener, and only one listener.
+Stream II -> continuous, more values. filter() distinct() consecutive same value. StreamController to c
+BroadcastStream
+async ->
+
+
+
+https://docs.flutter.dev/testing/common-errors
+overflow when -> a Col or Row has unconstrained child 
+overflow -> use Expanded or Flexible 	 
+
+https://www.youtube.com/watch?v=LnpGU8vj7TI complete, easy guide (unsuccessful IOS)
+Future<void> vs Future<null>
+Future<void> is better. 
+Cause User = Future<Null> successfully. And func(void argument) can take anything 
+void-checks lint check for null
+https://medium.com/dartlang/future-void-vs-future-null-whats-the-difference-84a42d616e7d // we have the clever option of making v
+null type
+fix -> async. throw ‘ ‘. if check null. init the value
+! guarantee not null
+
+
+https://medium.com/flutter-community/flutter-bloc-for-beginners-839e22adb9f5
+UI -> bloc -> data
+BlocProvider : provide and init Bloc
+RepositoryProvider : init Repository
+BlockConsumer : builder and listener for widgets
+BlockSelector : build based on state
+
+https://medium.com/flutter-community/simple-ways-to-pass-to-and-share-data-with-widgets-pages-f8988534bd5b
+pass through constructor. pass back through Navigator. InheritedWidget only one way. InheritedWidget and stream.
+
+Flutter & Firebase Course - Build a Full Stack Instagram Clone
+commands 
+flutter create flutter_project
+open -a simulator
+flutter run or Run Without Debugging
+flutter run -d chrome
+extension
+Pubspect Assist
+using firebase
+https://stackoverflow.com/questions/64037496/none-of-your-spec-sources-contain-a-spec-satisfying-the-dependencies-firebase 
+statelessW for shortcut
+
+
+
+############### Dart
+type safe. static type. 
+type annotations (type signature, declare types) are optional because of type inference
+‘dynamic’ type can be good for runtime 
+sound null safety -> they can’t be null unless you specify 
+Encoders and decoders for converting between different data representations, including JSON and UTF-8 
+Concurrent programming using isolates -> independent workers that are similar to threads but don’t share memory, communicating only through messages
+Dart includes both a Dart VM with just-in-time (JIT) compilation and an ahead-of-time (AOT) compiler for producing machine code.

@@ -1,0 +1,96 @@
+############### topics  
+race condition occurs when two or more threads can access shared data
+relational database 
+internet-focused network concepts & technologies such as DNS, BGP, routing tables, reverse proxies, IPv4/IPv6, TCP/UDP, TLS/HTTP/QUIC
+Scalability engineering
+Distributed systems
+static typing 
+thread, locking 
+Blob storage
+Amazon S3 
+web socket 
+sharding 
+replication
+auto scaling group : scale as needed 
+
+##### Content Delivery Network 
+CDN content delivery network : the first person watched it, CDN stores it locally, CDN routes to nearest nodes 
+https://www.youtube.com/watch?v=8zX0rue2Hic
+    Distributed File System 
+    Global Cache : global cache stores info, write once, read forever 
+    Distributed Cache : Distributed Consensus Paxos/ Raft 
+    single source of truth 
+
+
+### Database 
+https://www.youtube.com/watch?v=W2Z7fbCLSTw
+    00:45 Key-value -> redis, memcache
+        keep data on machine memory, most databases keep on the disk
+        very fast 
+        limited models 
+        best for -> cache, pub/sub, message queue
+    01:48 Wide Column
+        schemaless 
+        can't join
+        best for -> time-serise data, high-write low-read      
+    02:47 Document -> MongoDB, Firestore 
+        collection -> document -> key-value
+        schemaless
+        read fast write slow 
+        not ideal -> graph cause they usually need to 'joined'
+        best for -> general purpose 
+    04:05 Relational -> MySQL 
+        organize data in smallest forms
+        ACID compliance 
+    06:21 Graph -> GraphQL, DGraph 
+        best for -> recommendation system 
+    07:22 Search Engine -> elasticsearch 
+        best for -> search suggestion  
+    08:27 Multi-model
+        multi 
+
+
+
+############### OOP vs Functional
+OOP has state 
+language paradigm : remove and constraint some of our freedom 
+https://www.youtube.com/watch?v=wyABTfR9UTU
+structured programming : constraint the flow of control 
+function programming ->
+    constrains assignment, write code with no side effects (from input to output, no changing anything)
+OOP ->
+
+
+############### articles 
+5 Design Patterns Every Engineer Should Know
+    Singleton -> 1 instance. hard to reverting.
+    Facade -> abstraction. you can oversimplied, you have leaky abstraction. over-verticalization too specifics for a single use case.
+    Bridge/ Adapter -> interface DB, concrete DB
+    Observer -> publisher, subscriber.  
+Systems Design Interview Concepts (for software engineers / full-stack web)
+    load design 
+    -> for web server
+    distribute traffic to different services for throughput latency. NGNIX.
+    DNS load balancing -> one url has many IP addresses. Simple, but not many customizations
+    caching
+    -> image use CDN
+    database usually is the first to go down
+    in-memory cache doesn’t need to hit the disk at all
+    memcache. CDN content delivery file to cache static assets, HTML, Javascript, video
+    pool technique -> first time load slow, the after that all users in that area will be fast.
+    push technique -> push your files into CD
+    Amazon s3 
+    database schema
+    -> for database servers 
+    database indexes are important -> 
+    Slave-master replications 
+    -> for database servers
+    consistency -> while writing, we can also reading that info
+    database sharding
+    -> for writes
+    sharding database to multiple databases
+    vertical sharding -> user table, tweet table
+    horitonztal sharding -> single table in multiple machines
+    API design 
+    data transport mechanism -> JSON or protocol buffers
+    offline usage 

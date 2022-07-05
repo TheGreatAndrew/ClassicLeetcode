@@ -1,0 +1,25 @@
+Tips for negotiating your salary (from an ex-FAANG recruiter)
+salary expectation -> don’t give number/ range. “i’m curious, what’s the compensation band” or “this is really important, I will answer later”
+Cali or Seattle -> legally they must share minimum wage band
+if the recruit says salary -> ok “that’s a really good start”
+offer stage
+take this call to understand their philosophy. “I’m busy with prepping for coding interview. Could we go over the compensation struction and the perks and the benefits. Then we can take it from there”. 
+Wait one more. “Too many differen structures. Could you share number.”
+ask more benefit questions “how does bonus structure work”
+format
+email
+- Salary (Common)
+- PTO (Paid Time Off) (Common)
+- Remote Work (Common)
+- Signing Bonus 
+- Education Stipend
+- Flex Days 
+- Transportation Stipend 
+- Stocks as Bonus 
+
+
+How I Negotiated My $350k Facebook Offer (software engineer salary negotiation)
+better in coding interview -> better offer
+knowledge from levels.fyi
+competing offers
+never share your current compensation

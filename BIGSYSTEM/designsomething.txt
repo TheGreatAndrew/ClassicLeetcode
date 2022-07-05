@@ -1,0 +1,153 @@
+
+### exercise and case
+Design OOP 
+
+Google Advices
+    https://www.youtube.com/watch?v=Gg318hR5JY0 google
+    no coding 
+    time constraints 
+    "we're not looking for one specific answer"
+    design to scale -> is there a bottleneck. sharded large data set into multiple work machines 
+    latency, throughput, storage 
+    costs from operations -> read from disk, read from memory, LAn round-trip, cross-continental 
+    solution patterns -> sharding data, replication types, write ahead logging, separateing data and metadata storage, load distrubiton 
+    trade-offs
+    best practices -> 
+
+Design Reservation and Payment System for Parking Garage  
+    https://www.youtube.com/watch?v=NtMvNh0WFVM
+        API public endpoints 
+            /reserve with garage_id, start_end, end_time -> return spot_id, reservation_id 
+            /payment with reservation_id -> external Payment API 
+            /cancel with reservation_id
+        API internal endpoints 
+            /calculate_payment with reservation_id 
+            /freespots
+            /allocate_spot
+            /create_account email, hashed password, name and Social Media Login APIs
+            /login 
+        scale not much data to scale 
+        data schema 
+            reservation garage_id (foreign key), spot_id (foreign key), start (timestamp), end (timestamp), paid (bool)
+            garage zipcode (varchar) rate_compact rate_reg rate_large
+            spot garage_id vehicle_type (enum)
+                there is a trade-off when you use enum -> in Postgre once you have enum you can't never change it 
+            user email password (varchar note that this is probably SHA-256 hash)
+            vehicle user_id license vehicle_type (enum)
+        Design 
+            web and mobile and backend (PostgreSQL, third-party payment) 
+            read more than write -> read replicas for the DB 
+            we have read replicas -> so we have load balancer in-between to balance 
+            so Write to PostgreSQL 
+            and Read from 2 read replicas 
+            Strong Consistency over Eventual Consistency in this case 
+            trade-off will have higher latency when you have Strong Consistency 
+            Shared Read Replicas by Location 
+        Thoughts
+            explain your opinion on your choices 
+            people love people with opinions
+            say if you are not confident in some choice 
+
+
+My Coworking App
+    requirements 
+    client-side 
+    database schema 
+
+
+Facebook Messenger, Discord, Slack, Whatsapp
+    https://www.youtube.com/watch?v=uzeJb7ZjoQ4
+        Chat 
+            API server normal will have many unncessary requests
+            long polling -> server hold request, if data is available, then return result. A new request can come in -> better latency
+            web socket -> tcp protocol. built for chat.  
+            load balancer 
+            pub sub message queue : Message Service. each API server will 'publish' in the Message Service Queue, and subscribe to users it's connected to 
+        Database 
+            NoSQL, replication, sharding -> cassandra or hbase 
+            users -> username, lastActive (timestamp)
+            messages -> id, user, conversation, text, media_url 
+            conversations -> id, name
+            conversation_users -> conversation, userId 
+        Scale 
+            read through Cache so we can store in memory 
+            media -> Object Storage Service like Amazon S3 
+            media cache -> with CDN 
+            notification service -> third-party or mail service 
+            
+
+Tiktok
+    My Design 
+    Mobile App
+        a 
+    Functional  
+        Video -> NoSQL have a link to the video link. Store in Object Storage of Amazon s3. Cache CDN.
+    Schema 
+        Video -> title (string), url (video url), description (string), like (array of users id), commentId, timestamp
+        Comment -> commentId (string), authorId (string), timestamp
+    API
+        getVideo -> get from cache, if miss we go S3 
+    https://www.youtube.com/watch?v=Z-0g_aJL5Fw
+    Takeaway : ask lot of questions, use time to think, when answer can be vague 
+    Description
+        mobile app, video-sharing 
+        video feeds 
+        favorite, comment
+    Functional 
+        Upload video and text -> max 1 minutes long 
+        Video feed people you follow + trending -> 
+    Non Functional  
+        availablity -> 99,99 %
+        latency how quickly -> mobile devices can cahe a lot
+        scale -> a million daily active user 
+    Assumption
+        Videos 5MB * 2 = 10MB uploads 
+        User metadata 1K 
+    API 
+        uploadVideo upload video and metadata -> to relational and S3. When done 200 status back.
+        viewFeed get request -> preload videos to cache (Redis cache)
+        userActivity favorite video -> 
+    relational database   
+        Video - videoLink (videoLink stored in Blob store like S3), meta (string )
+        use relational -> more structured, user data objects, linking different tables -> can be more space, speed for specific queries 
+        noSQL -> good for unstructured (like log data). You don't join, but search per key data 
+        precache 
+        read heavy so read worker (read-only database)
+        relational write database -> relational read-only -> precache -> cache -> user 
+    scaling 10x traffic 
+        regions -> CDN 
+        latency -> auto scaling group, but it takes time to spin up 
+        database sharding to split the load between database 
+    schema
+        user video_link, meta, video_id, followings, likes 
+        user  
+    when asked if you like to improve, always say yes
+        redis clustering, queueing, analytics using nosql 
+
+
+
+Discord
+    https://www.youtube.com/watch?v=S3tLp_eKjbk bad video stop at 5
+    WebRTC is standard and free, vehicle for WebRTC is socket
+    TURN server 
+    Session Description Protocol -> to negotiate audio/ video info between peers
+ 
+Google
+    https://www.youtube.com/watch?v=q0KGYwNbf-0 stop at 4 
+    design global, fast code deployment System -> design a system that builds code into binary and deploy it globally 
+    2 parts building and testing 
+    
+
+Slack 
+    https://www.youtube.com/watch?v=WE9c9AZe-DY 1:50
+
+System Design Mock Interview: Design Instagram
+    scale -> how many data per year
+    data model -> draw database models
+    high-level components
+    Metadata DB (store references path to s3)
+    Object Storage (s3. store and replicate data). 
+    read-heavy -> replicate of databases. App Server (read from cache) and App Server (write to db)
+    cache (Redis)
+    load balancer -> figure which servers we want to access, and route us
+    Mobile Client 

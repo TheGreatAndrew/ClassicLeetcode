@@ -825,10 +825,6 @@ https://leetcode.com/problems/combination-sum/discuss/16510/Python-dfs-solution.
         just run it until 'target' is negative, that's wrong, if 'target' == 0 then add to 'result'
 
 
-https://leetcode.com/problems/subsets/solution/
-    approach 1 -> cascading. for every new number. add all new number to all previous list. 
-    approach 2 -> backtracking. for expanding length. we add remaining number, backtrack, then add remaining number
-    approach 3 -> Lexicographic (Binary Sorted) Subsets
 
 https://leetcode.com/submissions/detail/673764853/
     how to do ->
@@ -836,7 +832,10 @@ https://leetcode.com/submissions/detail/673764853/
         base case if len(permutation) == len(input) then we are good 
         add all numbers with Set
 
-https://leetcode.com/problems/subsets/ do it myself cascading, 
+https://leetcode.com/problems/subsets/ do it myself cascading
+    approach 1 -> cascading. for every new number. add all new number to all previous list. 
+    approach 2 -> backtracking. for expanding length. we add remaining number, backtrack, then add remaining number
+    approach 3 -> Lexicographic (Binary Sorted) Subsets
     https://leetcode.com/problems/subsets-ii/discuss/30305/Simple-python-solution-(DFS) DFS without using Set
 
 https://leetcode.com/problems/n-queens/ do it myself. first hard problem.

@@ -93,6 +93,12 @@ explained
     serialize/ decode -> 
 
 
+### HOW TO LEETCODE 
+don't solve new questions
+instead solve already did 150 questions and related questions and try to optimize/ memorize them 
+don't do systen, i did enough, only do system when have interview
+
+
 Python OOP 
 special graph -> learn graph algo
 python lambda function

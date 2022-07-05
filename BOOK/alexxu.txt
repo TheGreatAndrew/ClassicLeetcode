@@ -1,0 +1,21 @@
+### general
+Alex Xu Dive Into Design Patterns
+
+###chap 1 
+user -> DNA -> IP address -> HTTP requests to get data 
+Relational databases (SQL, relational database management system (RDBMS) -> 
+NoSQL -> 4 categories key-value stores, graph stores, column stores, and document stores -> 
+choose NOSQL when
+    Your application requires super-low latency.
+    Your data are unstructured, or you do not have any relational data.
+    You only need to serialize and deserialize data (JSON, XML, YAML, etc.).
+    You need to store a massive amount of data.
+vertical scailing : more power to 1 server 
+horizontal scailing : add more servers 
+load balancer : load balancer distributes traffic among servers that are defined in a load-balanced set
+database replication    
+    master database : for write 
+    slave databases : for read 
+    if master is offline, a slave will be promoted, it's complicated because the slave might not help enough info 
+
+// Considerations for using cache

@@ -1,0 +1,33 @@
+############### Typescript Questions
+a
+
+############### Typescript Topics
+javascript was not built for big applications. javascript is dynamically typed. 
+typescript is compile-time tool, so it adds zero cost to javascript. 
+tsc command will transpile ts to js
+3 primitive types.
+any type -> any 
+void type -> no type, can only be assigned null of undefined
+unknown type -> can assign anything to unknown.
+undefine -> when declared without init. can init with as null
+never type -> never return anything, maybe can have exception error. never type doesn’t return undefined
+var -> function-scope or global
+let -> block-scoped 
+object -> dictionary with {key: value}
+rest parameter and rest argument -> indefinite
+Symbols -> primitive type. unique.
+function overloads -> same function name, different params
+type inference -> var declared and init. we don’t need to declare type, it will use the init value as type
+contextual typing -> use the context to infer types. onSubmit(e => e.value), e is inferred
+noImplicitAny -> have error whenever code uses ‘any;
+interface -> custom type
+ts doesn’t need static -> since you don’t need class
+anonymous func -> unusually is for callback
+type assertion -> ‘as’ or ‘<>’
+strict null checks -> ts throws error if you try to use them when concrete type is expected
+triple-slashes directives -> contain a single XML statement. if at the top, it includes a file
+‘in’ operator -> to find if a property is in an object
+‘implement’ clauses -> class implements all interface’s things
+template literal style -> to create new string literal style
+class which inherits another class is called the derived class, and the class getting inherited is called the base class.
+ 

@@ -1,0 +1,121 @@
+Software Design Patterns (book)
+terms
+a
+
+SOLID Principles
+hardly any successful software uses all those 5
+Single Responsibility Principle
+class responsible for one thing, with hidden/ encapsulated logics
+Open/Close Principle
+a class is open for extends, but close for modification 
+final -> the class is no longer open
+Liskov Substitution Principle
+in subclass, when override a method. Extend the behavior rather than replacing with something else entirely. So subclass’s object can replace parent’s object without breaking client’s code
+has a checklist
+Interface Segregation Principle
+make your interfaces narrow enough, so that the client classes don’t need to implement the behaviors they don’t need
+Dependency Inversion Principle
+low-level class : basic engine
+low-level class depends on high-level 
+ 
+
+Creational Design Pattern
+creational design pattern -> object creation. help with resuablity. 
+
+Factory Method
+factory method
+interface [Interface] for superclass [Creator], and allows subclass [ConcreteCreator] to alter the type of objects [ConcreteProduct]
+[UIFrameWork] uses the new subclass instead of the default one -> create [UIRoundButtons] from base framework class, this will return [RoundButton]. While [UIFramework] will return Button 
+const factory = new ButtonFactory();
+const iosButton = factory.createButton(ios)
+const androidButton = factory.createButton(android)
+
+
+
+<>Abstract Factory
+produce families of related objects without specifying their concrete classes
+
+<>Builder
+rather than constructor, use construction method to add properties 
+myLunch().addMeat().addVegetable() 
+
+
+
+<>Prototype (clone)
+normally object inherits from class, but clone object from Object.create(oldObject). This is better for hierarchy, and flat prototype chain, which makes it easier to share functionalities  
+‘prototype’ in JS is its constructor
+
+
+
+<>Singleton
+class only has 1 object with global access point 
+
+Structural Design Pattern
+<>adapter
+convert the interface of one object so that another object can understand it
+<><>
+
+<>bridge
+split a closely related classes -> into two separate hierarchies abstraction and implementation
+
+<>composite
+let you compose objects to tree structure
+
+<>decorator
+wrapper object to wrap the objects, these wrappers contain the new behaviors
+
+<>facade
+the details of ElectricalSystem -> House simplified wrapper hide the details -> for the Client
+
+
+
+<>flyweight
+fit more objects into available RAM by sharing common state
+
+<>proxy (substitute) 
+create a proxy copy from the original, whenever the proxy is changed, the function with it is changed 
+
+Behavioral Design Pattern
+<>chain of responsibility 
+pass requests along chain of handlers
+
+<>command
+turn request into object with all info about the request, this wll add functionalities
+
+<>iterator
+to iterate a collections 
+
+
+
+<>mediator
+restrict direct communications between objects, and can only collaborate through mediator
+middleware 
+
+
+
+<>memento
+save and restore previous state of an object, without revealing the details
+
+<>observer
+a push system for subscription 
+tv1 = news.subscribe(i => console.log(I))
+
+<>state
+object alter its behavior when its internal state changes
+new HappyState()
+this.state.think()
+
+<>strategy
+
+
+
+<>Template method
+superclass defines skeleton, subclass can override it but not the structure
+
+
+
+<>Visitor
+ separate algorithms from objects, the objects are where they used to operate
+
+
+

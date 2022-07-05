@@ -1,0 +1,43 @@
+############### REACT QUESTIONS 
+
+
+############### REACT TOPICS  
+### how React works 
+realDOM -> manipulations are expensive. one change will update everything.
+how React works -> React creates two virtual DOMs, one have the current state, the other have the old state. Virtual DOM detects the diff between those two, then it only updates DOM with the diff
+ReactDOM -> sync virtual and real DOM
+React is a library not a framework
+JSX -> HTML inside Javscript
+reconciliation -> update the DOM when there are diff
+
+### components
+keys -> for uniqueness, and only need to be unique among siblings 
+props drilling : passing props from grandfather through multiple components to child
+functional components -> after introduction of Hooks, functional components are equivalent to class, and it’s more trendy. functional components are functions. 
+functional and class component differences -> for props, functional can use it directly, but class have to use this. for function, class need to use this and bind
+controlled component -> handled by React
+uncontrolled component -> handled by DOM. use ref 
+Effects without cleanup -> does not restrict the browser 
+Effects with cleanup -> require cleanup after updating the DOM is done.
+error boundary -> catch errors in the render phase using getDerivedStateFromError and componentDidCatch
+all lifecycles have 3 phases mount, unmount, and update
+StrictMode -> mode to help with debug
+callback ref -> is recommended over string ref
+prevent re-rendering -> parent re-render will cause child to re-render too, avoid that by shouldComponentUpdate()
+style -> inline styling, javascript object, CSS Stylesheet, CSS Modules
+useMemo -> performance. to cache CPU-expensive functions, which sometimes is repeatedly called when re-render 
+React.PureComponenent -> performance. to avoid re-render
+State Colocation -> performance. too many states in parent make it less reable, hard to maintain, keep rerendering. So better to move those states to separate components.
+lazy loading -> performance. reduce load time
+higher-order component -> take a component and returns a new component, share functionalities between 2 components
+init phase -> prepare props and initial state
+mouting phase -> React component is mounting on browser DOM
+updating phase -> when there is a change in state or props
+unmouting phase -> component remover from the DOM
+useEffect -> do something after everytime the component is updated
+useRef -> create a reference to a DOM element
+basic hooks -> useState, useEffect, useContext()
+additional hooks -> useReducer(), useMemo(), useCallback(), useImperativeHandle(), useDebugValue(), useRef(), useLayoutEffect()
+custom hooks -> whose name begin with ‘use’ and which calls the other hooks.
+Hooks can’t replace Redux -> Redux is useful states dependent of each other
+Flux architecture -> dispatcher, store, view

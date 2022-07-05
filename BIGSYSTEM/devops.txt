@@ -30,10 +30,11 @@ Kubernetes : manage and automate containerized workloads on the cloud
     yaml [Objects]: describe desired state of your Cluster 
     
 
+### real-life case
+what I understand 
+    
 
 
-
-real-life example
 docker
 Jenkins
 Kubernetes

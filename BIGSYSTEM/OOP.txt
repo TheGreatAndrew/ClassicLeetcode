@@ -1,0 +1,74 @@
+### OOP with Java 
+composition : combine classes, unlike inheritance get from a base class
+    example -> 
+abstraction : exposing only the relevant details
+    example -> abstract class, interface  
+encapsulation : superclass hides sensitive data 
+    example -> private, get, set
+inheritance : reuseability of code
+    example -> class inheritance 
+polymorphism : existing in many form 
+    polymorphism - existing in many forms 
+    compile time polymorphism -> overloading is same name different params 
+    run time polymorphism -> overriding is same name same params in superclass and child 
+    dynamic method binding -> 
+
+### topics and articles
+instance : object is called instance sometimes
+interface 
+    everything in interface is abstract 
+    usage -> unrelated classes 
+    https://www.geeksforgeeks.org/interfaces-in-java 
+        Interfaces and interface methods are implicity ‘abstract’
+        all interface methods are implicitly ‘public’
+        multiple inheritance -> no method body 
+        interface specify what a class must do -> it doesn't implement method, need to declares it abstract
+abstract 
+    usage -> related classes 
+    https://www.geeksforgeeks.org/abstract-keyword-in-java/
+        abstract class : some classes are abstract, some classes have definitions
+        abstract method : non-abstract class can’t have abstract method
+
+more on differences
+    abstract -> some are implemented so you don’t have implement all. Interface implements all
+    abstract -> can have access modifiers. Interface only has public
+    abstract class -> can have data fields
+
+
+final
+    prevent inheritance, prevent overriden
+Compare 
+    Comparable : interface. compareTo. this is inside the class
+    Comparator : interface. compare. this is another class, just like extra features.
+singleton
+    create 1 instance of Object
+    with static 
+static
+    https://www.geeksforgeeks.org/static-keyword-java/
+    static : share same var or method of a class. access just with a class. 
+    static block : can init value by doing it in static block
+    static order come first 
+binding
+    https://www.geeksforgeeks.org/static-vs-dynamic-binding-in-java/ 
+    private, final and static are static binding
+    virtual method are dynamic binding (Java methods are all virtual)
+    overload methods are static binding, overridden methods use dynamic binding 
+
+
+
+
+### real-life cases 
+Elavator System Design 
+    My Design 
+    Elavator has 3 states, so we can use enum cause it's more stable 
+
+    https://www.youtube.com/watch?v=siqiJAJWUVg 7
+    don't overcomplicate the system 
+    Description
+        can be single elevator
+        3 states : go up, down, idle enum 
+        from 1 floor to another 
+        open door when idle 
+        200 floors 
+        minimize wait time 
+

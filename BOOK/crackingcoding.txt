@@ -1,0 +1,7 @@
+### Chap 4 Big O
+// Let's look at this from the perspective of quick sort. Quick sort picks a random element as a "pivot" and then
+
+### Chap 8 Recursion and Dynamic Programming
+people typically have about 50% accuracy in their "this sounds like a recursive problem" instinct
+DP : top down, bottom up, half and half (merge sort)
+“it's often better to implement a recursive algorithm iteratively”
