@@ -19,3 +19,37 @@ database replication
     if master is offline, a slave will be promoted, it's complicated because the slave might not help enough info 
 
 // Considerations for using cache
+
+
+
+### chap 8
+back on the envelope estimation
+    write operation : 100 millions URL per day 
+    write operation per second : 100 m/24/3600 = 1160 
+    run for 10 years 365 billion records 
+    average URL is 100 
+    total in 10 years : 365 billions * 100 bytes * 10 years 
+API endpoints
+    POST api/v1/data/shorten
+    GET api/v1/shortUrl
+URL redirecting
+    change to short url with 301 redirect 
+    301 redirect -> "permanent" short url, so browser will cache and send directly to longUrl 
+    302 redirect -> redirect to URL shortening service first. Can do analytics
+    store short-long url in hashtable. 
+URL shortening flows
+    hashing function -> from longUrl to hash value (shortUrl)
+data model 
+    hash table is expensive. Insted relational id (longUrl, shortUrl)
+    length of hashValue is 7 ... 
+    2 types of hash 
+        Hash + collision resolution -> CRC32, MD5, or SHA-1 -> even shortest CRC32 is longer than 7 -> use bloom filters to improve 
+        Base 62 conversion -> commonly used for shortenName 
+Wrap up
+    rate limiter -> filter out things, can filuter number of requests at a specific IP 
+    web server scaling -> web server is tier less, so can easily add more 
+
+### chap 9 
+
+
+

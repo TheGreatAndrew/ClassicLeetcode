@@ -1,0 +1,12 @@
+############### THIS IS LIST OF BACKTRACKING QUESTIONS BASED ON A LEETCODE POST
+https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+    https://leetcode.com/problems/subsets/
+        https://leetcode.com/submissions/detail/739685411/ backtracking 
+        https://leetcode.com/submissions/detail/739686596/ bactracking and same as Java post 
+    https://leetcode.com/problems/subsets-ii/
+        https://leetcode.com/submissions/detail/739700129/ backtracking, same as Java post, except for duplicate
+    https://leetcode.com/problems/permutations/
+    https://leetcode.com/problems/permutations-ii/
+    https://leetcode.com/problems/combination-sum/
+    https://leetcode.com/problems/combination-sum-ii/
+    https://leetcode.com/problems/palindrome-partitioning/

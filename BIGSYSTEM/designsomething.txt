@@ -151,3 +151,10 @@ System Design Mock Interview: Design Instagram
     cache (Redis)
     load balancer -> figure which servers we want to access, and route us
     Mobile Client 
+
+Tinyurl 
+    My Design
+    user types url in search bar, click Submit, and return a shorten
+    shortend url lives long 
+    API 
+        submitUrl - DNS mask it 

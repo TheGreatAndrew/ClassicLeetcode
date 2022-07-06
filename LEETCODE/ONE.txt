@@ -19,6 +19,7 @@ https://leetcode.com/problems/happy-number
     approach 1 -> just keep going until the set is repeated 
     approach 2 -> niche. Floyd's Cycle-Finding Algorithm. 
 https://leetcode.com/problems/count-asterisks/ do it myself 
+    how to do -> 
 
 
 
@@ -147,6 +148,9 @@ https://leetcode.com/problems/container-with-most-water/ do it myself
     how to do -> two pointers start, end. We are greedily getting max so the Bar smaller will be removed
     my try -> hard to deal with edge case where same bar length -> actually that edge case doesn't matter cause we will always use Lesser Height Bar to calculate
     what's interesting -> Water 
+    time -> O(n) to walk all of them
+    space -> O(1) no data 
+
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
     # thought process
     # fast reaches the end
@@ -545,7 +549,7 @@ https://leetcode.com/problems/pacific-atlantic-water-flow/
             loop 4 borders, dfs, if newR newC is bigger than current then we keep dfs
         lesson -> with dfs, we don't need to worry about which row, column comes first 
         
-############### Dijkstra's algorithm
+############### Dijkstra algorithm
 ### guide 
 Dijkstra's algorithm : shortest path from one node to every other nodes  
     step 1 -> priority queue with distance_from_source, and node 
@@ -712,7 +716,12 @@ https://leetcode.com/problems/kth-smallest-element-in-a-bst do it myself
 
 ############### DICTIONARY
 https://leetcode.com/problems/lru-cache/ do it myself
-    # 
+    how to do -> OrderedDict which tracks the orders of inserted key
+    https://leetcode.com/problems/lru-cache/discuss/850110/Python-3.7%2B.-No-need-to-use-OrderedDict.-Simply-use-the-regular-dict
+        how to do -> no need to use OrderedDict
+    https://leetcode.com/problems/lru-cache/discuss/594885/Python-Simple-implementation-with-deque-(slow)-and-OrderedDict-(fast)
+        how to do -> deque 
+        
 
 ############### STACK 
 ###guide
@@ -818,6 +827,12 @@ https://www.geeksforgeeks.org/backtracking-introduction/
     can be used for Knapsack problem
 
 ### general 
+https://leetcode.com/problems/permutations/
+    https://leetcode.com/submissions/detail/719236963/ normal recursion 
+    https://leetcode.com/problems/permutations/discuss/360280/Python3-backtracking backtracking 
+    https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning) 
+        list of backtracking solutions 
+
 https://leetcode.com/problems/combination-sum/discuss/16510/Python-dfs-solution.
     very basic backtracking 
     how to do ->  
@@ -833,8 +848,12 @@ https://leetcode.com/submissions/detail/673764853/
         add all numbers with Set
 
 https://leetcode.com/problems/subsets/ do it myself cascading
-    approach 1 -> cascading. for every new number. add all new number to all previous list. 
+    approach 1 -> cascading. for every new number. add all new number to all previous list.
+        time ->
+        space ->  
     approach 2 -> backtracking. for expanding length. we add remaining number, backtrack, then add remaining number
+        time -> O(N*2^n) I think it's O(Each Element * ...)
+        space -> 
     approach 3 -> Lexicographic (Binary Sorted) Subsets
     https://leetcode.com/problems/subsets-ii/discuss/30305/Simple-python-solution-(DFS) DFS without using Set
 
@@ -915,3 +934,12 @@ store 'character' by storing as 'key' or
 https://leetcode.com/problems/implement-trie-prefix-tree/ solve half of it myself
 https://leetcode.com/problems/design-add-and-search-words-data-structure/
 
+
+### CONTEST
+5218. Sum of Numbers With Units Digit K not done 
+https://leetcode.com/discuss/interview-question/1803238/Amazon-or-OA-or-sum-of-cache-optimization-power-for-all-sub-arrays
+https://leetcode.com/problems/subtree-of-another-tree/discuss/386209/Python-98-speed-with-comments
+https://leetcode.com/problems/most-common-word/solution/
+https://leetcode.com/problems/group-anagrams/
+https://leetcode.com/problems/valid-anagram/ do it myself
+https://leetcode.com/problems/longest-repeating-character-replacement don't understand 
