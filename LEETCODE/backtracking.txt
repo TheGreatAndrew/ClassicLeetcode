@@ -1,12 +1,53 @@
 ############### THIS IS LIST OF BACKTRACKING QUESTIONS BASED ON A LEETCODE POST
-https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
-    https://leetcode.com/problems/subsets/
-        https://leetcode.com/submissions/detail/739685411/ backtracking 
-        https://leetcode.com/submissions/detail/739686596/ bactracking and same as Java post 
-    https://leetcode.com/problems/subsets-ii/
-        https://leetcode.com/submissions/detail/739700129/ backtracking, same as Java post, except for duplicate
-    https://leetcode.com/problems/permutations/
-    https://leetcode.com/problems/permutations-ii/
-    https://leetcode.com/problems/combination-sum/
-    https://leetcode.com/problems/combination-sum-ii/
-    https://leetcode.com/problems/palindrome-partitioning/
+###https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
+    general 
+        permutation n! 
+        combination sum Ckn 
+        subset 2^n 
+
+    subsets
+        approach 1 
+            time O(n*2**n) -> because to go from 2**(n-1) to 2**n we need to copy the list through path[:]
+            space O(n*2**n) -> count how many subset solutions, multiply to space of each subset 
+        approach 2 
+            time same as above 
+            space O(n) -> because only memory of 'path', the 'res' is output so it doesn't need to count    
+        https://leetcode.com/submissions/detail/739685411/ do it myself, backtracking 
+        https://leetcode.com/submissions/detail/739686596/ same as Java post 
+        
+    
+    subsets-ii duplicate input 
+        https://leetcode.com/submissions/detail/739700129/ same as Java post
+        
+    
+    permutations 
+        https://leetcode.com/submissions/detail/740051700/ do it myself, more optimized, simply add remaning array
+        https://leetcode.com/submissions/detail/740152507/ same as Java post 
+            we have [1,2,3,4], then we pop [4] nothing left, we pop [3], and then add [4]
+    
+    permutations-ii duplicated input 
+        https://leetcode.com/submissions/detail/740201739/ do it myself 
+        https://leetcode.com/submissions/detail/740374917/ same as Java post 
+            if statement to check -> 
+    
+    combination-sum
+        https://leetcode.com/submissions/detail/719780895/ keep removing input array... 
+        https://leetcode.com/submissions/detail/740461163/
+            demonstrate can use either path + [nums[i]]
+            or path.append(num[i]), then pop()
+        https://leetcode.com/submissions/detail/740468630/ same as Java post
+            not i + 1 because we can reuse same elements, the for-loop will do its job of increasing i
+            unlike /740461163/ approach, the path[] went on so need to be path[:]
+
+
+    combination-sum-ii input used once 
+        approach 1 ->
+        approach 2 ->
+
+    To demonstrate the idea, we showcase how it works with a concrete example in the following graph:
+
+
+
+    palindrome-partitioning
+        aaa
+

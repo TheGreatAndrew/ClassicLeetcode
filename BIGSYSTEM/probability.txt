@@ -1,0 +1,10 @@
+
+### general 
+polynomial : 2x^2 + 3x 
+coefficient : number floating 
+binomial coefficient ->
+    C(n, k)= n!/[k!(n-k)!]
+    how many ways to draw 6 cards out of a pack of 10 cards -> n=10,k=6
+
+
+ 

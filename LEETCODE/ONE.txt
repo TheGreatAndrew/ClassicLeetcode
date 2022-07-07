@@ -827,11 +827,11 @@ https://www.geeksforgeeks.org/backtracking-introduction/
     can be used for Knapsack problem
 
 ### general 
-https://leetcode.com/problems/permutations/
+https://leetcode.com/problems/permutations/ do it myself 
     https://leetcode.com/submissions/detail/719236963/ normal recursion 
     https://leetcode.com/problems/permutations/discuss/360280/Python3-backtracking backtracking 
-    https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning) 
-        list of backtracking solutions 
+
+https://leetcode.com/problems/permutations-ii do it myself 
 
 https://leetcode.com/problems/combination-sum/discuss/16510/Python-dfs-solution.
     very basic backtracking 
