@@ -12,6 +12,7 @@ do bfs for Easy
 while solving, read the theory before of during 
 
 
+
 ############### HOW MANY LEETCODE IS ENOUGH
 https://www.reddit.com/r/cscareerquestionsEU/comments/g7bc48/how_much_leetcode_practice_is_enough_for_fang/
     doing a couple of related problems like this for 8 weeks should be enough for FAANG
@@ -63,15 +64,8 @@ https://www.reddit.com/r/leetcode/comments/vs52ur/how_to_find_which_algorithm_to
     leave it here cause these are topics i stuck on, it's easier to manage, and not get lost 
     bit manipuation -> 
     state machine -> 
-    sliding window -> https://leetcode.com/problems/longest-substring-without-repeating-characters/
     serialize tree ->
     serialize/ decode -> 
-    Dijkstra's -> https://leetcode.com/problems/network-delay-time/
-    topo sort Kahns -> 
-    MST/shortest path Prim, Kruskal->
-    union find -> 
-    https://www.youtube.com/watch?v=f7JOBJIC-NA 
-    https://www.youtube.com/watch?v=5eIK3zUdYmE
 
 
 Python OOP 

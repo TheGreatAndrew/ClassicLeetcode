@@ -41,13 +41,14 @@
 
 
     combination-sum-ii input used once 
-        approach 1 ->
-        approach 2 ->
-
-    To demonstrate the idea, we showcase how it works with a concrete example in the following graph:
-
+        approach 1 -> with Counter.
+        approach 2 -> with Index.
+            TODO 
+            if(i > start && nums[i] == nums[i-1])
 
 
     palindrome-partitioning
-        aaa
+        approach 1 -> backtracking
+        approach 2 -> backtracking with dynamic programming
+        ....
 

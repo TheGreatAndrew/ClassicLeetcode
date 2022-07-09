@@ -1,0 +1,74 @@
+############### THIS IS A LIST OF GRAPH, NO MATRIX AND NO TREE 
+https://leetcode.com/discuss/general-discussion/655708/graph-for-beginners-problems-pattern-sample-solutions/
+patterns
+    Union Find 
+        subpattern -> finding groups or components 
+    Depth First Search  
+        subpattern -> Start DFS from nodes at boundary
+        subpattern -> Time taken to reach all nodes or share information to all graph nodes
+        subpattern -> DFS from each unvisited node/Island problems
+        subpattern -> Cycle Find 
+    Breath First Search 
+        subpattern -> Shortest Path 
+    Graph coloring/ Bipartition
+        when to use -> Problems asks to check if its possible to divide the graph nodes into 2 groups
+    Topological Sort   
+        when to use -> Check if its directed acyclic graph and we have to arrange the elements in an order in which we need to select the most independent node at first. Number of in-node 0
+    Find Shortest Path (Dijkstra's/Bellman Ford)
+        when to use -> Shortest Path 
+       
+
+### Union Find 
+
+### Depth First Search  
+
+### Breath First Search 
+
+### Graph coloring/ Bipartition
+
+### topological sort 
+
+
+
+
+### Find Shortest Path (Dijkstra's/Bellman Ford)  
+guide  
+    Dijkstra's algorithm -> 
+    Bellman Ford's algorithm -> 
+    they both for single source shortest path https://www.geeksforgeeks.org/what-are-the-differences-between-bellman-fords-and-dijkstras-algorithms/
+
+Dijkstra's
+    https://leetcode.com/problems/network-delay-time/
+
+Bellman Ford
+
+
+
+############### OTHER PATTERNS I WILL CATEGORIZE LATER 
+https://leetcode.com/discuss/general-discussion/1122034/important-graph-algorithm-notes-for-interview
+
+
+############### MINIMUM SPANNING TREE
+### guide
+spanning tree : given undirected, connected graph G. Spanning tree is a subgraph of G, includes all vertices with min possible number of edges 
+minimum spanning tree : 
+    spanning tree with weights, sum of the weights of edges is as min as possible 
+    if n vertices, n-1 edges 
+Prim's Algorithm : usually more efficient 
+    programiz.com/dsa/prim-algorithm great website 
+    greedy algo
+    start with smallest edges
+    keep adding smallest edges to previous 
+Kruskal's Algorithm : 
+    purpose -> detect cycle
+    greedy algo 
+    start with smallest edges 
+    get smallest edges, but it doesn't need to connect with previous 
+    if new edge forming a cycle, don't 
+    speed O(n^2)
+    with min heap it's O(nlogn)
+
+Prim 
+    https://leetcode.com/problems/min-cost-to-connect-all-points/
+
+

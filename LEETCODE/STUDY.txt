@@ -1,0 +1,69 @@
+############### FOR STUDYING, LATER WILL TURN IT INTO GUIDE  
+OTHER
+    Tarjan's strongly connected component algorithm : detect if there are cycles
+
+Prim's 
+    principals 
+        keep getting smallest cost, the one attacehd with previous 
+        time O((V+E)logV)
+    algo 
+        visit set() 
+        frontier minHeap 
+        res 
+        choose a random node 
+        put all neighbor (cost, node) to frontier 
+        choose smallest, repeat
+    problem 
+        https://leetcode.com/submissions/detail/741291968/
+            how to do -> build adjacency list, then Prim's 
+            time -> O(n^2 logn) cause (n^2) is number of potential edges, and (logn) come from Prim's cause Min Heap 
+
+Topological
+    principals 
+        when -> 
+            only for Directed Acylic Graph (directed and no cycle)
+            directed cycle : can't have topological 
+            acycle graph : don't have cycle 
+        purpose -> schedule system where first task comes before second task
+        example -> 
+            take 0 before 2, take 1 before 2 so [2,0] and [2,1]
+            0->2 1->2
+            topological sort prints the one with no incoming edges first 
+    algo 
+        loop all nodes 
+        we have output[], visit set(), cycle() 
+        if it's not in this cycle yet, we add to cycle
+        then dfs 
+        then cycle, visit, output add current 
+
+    problems 
+        https://leetcode.com/problems/course-schedule-ii/
+            you don't need to know topological sort, this problem teaches u that
+            how to do -> read 'algo' above
+            
+        https://leetcode.com/problems/minimum-height-trees/ topological. very short buildGraph
+            centroids of the circle, i.e. nodes that is close to all the peripheral nodes (leaf nodes).
+            step base cases input only 2 nodes 
+            step 1 -> get all leaves
+            step 2 -> queue until only 2 nodes left. remove leaf from adjancency list (bi-directional). add new leaf.
+        
+        https://leetcode.com/problems/course-schedule
+            https://leetcode.com/problems/course-schedule/discuss/58586/Python-20-lines-DFS-solution-sharing-with-explanation look at first comment 
+            how to do dfs ->
+                graph[take these after] = [prerequisites]
+                3 states not visited, currently visiting, and visisted 
+                visited is dictionary 
+            https://leetcode.com/problems/course-schedule/discuss/441722/Python-99-time-and-100-space.-Collection-of-solutions-with-explanation
+            how to do topological ->
+                geeksforgeeks.org/topological-sorting-indegree-based-solution/ 
+                0 incoming edges, incoming from prerequisites to course 
+                1 vertex, with number of incoming edges 
+                2 queue, with vertex with no incoming edges 
+
+
+https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/894031/Python-O(logn)-Detailed-Explanation     
+    how to do ->
+        inflection point 
+        the values from [0, IP] are always bigger than [IP + 1, n] -> because for [0,1,2,3,4] IP is 4 
+
+

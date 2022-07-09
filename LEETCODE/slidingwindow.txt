@@ -1,0 +1,3 @@
+############### THIS IS A LIST OF SLIDING WINDOW PROBLEMS
+
+https://leetcode.com/discuss/general-discussion/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions
