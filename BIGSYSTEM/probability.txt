@@ -6,5 +6,31 @@ binomial coefficient ->
     C(n, k)= n!/[k!(n-k)!]
     how many ways to draw 6 cards out of a pack of 10 cards -> n=10,k=6
 
+ create and sample from a discrete distribution
+    Yeah. Take probabilities,convert to cumulative distribution function by mapping categories to ranges, generate random number between 0-1, then perform binary search over these discrete categories to determine which range the random number falls within.
+    But what if you weren't given probabilities? What if you were given rarities, where there larger the number the more rare it is.
 
- 
+Bernouli : either success or fail. 
+    example : if a random American is selected, what is their probabilities of being a heart surgeon
+    N : number of events 
+    P : number of successes
+
+Binomial (Independent Bernouli Trials where Bernouli is N=1) : distribution of the number of successes in N independent Bernouli trials 
+    example : if a coin is tossed 20 times, what is the probabilites heads come up 14 times 
+    The number of trials is fixed 
+    The number of success is random variable 
+
+Geometric (Independent Bernouli Trials) : number of trials needed to get first success 
+    example : if a coin is repeated tossed, what is the probabilites the first time heads appear on the 8th toss ? 
+
+Negative Bionomial (Independent Bernouli Trials) : number of trials needed to get certain number of successes 
+    example : if a coin is repeated tossed, what is the probabilites the third time heads appear on the 9th toss ? 
+    The number of trials is random variable  
+    The number of success is fixed
+
+Hypergeometric (similar to Binomial but cards are w'ith replacement') : trials not independent
+    example : if 5 cards are drawn 'without replacement' from a well shuffled deck, what is the probability exactly 3 hearts are drawn?
+
+Poisson : number of events in a given time. If events occur randomly and independently 
+    example : probabilites of 4 car accidents in a given week 
+

@@ -63,7 +63,22 @@ Topological
 
 https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/894031/Python-O(logn)-Detailed-Explanation     
     how to do ->
-        inflection point 
-        the values from [0, IP] are always bigger than [IP + 1, n] -> because for [0,1,2,3,4] IP is 4 
+        split into 2 normal arrays, the others are 2 abnormal arrays 
+    
+https://leetcode.com/problems/largest-rectangle-in-histogram/
+    how to come up with this solution ->
 
+    how to do ->
+        monotonic stack increasing 
+        if we meet a smaller 'height'
+        then we trace back, area = width * height. width is 'index', and height is smallest bar, which is the first one since this is monotonic stack
 
+    https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/28917/AC-Python-clean-solution-using-stack-76ms
+        how to do -> same as above 
+
+https://leetcode.com/problems/robot-bounded-in-circle/ SIMULATION 
+    https://leetcode.com/problems/robot-bounded-in-circle/discuss/850464/Python-3-or-Simulation-or-Explanation
+        how to do ->
+            north 0 
+            west 1 
+            

@@ -532,6 +532,7 @@ https://leetcode.com/problems/largest-rectangle-in-histogram/
         # i−stack[−1]−1 is newestIndex - top index in the stack (after popping 6)
     # approach 2 DP https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/440433/Python-Detailed-Explanation-for-DP-O(n)-Solution-Beats-99.9-RunTime-100-Memory
         # 
+        
 https://leetcode.com/problems/daily-temperatures do it myself 
     my try -> some algo error, use list for stack so it's slow 
     approach 1 -> monotonic stack, same as mine 
@@ -553,6 +554,11 @@ https://leetcode.com/problems/car-fleet
 
 
 ############### HEAP  
+https://leetcode.com/problems/merge-k-sorted-lists
+    tuples are compared elementwise, so if there's a tie on the l.val, it then tries to compare the second elements
+    
+
+
 https://leetcode.com/problems/kth-largest-element-in-a-stream/discuss/482591/Simple-Python-Solution-or-Maintain-Min-Heap-whose-size-is-always-kept-at-k
     my try -> pass 9/10 but time limit exceed 
 
