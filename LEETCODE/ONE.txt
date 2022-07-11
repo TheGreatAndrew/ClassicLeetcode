@@ -554,9 +554,31 @@ https://leetcode.com/problems/car-fleet
 
 
 ############### HEAP  
-https://leetcode.com/problems/merge-k-sorted-lists
+https://leetcode.com/problems/merge-k-sorted-lists do it myself. Only problem is Python 3 weird heap.  
     tuples are compared elementwise, so if there's a tie on the l.val, it then tries to compare the second elements
-    
+    do i use existing node or new node -> new node 
+    how to do ->
+        each node 
+        complexity 
+            n number of nodes 
+            k number of linked lists
+            time O(nlogn * 2)-> O(n) for traverse the list, O(logn) for heap push. Then O(logn) for heap pop, O(n) building new linked list 
+                correct time O(nlogk) -> push and pop O(logk), k because each time we get min from k elements, not n total elements. O(n) for building final linkedlist
+            space O(k) -> k is number of linked lists O(k) for heap and new linked list 
+                correct space -> O(n) for new linked list, and O(k) for heap 
+    https://leetcode.com/problems/merge-k-sorted-lists/solution/
+        approach 1 -> brute force 
+        approach 2 -> compare head of nodes
+            time : O(kN) so I was right 
+            space : O(n) for new linked list 
+        approach 3 -> optimize approach 2 by PriorityQueue
+        approach 4 -> merge 
+        approach 5 -> divide and conqueror. keep merging every pair of linked lists
+    https://leetcode.com/problems/merge-k-sorted-lists/discuss/465094/Problems-with-Python3-and-Multiple-Solutions
+        how to do ->
+            approach 3 but for Python3 
+
+
 
 
 https://leetcode.com/problems/kth-largest-element-in-a-stream/discuss/482591/Simple-Python-Solution-or-Maintain-Min-Heap-whose-size-is-always-kept-at-k

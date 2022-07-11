@@ -20,18 +20,9 @@ https://www.amazon.jobs/en/landing_pages/in-person-interview
 
 
 ### OA 
-QUESTION -> swap without adjacent 
 https://leetcode.com/discuss/interview-question/346621/Google-or-Phone-Screen-or-Min-swaps-to-sort-array
 https://leetcode.com/discuss/interview-question/789524/determine-minimum-numbers-of-moves-required-to-sort-the-array-in-ascending-order
-
-
-
-QUESTION -> swap with only adjacent
 https://www.geeksforgeeks.org/number-swaps-sort-adjacent-swapping-allowed/
-
-
-
-QUESTION -> 
 https://leetcode.com/discuss/interview-question/2108095/amazon-sde2-may-2022-online-assessment
 public long findMaxProducts(List<Integer> products) {
         int l = products.size();
@@ -50,5 +41,6 @@ public long findMaxProducts(List<Integer> products) {
         return max;
   } 
 
+https://leetcode.com/discuss/interview-question/1031933/amazon-onsite-sde2-package-dependencies top sort 
 
 		

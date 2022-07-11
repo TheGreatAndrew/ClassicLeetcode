@@ -21,7 +21,6 @@ set : unchangable, but can add and remove items
 
 
 
-
 ### regex
 https://www.youtube.com/watch?v=K8L6KVGG-7o 6:00
 import re 
@@ -39,7 +38,9 @@ for match in matches :
 
 
 ### lambda 
-a 
+why use -> anoymous lambda function to used with higher-order function (like filter or map)
+
+
 
 ## pass arguments
 

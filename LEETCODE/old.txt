@@ -170,7 +170,6 @@ print(5)
 
 ### all graphs
 # https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
-# Dijkstra's algorithm: Is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks
 # Union–find data structure or disjoint-set data structure or merge–find set, is a data structure that stores a collection of disjoint (non-overlapping) sets. Equivalently, it stores a partition of a set into disjoint subsets.
 # minimum spanning tree (MST) : is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
 # Topological sort : is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.

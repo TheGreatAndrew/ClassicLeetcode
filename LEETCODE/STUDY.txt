@@ -29,6 +29,9 @@ Topological
             take 0 before 2, take 1 before 2 so [2,0] and [2,1]
             0->2 1->2
             topological sort prints the one with no incoming edges first 
+    algo principal 
+        print all node with no incoming edges first 
+        meaning traverse adjacency list and have cycle(), visit() 
     algo 
         loop all nodes 
         we have output[], visit set(), cycle() 
@@ -41,13 +44,7 @@ Topological
             you don't need to know topological sort, this problem teaches u that
             how to do -> read 'algo' above
             
-        https://leetcode.com/problems/minimum-height-trees/ topological. very short buildGraph
-            centroids of the circle, i.e. nodes that is close to all the peripheral nodes (leaf nodes).
-            step base cases input only 2 nodes 
-            step 1 -> get all leaves
-            step 2 -> queue until only 2 nodes left. remove leaf from adjancency list (bi-directional). add new leaf.
-        
-        https://leetcode.com/problems/course-schedule
+        https://leetcode.com/problems/course-schedule do it myself in topological sorting 
             https://leetcode.com/problems/course-schedule/discuss/58586/Python-20-lines-DFS-solution-sharing-with-explanation look at first comment 
             how to do dfs ->
                 graph[take these after] = [prerequisites]
@@ -59,6 +56,45 @@ Topological
                 0 incoming edges, incoming from prerequisites to course 
                 1 vertex, with number of incoming edges 
                 2 queue, with vertex with no incoming edges 
+
+        https://leetcode.com/problems/minimum-height-trees/ topological
+            https://leetcode.com/problems/minimum-height-trees/solution/
+                centroids : (similar to root node) node that is close to all the peripheral nodes (leaf nodes)
+                approach 0 : brute force just all tree, then choose smallest 
+                how to do ->
+                    (keep trimming leaf ndoes until only 1 or 2 centroids left)
+                    queue to holds all leaves, bfs 
+                    keep removing leaves, there will be new leaves, keep removing all 
+                complexity
+                    e = v-1 
+                    time -> buildGraph O(v), initial leaves O(v), O(v+e)
+                    space -> buildGraph O(v+e) 
+
+                    
+
+
+                
+
+
+            step base cases input only 2 nodes 
+            step 1 -> get all leaves
+            step 2 -> queue until only 2 nodes left. remove leaf from adjancency list (bi-directional). add new leaf.
+        https://leetcode.com/problems/find-eventual-safe-states/ do it myself 
+            how to do -> topological sorting, check if node's all neighborers are 'qualify' or not 
+            time O(E+V) -> O(n) create adjList, O(E+V) 
+            space O(3n) -> qualify, visit, adjList
+            https://leetcode.com/problems/find-eventual-safe-states/solution/
+                approach 1 -> Reverse Edges. 
+                    how to do -> have outgoingGraph, incomingGraph. 
+                    We start from Terminal Node and works backward, each time remove an edge from outgoingGraph, if outgoingGraph is None, it's 'qualify' too
+                approach 2 -> 
+                    ... 
+
+
+
+             
+
+
 
 
 https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/894031/Python-O(logn)-Detailed-Explanation     
@@ -81,4 +117,5 @@ https://leetcode.com/problems/robot-bounded-in-circle/ SIMULATION
         how to do ->
             north 0 
             west 1 
+
             
