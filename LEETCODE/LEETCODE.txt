@@ -1,3 +1,13 @@
+############### HOW TO SOLVE LEETCODE 
+For matrix,
+    if directions allowed are left, right, up, down then bfs/dfs. 
+    If minimum path, then bfs. 
+    If a path has a value associated with it, then djask.
+    If directions allowed are (left and up) or (right and down), then dp.
+    If direction is either horizontal or vertical, then 2 pointers or just a loop going row by row and col by col!
+
+
+
 ############### HOW TO PREPARE LEETCODE
 https://leetcode.com/discuss/interview-experience/552835/how-i-found-a-new-bay-area-faang-job-in-1-34-months
 did 180 questions
@@ -63,9 +73,9 @@ https://www.reddit.com/r/leetcode/comments/vs52ur/how_to_find_which_algorithm_to
 @standardquestion 
     leave it here cause these are topics i stuck on, it's easier to manage, and not get lost 
     bit manipuation -> 
-    state machine -> 
     serialize tree ->
-    serialize/ decode -> 
+    LRU but not OrderedDict 
+    https://docs.google.com/spreadsheets/u/0/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/htmlview
 
 
 Python OOP 

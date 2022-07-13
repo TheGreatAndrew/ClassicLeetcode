@@ -362,6 +362,13 @@ https://leetcode.com/problems/pacific-atlantic-water-flow/
             loop 4 borders, dfs, if newR newC is bigger than current then we keep dfs
         lesson -> with dfs, we don't need to worry about which row, column comes first 
         
+
+https://leetcode.com/problems/word-search/ nearly do it myself. interview others. 
+    space : O(s )
+    time : O(N⋅3^L) with N = mxn 
+
+
+
 ############### Dijkstra algorithm
 ### guide 
 Dijkstra's algorithm : shortest path from one node to every other nodes  
@@ -447,7 +454,7 @@ https://www.youtube.com/watch?v=wU6udHRIkcc
 https://leetcode.com/problems/invert-binary-tree/ do it myself 
     what's cool -> passing node reference 
 https://leetcode.com/problems/maximum-depth-of-binary-tree do it myself 
-
+https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ do it myself 
 
 
 
@@ -577,6 +584,9 @@ https://leetcode.com/problems/merge-k-sorted-lists do it myself. Only problem is
     https://leetcode.com/problems/merge-k-sorted-lists/discuss/465094/Problems-with-Python3-and-Multiple-Solutions
         how to do ->
             approach 3 but for Python3 
+    https://leetcode.com/problems/kth-largest-element-in-an-array/
+https://leetcode.com/problems/k-closest-points-to-origin do it myself 
+
 
 
 
@@ -632,7 +642,6 @@ https://leetcode.com/problems/combination-sum/discuss/16510/Python-dfs-solution.
     how to do ->  
         backtracking - we need to explore all possibilities since they are no limit, we don't need to find min/max, and we can use 'input' multiple times
         just run it until 'target' is negative, that's wrong, if 'target' == 0 then add to 'result'
-
 
 
 https://leetcode.com/submissions/detail/673764853/
@@ -706,11 +715,19 @@ bitmas
     100 << n left shift multiple by 2**n
 technique
     n&(n-1) will remove the rightmost
-
 operator overloading : same symbol, different meanings in different classes 
+
+
+https://leetcode.com/problems/reverse-bits/
+    https://www.youtube.com/watch?v=UcoN6UjAI64
+        comment section algo ->
+            (logic similar to reverse normal int, we get last %10, *10, then /10)
+            (logic is get last bit, <<, then remove last bit)
+              
+
+
 https://leetcode.com/problems/sum-of-two-integers/discuss/84278/a-summary-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently
     a  
-
 
 ### general 
 https://leetcode.com/problems/number-of-1-bits/discuss/1044775/Python-n-and-(n-1)-trick-%2B-even-faster-explained

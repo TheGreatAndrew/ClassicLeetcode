@@ -118,4 +118,17 @@ https://leetcode.com/problems/robot-bounded-in-circle/ SIMULATION
             north 0 
             west 1 
 
-            
+https://leetcode.com/problems/reverse-integer/
+
+
+
+
+https://www.google.com/search?q=recruiting+event&oq=recruiting+event&aqs=chrome..69i57.3581j0j7&sourceid=chrome&ie=UTF-8&ibp=htl;events&rciv=evn&sa=X&ved=2ahUKEwj-odijyvH4AhXWlmoFHbTmBb8Q8eoFKAJ6BAgXEA8&sxsrf=ALiCzsbd8h6kwbr-8bpyA1n11dSXeDD7Zw:1657568077689#htivrt=events&htidocid=L2F1dGhvcml0eS9ob3Jpem9uL2NsdXN0ZXJlZF9ldmVudC8yMDIyLTA3LTI4fDQ2OTg0MTMxMDM4OTU1MDQ4OTg%3D&fpstate=tldetail
+
+https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 
+    what's cool -> sliding window SUM but have negative
+    how to do ->
+        don't use 'nums' input directly, use PrefixSum
+        think about it, 
+        think about it, if >= k then we will make it <k for adding new number
+        ....

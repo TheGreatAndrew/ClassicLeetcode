@@ -139,8 +139,14 @@ https://leetcode.com/problems/maximum-profit-in-job-scheduling/ binary search wi
     # dp -> if it's bigger profit, add endTime and add profit 
 
 ### 0/1 bounded knapsack items can't be repeated
-https://leetcode.com/problems/partition-equal-subset-sum/
-    https://www.youtube.com/watch?v=IsvocB5BJhw 6:00 very good O(n) analyze, last minute also have optimization
+https://leetcode.com/problems/partition-equal-subset-sum/ interview others
+    https://www.youtube.com/watch?v=IsvocB5BJhw 6:00 10:40 very good O(n) analyze, last minute also have optimization
+        how to do -> 
+            0/1 knapsack 
+            cascading keep adding new numbers to set of sums
+    https://leetcode.com/problems/partition-equal-subset-sum/discuss/1624391/Python-DP-and-DFS-Solutions-Easy-to-understand-with-Explanation
+        how to do -> 
+
 
 ### unbounded knapsack
 guide 
