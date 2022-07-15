@@ -17,6 +17,12 @@ patterns
     Find Shortest Path (Dijkstra's/Bellman Ford)
         when to use -> Shortest Path 
        
+### general 
+https://leetcode.com/problems/is-graph-bipartite/ do it myself in 30+ minutes 
+    advice 
+        depth first search can be level order traversal 
+    how to do -> 
+
 
 ### Union Find 
 
@@ -38,7 +44,14 @@ guide
     they both for single source shortest path https://www.geeksforgeeks.org/what-are-the-differences-between-bellman-fords-and-dijkstras-algorithms/
 
 Dijkstra's
+    principals 
+        a 
+    algo 
+        a 
+
     https://leetcode.com/problems/network-delay-time/
+        how to do -> simple BFS with Dijkstra 
+        question -> what if [2,4] [2,3] [2,4]
 
 Bellman Ford
 

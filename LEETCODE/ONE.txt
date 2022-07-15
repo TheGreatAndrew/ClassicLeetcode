@@ -29,6 +29,22 @@ https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists
     sets aren't faster than lists in general -- membership test is faster for sets, and so is removing an element
 
 
+############### BUILD DATA STRUCTURE 
+https://leetcode.com/problems/min-stack/
+    https://leetcode.com/problems/min-stack/discuss/1003721/Easy-Python-or-High-Speed
+        how to do -> 
+            extra stack 
+            [-2, 0, -1, -3]
+            min of that stack will be [-2,-2,-2,-3] because get min from [-2,0] needs to return -2 
+
+
+    https://leetcode.com/problems/min-stack/discuss/49183/Python-one-stack-solution-without-linklist
+        how to do -> 
+            similar to above extra stack problem
+            but used tuple instead
+
+
+
 
 ############### STRING 
 general
@@ -101,7 +117,7 @@ https://leetcode.com/problems/generate-parentheses/solution/
     approach 2 -> backtracking. add all ( 
         speed -> need to read 
     approach 3 -> look in comment for explanation
-
+https://leetcode.com/problems/intersection-of-two-arrays-ii/ do it myself 
 
 
 
@@ -260,6 +276,11 @@ https://leetcode.com/problems/median-of-two-sorted-arrays/
 guide
     prefix sum : is the sum of all previous index
 
+general 
+    https://leetcode.com/problems/subarray-sum-equals-k/discuss/341399/Python-clear-explanation-with-code-and-example
+        how to do ->
+            (prefix sum and dictionary)
+            [1,2,1,3] 3 
 
 
 ############### MATRIX
@@ -385,7 +406,7 @@ https://www.youtube.com/watch?v=XB4MIexjvY0
 
 
 ### general 
-https://leetcode.com/problems/network-delay-time/solution/
+https://leetcode.com/problems/network-delay-time interview others 
     approach 1 -> dfs. 
     approach 2 -> bfs queue. 
     approach 3 -> priority queue. Dijkstra.
