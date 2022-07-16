@@ -6,18 +6,25 @@ Google
     https://leetcode.com/discuss/interview-question/algorithms/1361977/Google-or-SDE-2-or-Onsite-or-Shortest-Path-with-twist/1028017
     
 
+Mentality
+    Google is hard, harder now becvause of recession -> 
 
 
 
-
-############################################# OLD 
 ############### HOW TO SOLVE LEETCODE 
+My Cheatsheet 
+    a 
+
 For matrix,
     if directions allowed are left, right, up, down then bfs/dfs. 
     If minimum path, then bfs. 
     If a path has a value associated with it, then djask.
     If directions allowed are (left and up) or (right and down), then dp.
     If direction is either horizontal or vertical, then 2 pointers or just a loop going row by row and col by col!
+
+
+
+############################################# OLD 
 
 ############### HOW TO PREPARE LEETCODE
 https://leetcode.com/discuss/interview-experience/552835/how-i-found-a-new-bay-area-faang-job-in-1-34-months

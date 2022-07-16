@@ -23,6 +23,21 @@ https://leetcode.com/problems/is-graph-bipartite/ do it myself in 30+ minutes
         depth first search can be level order traversal 
     how to do -> 
 
+### Lowest Common Ancestor 
+https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/
+    what's cool ->
+        subproblem -> tree from node A to node B
+        subproblem -> 
+
+    https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/discuss/2005805/Python3-DFS-easy-solution-using-deque
+        how to do ->
+            (path to start, path to end, then lowest common ancestor)
+    https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/discuss/1612071/Accepted-Python-Super-Simple-or-DFS-%2B-BFS
+        how to do ->
+            (simple DFS to collect start and end, also add 'parent' attribute to ListNode)
+            (then BFS)
+
+
 
 ### Union Find 
 
@@ -45,10 +60,15 @@ guide
 
 Dijkstra's
     principals 
-        a 
+        pick starting node 
+        check shortest among neighbor nodes (not among all nodes)
+        plus the cost from C if go indirect A->C->B
+        O(E+VlogV) if a heap is used
     algo 
-        a 
+        use min heap for shortest 
+        add the costs of the edges in heap A->B or A->C->B
 
+    https://www.youtube.com/watch?v=_lHSawdgXpI short pseudo code at the end 
     https://leetcode.com/problems/network-delay-time/
         how to do -> simple BFS with Dijkstra 
         question -> what if [2,4] [2,3] [2,4]

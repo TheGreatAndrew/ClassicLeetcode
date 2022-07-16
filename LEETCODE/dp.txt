@@ -65,8 +65,21 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/discuss/803206/
     # everytime we buy something it's negative 
     # either we buy it previously, or we buy current price
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/discuss/75928/Share-my-DP-solution-(By-State-Machine-Thinking) 
-    # s1 : did buy, can sell
-    # best example of State Machine
+    normal order 
+    temp = beforeBuy
+    tempA = beforeSell
+    beforeBuy = max(beforeBuy, beforeRest)
+    beforeSell = max(beforeSell, temp-p ) 
+    beforeRest = tempA + p
+
+    reverse order  
+    temp = beforeRest
+    beforeRest = beforeSell + p
+    beforeSell = max(beforeSell, beforeBuy-p ) 
+    beforeBuy = max(before, temp)
+
+
+
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/solution/
     # what to do if better prices 10 later
     # -> basically the more buy/ sell the better
