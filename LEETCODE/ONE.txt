@@ -476,6 +476,36 @@ https://leetcode.com/problems/invert-binary-tree/ do it myself
     what's cool -> passing node reference 
 https://leetcode.com/problems/maximum-depth-of-binary-tree do it myself 
 https://leetcode.com/problems/maximum-depth-of-n-ary-tree/ do it myself 
+https://leetcode.com/problems/diameter-of-binary-tree/ do it myself 
+    how to -> keep track of local sum and local max
+https://leetcode.com/problems/balanced-binary-tree/
+    what's cool -> 
+        for depth you want push an incrementing counter down the tree
+        for height you want to increment the return value of nodes (and a max over nodes)
+    https://leetcode.com/submissions/detail/709809165/
+        what's cool ->
+            if left == -1 or right == -1 or abs(left -right) > 1 :  to check everything at the same time 
+        how to -> 
+            1 + max(left, right) at every node 
+https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/ do it myself
+    how to do -> 
+        dfs to collect
+        start[0] = same and start[0+1] same
+        path[0] = same and start[0+1] same 
+        can pop  
+    time : DFS O(n), copy path O(2n), popping O(n)
+    space : 
+    https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/
+        approach 1 -> 
+            the node with 3 flags (left, root, right) as true, is the answer 
+        approach 2 -> 
+            build parent, while get the start and end node (parent using dictionary)
+            traverse up, the first common ancestor is the ancestor 
+        approach 3 -> 
+            #
+
+
+
 
 
 

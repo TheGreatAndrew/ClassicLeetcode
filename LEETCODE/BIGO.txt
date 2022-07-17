@@ -1,14 +1,24 @@
-Big O
-    General     
-        https://cs.stackexchange.com/questions/83574/does-space-complexity-analysis-usually-include-output-space
-        constant time O(1)
-        linear time O(n)
+### practice Big O 
+cheatsheet 
+    constant time O(1)
+    linear time O(n)
 
-    https://wiki.python.org/moin/TimeComplexity
-        O(n) for copy -> list.copy(), [:]
+techniques 
+    https://stackoverflow.com/questions/25216962/python-concatenation-vs-append-speed-on-lists
+        list append is faster than concat 
+    
 
+###Big O
+General     
+https://cs.stackexchange.com/questions/83574/does-space-complexity-analysis-usually-include-output-space
+    constant time O(1)
+    linear time O(n)
+
+https://wiki.python.org/moin/TimeComplexity
+    O(n) for copy -> list.copy(), [:]
 
 https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly#:~:text=O(log%20n)%20intuitively%20means,com%2Fquestions%2F471199%2F%E2%80%A6
+
 
 ### AMORTIZE 
 explained

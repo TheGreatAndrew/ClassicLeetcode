@@ -72,6 +72,10 @@ Dijkstra's
     https://leetcode.com/problems/network-delay-time/
         how to do -> simple BFS with Dijkstra 
         question -> what if [2,4] [2,3] [2,4]
+    https://leetcode.com/problems/path-with-minimum-effort/ do it myself in 30+ minutes 
+        how to do -> Dijkstra
+        speed : O(E + Vlog(V))
+        space : visitSet will be O(n)  in worst case
 
 Bellman Ford
 

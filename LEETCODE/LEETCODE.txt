@@ -1,3 +1,6 @@
+"do i want to code with this person full-time"
+comfortable with the code
+
 ############################################# NEW 
 Google 
     https://leetcode.com/discuss/interview-experience/1173240/google-interview-in-2-weeks-advice-please a lot of Google topics (graph, union find, dijkstra, tree)
@@ -8,7 +11,8 @@ Google
 
 Mentality
     Google is hard, harder now becvause of recession -> 
-
+    personality matters, so just smile 
+    
 
 
 ############### HOW TO SOLVE LEETCODE 

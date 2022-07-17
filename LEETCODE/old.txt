@@ -171,7 +171,6 @@ print(5)
 # https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
 # Union–find data structure or disjoint-set data structure or merge–find set, is a data structure that stores a collection of disjoint (non-overlapping) sets. Equivalently, it stores a partition of a set into disjoint subsets.
 # minimum spanning tree (MST) : is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
-# Topological sort : is a linear ordering of its vertices such that for every directed edge uv from vertex u to vertex v, u comes before v in the ordering.
 # Bellman Ford : Is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph.
 # Floyd Warshall : Is an algorithm for finding shortest paths in a directed weighted graph with positive or negative edge weights.
 # Eulearian Path : Is an algorithm that finds a path that uses every edge in a graph only once.
@@ -189,9 +188,6 @@ def buildGraph() :
 # graph dfs recursion or stack
 # https://leetcode.com/problems/clone-graph/discuss/494246/Python-Simple-BFS-and-DFS-with-detailed-explanation
   
-
-# topological sort
-# https://leetcode.com/problems/minimum-height-trees/ not basic, so don't include full code
 
 # Height: Imagine measuring a person's height, we do it from toe to head (leaf to root)
 # Depth: Imagine measuring depth of a sea, we do it from earth's surface to ocean bed (root to leaf)

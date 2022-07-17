@@ -19,7 +19,7 @@ Prim's
             time -> O(n^2 logn) cause (n^2) is number of potential edges, and (logn) come from Prim's cause Min Heap 
 
 Topological
-    principals 
+    knowledge 
         when -> 
             only for Directed Acylic Graph (directed and no cycle)
             directed cycle : can't have topological 
@@ -29,7 +29,7 @@ Topological
             take 0 before 2, take 1 before 2 so [2,0] and [2,1]
             0->2 1->2
             topological sort prints the one with no incoming edges first 
-    algo principal 
+    principal 
         print all node with no incoming edges first 
         meaning traverse adjacency list and have cycle(), visit() 
     algo 
