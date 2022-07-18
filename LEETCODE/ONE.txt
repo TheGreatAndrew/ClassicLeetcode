@@ -503,14 +503,40 @@ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/ do it mys
             traverse up, the first common ancestor is the ancestor 
         approach 3 -> 
             #
+https://leetcode.com/problems/subtree-of-another-tree/ do it myself 
+    what's cool -> 
+        do the encoding/ decoding tree 
+    https://leetcode.com/problems/subtree-of-another-tree/discuss/386209/Python-98-speed-with-comments 
+        beautiful encoding tree 
+https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/ do it myself 
+    what's cool -> 
+        so hard to append list with 2 recursions 
+        def build(node, target, path) : 
+            if node is None : return     
+            path.append(node.val)
+            if node.val == target.val : 
+                return node.val
+            elif node.val > target.val : 
+                return build(node.left, target, path) 
+            else : 
+                return build(node.right, target, path)           
+            return node.val 
+    https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/discuss/519429/Python-O(n)-sol-by-DFS.-w-Hint-and-Explanation
+        how to do ->
+            more neat 
+            if p and q are on different side of the current node, then current node is LCA
 
-
+https://leetcode.com/problems/count-good-nodes-in-binary-tree/ 
+    how to do ->
+        X bigger than all ancestors, not just direct parent 
+    speed O(n)
+    space O(1)
 
 
 
 
 ### bfs
-https://leetcode.com/problems/binary-tree-level-order-traversal do it myself but take 1 hint and 2 hours
+https://leetcode.com/problems/binary-tree-level-order-traversal do it myself but take 1 hint and 2 hours (in July do it in 10 minute)
     https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/458315/Python-99-speed-100-memory-*Simple-Solution*-with-comments memorize this, how to get all elements of that one level
 https://leetcode.com/problems/binary-tree-right-side-view/ do it myself 
     speed O(n) since we have to traverse all nodes 
@@ -795,6 +821,9 @@ store 'character' by storing as 'key' or
 ### TRIE 
 https://leetcode.com/problems/implement-trie-prefix-tree/ solve half of it myself
 https://leetcode.com/problems/design-add-and-search-words-data-structure/
+https://leetcode.com/problems/replace-words/ do it myself 
+    what's cool -> finally learn how to use Trie 
+    
 
 
 ### CONTEST

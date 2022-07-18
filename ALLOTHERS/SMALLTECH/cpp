@@ -1,0 +1,25 @@
+### questions 
+how to get element in a list through index ->
+
+
+
+question on Cisco 
+https://www.geeksforgeeks.org/check-if-a-queen-can-attack-a-given-cell-on-chessboard/
+https://leetcode.com/problems/validate-ip-address/discuss/689995/C%2B%2B-Regex-Solution-4-lines-of-code-Time-and-Space-O(1)-beats-100
+https://www.geeksforgeeks.org/count-set-bits-in-an-integer/
+merge two lists 
+
+### list vector 
+
+
+### function 
+aaa
+
+
+### structure 
+group several related variables into one place 
+
+
+### reference and pointers 
+string food = "Pizza";  
+string &meal = food; 
