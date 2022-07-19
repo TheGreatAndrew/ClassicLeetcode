@@ -550,8 +550,10 @@ https://leetcode.com/problems/find-duplicate-subtrees do it myself, with 5 hours
     https://leetcode.com/problems/find-duplicate-subtrees/discuss/106020/Python-easy-understand-solution inorder can create same serialization for symmetric trees
 
 ### serialize
-https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
-
+https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ do it myself 
+    how to do ->
+        build a string with join('')
+        build a tree by looping array 
 
 
 
@@ -564,13 +566,23 @@ https://leetcode.com/problems/kth-smallest-element-in-a-bst do it myself
     # approach 1 : use Stack for traversal, and also stop at k -> Speed is O(H+k), H can be balanced tree or skewed tree
     # approach optimized : (do it late) 
 
+https://leetcode.com/problems/kth-smallest-element-in-a-bst/ do it myself optimized way in 20 minutes 
+    speed O(logn) : run height of a tree
+        time complexity of these operations is O(H), where H is a height of the binary tree. H = logN for the balanced tree and H = N for a skewed tree.
+    space O(1)
+    follow up 
+        how to do -> 
+
+
+
+
 ############### DICTIONARY
-https://leetcode.com/problems/lru-cache/ do it myself
+https://leetcode.com/problems/lru-cache/ do it myself, do it myself dict and queue
     how to do -> OrderedDict which tracks the orders of inserted key
-    https://leetcode.com/problems/lru-cache/discuss/850110/Python-3.7%2B.-No-need-to-use-OrderedDict.-Simply-use-the-regular-dict
-        how to do -> no need to use OrderedDict
-    https://leetcode.com/problems/lru-cache/discuss/594885/Python-Simple-implementation-with-deque-(slow)-and-OrderedDict-(fast)
-        how to do -> deque 
+    OrderedDict popitem(last=False) .move_to_end(key)
+    https://leetcode.com/problems/lru-cache/discuss/352295/Python3-doubly-linked-list-and-dictionary 
+        double linked list
+
         
 
 ############### STACK 

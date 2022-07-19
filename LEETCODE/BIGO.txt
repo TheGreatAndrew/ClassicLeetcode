@@ -1,7 +1,13 @@
 ### practice Big O 
 cheatsheet 
-    constant time O(1)
-    linear time O(n)
+    O(1) constant time 
+    O(n) linear time 
+    O(logn) : binary search. divide and conquer. a binary tree of 4-nodes has height log2(4)+1 = 3
+    O(nlogn) : sort. a combination of O(n) * O(logn)
+    O(n^2) : nested for-loop 
+    O(n!) : with permutation or factorial 
+    O(2^N) : subset
+
 
 techniques 
     https://stackoverflow.com/questions/25216962/python-concatenation-vs-append-speed-on-lists
@@ -11,17 +17,21 @@ techniques
 ###Big O
 General     
 https://cs.stackexchange.com/questions/83574/does-space-complexity-analysis-usually-include-output-space
-    constant time O(1)
-    linear time O(n)
+    does-space-complexity-analysis-usually-include-output-space
 
 https://wiki.python.org/moin/TimeComplexity
     O(n) for copy -> list.copy(), [:]
 
-https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly#:~:text=O(log%20n)%20intuitively%20means,com%2Fquestions%2F471199%2F%E2%80%A6
+https://stackoverflow.com/questions/2307283/what-does-olog-n-mean-exactly
+    yellow business, white people 
+
+https://stackoverflow.com/questions/3953244/example-of-on
+    O(n!) this is scale of O!, not exact factorial of a number
+
 
 
 ### AMORTIZE 
-explained
-    ArrayList can grow. And insertion is O(1), but once it hits the capacity, it will create a new array with O(n) time
-    ArrayList grow 2x, it will create 2x array size, and copy x elements from old array, and destroy old array 
-    X insertions take 0(2X) time. The amortized time for each insertion is 0(1) .... 
+    about amortized time Big O,
+    for ArrayList in Java, if we keep appending element to the end, that's O(1). But if we reach the ArrayList length limit, it will copy and create another ArrayList with twice the size and copy old list into new list, so it will be O(n)
+    so amortized time is O(1)
+    and normal (worst) time is O(n) right ?

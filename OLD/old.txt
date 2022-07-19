@@ -37,10 +37,6 @@
 # Dictionary is a collection which is ordered** and changeable. No duplicate members.
 
 
-### lambda 
-# lambda : small anonymous function 
-
-
 #### WERID CODE
 # https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/discuss/64963/3-lines-with-O(1)-space-1-Liners-Alternatives
 root = (root.left, root.right)[p.val > root.val]
@@ -49,32 +45,12 @@ root = (root.left, root.right)[p.val > root.val]
 mylist = [False, True, False]
 x = any(mylist)
 
-# operators
-print(5/2 == 2.5)
-print(5//2 == 2)
-print(5)  
-
-
-
 
 ##### BITE 
-# x, y = oldX, oldY
-    # no need for holder 
-
 # * asterisk 
 # is multiply list, unpacking list, *args for any arguments
- 
-# queue = collections.deque([(root)])
-# queue = collections.deque()
-# queue.append(root)
 
 #### SPEED
-# https://leetcode.com/problems/3sum/discuss/725950/Python-5-Easy-Steps-Beats-97.4-Annotated set is faster and itertools
-
-
-
-
-
 
 # https://www.geeksforgeeks.org/analysis-of-different-sorting-techniques/ remember this
 # buble sort, insertion sort -> worst O(n^2) when array is reversed sorted 
@@ -207,9 +183,6 @@ def buildGraph() :
 # https://leetcode.com/problems/diameter-of-binary-tree/ do 2 tasks inside recursion
 # https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree interesting recursion 
 # https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ medium but actually hard. redo
-# https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ hard but actually medium. how to build a binary tree.
-    # https://www.youtube.com/watch?v=u4JAi2JJhI8
-    # 
 
 
 #bfs

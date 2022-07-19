@@ -111,16 +111,7 @@ https://www.quora.com/What-graph-topics-should-I-study-in-order-to-be-adequately
 only BFS and DFS. no advanced graph. higher standards about your ability to solve new problems with basic CS knowledge.
 
 ### my guide 
-start coding guide
-10 minutes whiteboard, if stuck go read hints
-30 minutes coding, if stuck go read solution 
-if read solution, later come back and solve
-if brute force O(n^2), first technique you can try is sorting inputs
-
-when stuck
-relax a little 
-read the description and write my pseudocode
-
+a
 
 ### how to study
 https://www.youtube.com/watch?v=SVvr3ZjtjI8
