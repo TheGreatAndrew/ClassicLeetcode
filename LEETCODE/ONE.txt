@@ -77,6 +77,41 @@ https://leetcode.com/problems/valid-palindrome/
         solution 2 -> two pointers ...
 
 
+############### INTERVAL 
+### interval guide 
+    there are 6 possible places an interval can be 
+    if we sort it, there will only be 3 if else 
+        if the second is totally bigger -> first[1] <= second[0]
+        of there are overlap, when we do just pick smaller ending -> first[1] < second[1]
+
+
+
+https://leetcode.com/problems/non-overlapping-intervals do it myself, pretty new pattern and come up with a guide 45 minutes totoal 
+    how to do ->
+        sort it, and 3 if else 
+
+https://leetcode.com/problems/insert-interval/
+    https://leetcode.com/problems/insert-interval/discuss/21809/Python-O(n)-and-O(nlgn)-solutions
+        what's cool -> 
+        how to do -> 
+            if newInterval before current 
+            if newInterval after current -> update new interval to current one (normally we add current to 'res', but now new will be added to 'res', current for later)
+            else overlap -> create even Newer Interval 
+
+https://leetcode.com/problems/merge-intervals/
+    how to do ->
+        3 if and if there are overlap, merge them by min() max() 
+        big O 
+            https://discord.com/channels/267624335836053506/650401909852864553/999002411798634537
+            time : O(nlogn) + O(n**2)
+            space : O(n) because Tim Sort 
+
+    approach 1 -> generate a graph ... 
+        time O(n^2)
+        space O(n^2)
+    approach 2 -> sorting with a 'merged' list 
+
+
 
 
 
@@ -86,14 +121,10 @@ patterns : prefix sum, subset backtracking (permutation), sliding window
 ### subset backtracking 
 https://leetcode.com/problems/letter-combinations-of-a-phone-number/discuss/780232/Backtracking-Python-problems%2B-solutions-interview-prep list
 
+
+
 ### general
-https://leetcode.com/problems/insert-interval/
-    https://leetcode.com/problems/insert-interval/discuss/21809/Python-O(n)-and-O(nlgn)-solutions
-        what's cool -> 
-        how to do -> 
-            if newInterval before current 
-            if newInterval after current -> update new interval to current one (normally we add current to 'res', but now new will be added to 'res', current for later)
-            else overlap -> create even Newer Interval 
+
 https://leetcode.com/problems/longest-consecutive-sequence do it myself in 30 minutes 
     how to do -> have a Set. keep removing number+1 number-1
     https://leetcode.com/problems/longest-consecutive-sequence/solution/
@@ -390,54 +421,6 @@ https://leetcode.com/problems/word-search/ nearly do it myself. interview others
 
 
 
-############### Dijkstra algorithm
-### guide 
-Dijkstra's algorithm : shortest path from one node to every other nodes  
-    step 1 -> priority queue with distance_from_source, and node 
-    step 2 -> init distance to infinity 
-    step 3 -> pick node with smallest distance, consider its neighbours
-/network-delay-time uses all 3 patterns 
-https://leetcode.com/list/53js48ke/ 
-https://www.youtube.com/watch?v=XB4MIexjvY0
-    Dijkstra is greedy
-    can work on directed, undirected graph 
-    relaxation : update vertex's cost 
-    also work with negative weights
-
-
-### general 
-https://leetcode.com/problems/network-delay-time interview others 
-    approach 1 -> dfs. 
-    approach 2 -> bfs queue. 
-    approach 3 -> priority queue. Dijkstra.
-        TODO 
-        time -> O(N+ElogN)
-        space -> 
-
-
-
-############### Bellman-Ford
-### guide 
-Bellman-Ford algorithm
-    similar to BFS 
-why use Bellman-Ford -> because it has at most 'k' stops
-speed -> O(Edges*k)
-it can deal with negative weights
-
-### general
-https://leetcode.com/problems/cheapest-flights-within-k-stops
-    https://www.youtube.com/watch?v=5eIK3zUdYmE 
-        what's cool -> traverse graph without using adjancency list or neighbours
-        how to do -> 
-            have prices[] and temp[]
-            first layer k=0, prices[B] is infinity, temp[B] is 100. We still use infinity so temp[C] will have the bad 500 value
-            update prices[] with temp[]
-            second layer k=1, go all nodes of the graph again, this time prices[B] = 100 so we use that to calculate temp[C] = 200
-        time -> 
-            with k stops. 
-
-
-
 
 
 
@@ -471,6 +454,15 @@ https://www.youtube.com/watch?v=wU6udHRIkcc
 
 
 ############### BINARY TREE
+### guide
+    strategy
+        really good at recursion
+        depth, height -> Steve's question 
+        level order traversal -> BFS with for-loop 
+        lowest common ancestor -> 3 flags. DFS to build path for each node, then popping. Or DFS to build parent.
+        finding a path between 2 nodes -> also lowest common ancestor step-by-step-directions-from-a-binary-tree-node-to-another
+        serialize -> 
+
 ### general
 https://leetcode.com/problems/invert-binary-tree/ do it myself 
     what's cool -> passing node reference 
@@ -532,28 +524,36 @@ https://leetcode.com/problems/count-good-nodes-in-binary-tree/
     speed O(n)
     space O(1)
 
+https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ do it myself 
+    how to do ->
+        build a string with join('')
+        build a tree by looping array 
 
-
-
-### bfs
-https://leetcode.com/problems/binary-tree-level-order-traversal do it myself but take 1 hint and 2 hours (in July do it in 10 minute)
-    https://leetcode.com/problems/binary-tree-level-order-traversal/discuss/458315/Python-99-speed-100-memory-*Simple-Solution*-with-comments memorize this, how to get all elements of that one level
+https://leetcode.com/problems/binary-tree-level-order-traversal do it myself 
+    how to do ->
+        BFS with for-loop
 https://leetcode.com/problems/binary-tree-right-side-view/ do it myself 
     speed O(n) since we have to traverse all nodes 
     space O(logn) because only need to store right-hand  
     https://leetcode.com/problems/binary-tree-right-side-view/discuss/56064/5-9-Lines-Python-48%2B-ms much faster code
 
-### dfs
 https://leetcode.com/problems/find-duplicate-subtrees do it myself, with 5 hours and bad big O
     https://leetcode.com/problems/find-duplicate-subtrees/discuss/1571352/Python-solution-explained-in-two-steps-for-beginners serialize postorder, put it in dict, if duplicated in dict then it's result 
     https://leetcode.com/problems/find-duplicate-subtrees/discuss/1178526/Easy-%2B-Clean-%2B-Straightforward-Python-Recursive simple dfs, print 'sub' to understand 
     https://leetcode.com/problems/find-duplicate-subtrees/discuss/106020/Python-easy-understand-solution inorder can create same serialization for symmetric trees
 
-### serialize
-https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ do it myself 
-    how to do ->
-        build a string with join('')
-        build a tree by looping array 
+https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/ lowest common ancestor 
+    what's cool ->
+        subproblem -> tree from node A to node B
+        subproblem -> 
+
+    https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/discuss/2005805/Python3-DFS-easy-solution-using-deque
+        how to do ->
+            (path to start, path to end, then lowest common ancestor)
+    https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/discuss/1612071/Accepted-Python-Super-Simple-or-DFS-%2B-BFS
+        how to do ->
+            (simple DFS to collect start and end, also add 'parent' attribute to ListNode)
+            (then BFS)
 
 
 
@@ -806,6 +806,8 @@ technique
     n&(n-1) will remove the rightmost
 operator overloading : same symbol, different meanings in different classes 
 
+https://leetcode.com/problems/subsets/solution/
+    how to do -> bitmask
 
 https://leetcode.com/problems/reverse-bits/
     https://www.youtube.com/watch?v=UcoN6UjAI64
@@ -818,10 +820,11 @@ https://leetcode.com/problems/reverse-bits/
 https://leetcode.com/problems/sum-of-two-integers/discuss/84278/a-summary-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently
     a  
 
-### general 
 https://leetcode.com/problems/number-of-1-bits/discuss/1044775/Python-n-and-(n-1)-trick-%2B-even-faster-explained
     solution 1 -> keep removing rightmost until 'n' is zero (number of bit stay the same, only value of bit changed)
     solution 2 -> work with group of 2, then 4, then 8
+
+
 
 
 ############### TRIE 

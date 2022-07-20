@@ -23,19 +23,6 @@ https://leetcode.com/problems/is-graph-bipartite/ do it myself in 30+ minutes
         depth first search can be level order traversal 
     how to do -> 
 
-### Lowest Common Ancestor 
-https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/
-    what's cool ->
-        subproblem -> tree from node A to node B
-        subproblem -> 
-
-    https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/discuss/2005805/Python3-DFS-easy-solution-using-deque
-        how to do ->
-            (path to start, path to end, then lowest common ancestor)
-    https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to-another/discuss/1612071/Accepted-Python-Super-Simple-or-DFS-%2B-BFS
-        how to do ->
-            (simple DFS to collect start and end, also add 'parent' attribute to ListNode)
-            (then BFS)
 
 
 
@@ -58,7 +45,8 @@ guide
     Bellman Ford's algorithm -> 
     they both for single source shortest path https://www.geeksforgeeks.org/what-are-the-differences-between-bellman-fords-and-dijkstras-algorithms/
 
-Dijkstra's
+# Dijkstra's
+guide 
     principals 
         pick starting node 
         check shortest among neighbor nodes (not among all nodes)
@@ -68,16 +56,62 @@ Dijkstra's
         use min heap for shortest 
         add the costs of the edges in heap A->B or A->C->B
 
-    https://www.youtube.com/watch?v=_lHSawdgXpI short pseudo code at the end 
-    https://leetcode.com/problems/network-delay-time/
-        how to do -> simple BFS with Dijkstra 
-        question -> what if [2,4] [2,3] [2,4]
-    https://leetcode.com/problems/path-with-minimum-effort/ do it myself in 30+ minutes 
-        how to do -> Dijkstra
-        speed : O(E + Vlog(V))
-        space : visitSet will be O(n)  in worst case
+more guide     
+https://www.youtube.com/watch?v=_lHSawdgXpI 
+    short pseudo code at the end 
+https://www.youtube.com/watch?v=XB4MIexjvY0
+    Dijkstra is greedy
+    can work on directed, undirected graph 
+    relaxation : update vertex's cost 
+    also work with negative weights
+Dijkstra's algorithm : shortest path from one node to every other nodes  
+    step 1 -> priority queue with distance_from_source, and node 
+    step 2 -> init distance to infinity 
+    step 3 -> pick node with smallest distance, consider its neighbours
 
-Bellman Ford
+general 
+https://leetcode.com/list/53js48ke/ 
+    list 
+https://leetcode.com/problems/network-delay-time/
+    how to do -> simple BFS with Dijkstra 
+    question -> what if [2,4] [2,3] [2,4]
+    approach 1 -> dfs. 
+    approach 2 -> bfs queue. 
+    approach 3 -> priority queue. Dijkstra.
+        TODO 
+        time -> O(N+ElogN)
+        space -> 
+https://leetcode.com/problems/path-with-minimum-effort/ do it myself in 30+ minutes 
+    how to do -> Dijkstra
+    speed : O(E + Vlog(V))
+    space : visitSet will be O(n)  in worst case
+
+
+
+# Bellman Ford
+guide 
+    Bellman-Ford when to use 
+        similar to BFS 
+        why use Bellman-Ford -> because it has at most 'k' stops
+        speed -> O(edges*k) or O(VE)
+        it can deal with negative weights
+    principals 
+        a
+    algo 
+        a
+
+
+general 
+https://leetcode.com/problems/cheapest-flights-within-k-stops
+    https://www.youtube.com/watch?v=5eIK3zUdYmE 
+        what's cool -> traverse graph without using adjancency list or neighbours
+        how to do -> 
+            have prices[] and temp[]
+            first layer k=0, prices[B] is infinity, temp[B] is 100. We still use infinity so temp[C] will have the bad 500 value
+            update prices[] with temp[]
+            second layer k=1, go all nodes of the graph again, this time prices[B] = 100 so we use that to calculate temp[C] = 200
+        time -> 
+            with k stops. 
 
 
 
@@ -105,7 +139,24 @@ Kruskal's Algorithm :
     speed O(n^2)
     with min heap it's O(nlogn)
 
-Prim 
+
+### prim's algo 
+Prim's 
+    principals 
+        keep getting smallest cost, the one attached with previous 
+        time O((V+E)logV)
+    algo 
+        visit set() 
+        frontier minHeap 
+        res 
+        choose a random node 
+        put all neighbor (cost, node) to frontier 
+        choose smallest, repeat
+    problem 
+        https://leetcode.com/submissions/detail/741291968/
+            how to do -> build adjacency list, then Prim's 
+            time -> O(n^2 logn) cause (n^2) is number of potential edges, and (logn) come from Prim's cause Min Heap 
+ 
     https://leetcode.com/problems/min-cost-to-connect-all-points/
 
 

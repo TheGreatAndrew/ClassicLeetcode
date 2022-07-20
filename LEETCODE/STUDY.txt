@@ -2,22 +2,6 @@
 OTHER
     Tarjan's strongly connected component algorithm : detect if there are cycles
 
-Prim's 
-    principals 
-        keep getting smallest cost, the one attacehd with previous 
-        time O((V+E)logV)
-    algo 
-        visit set() 
-        frontier minHeap 
-        res 
-        choose a random node 
-        put all neighbor (cost, node) to frontier 
-        choose smallest, repeat
-    problem 
-        https://leetcode.com/submissions/detail/741291968/
-            how to do -> build adjacency list, then Prim's 
-            time -> O(n^2 logn) cause (n^2) is number of potential edges, and (logn) come from Prim's cause Min Heap 
-
 Topological
     knowledge 
         when -> 
