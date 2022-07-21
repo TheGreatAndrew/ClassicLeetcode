@@ -464,6 +464,9 @@ https://www.youtube.com/watch?v=wU6udHRIkcc
         serialize -> 
 
 ### general
+https://leetcode.com/problems/delete-nodes-and-return-forest/discuss/345009/Python-BFS-Solution
+    how to do ->
+        'hasParent' for when to create another linked list
 https://leetcode.com/problems/invert-binary-tree/ do it myself 
     what's cool -> passing node reference 
 https://leetcode.com/problems/maximum-depth-of-binary-tree do it myself 
@@ -559,7 +562,7 @@ https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to
 
 
 
-############### BINARY SEARCH TREE
+###############BINARY SEARCH TREE
 ### basic 
 https://leetcode.com/problems/validate-binary-search-tree do it myself
 https://leetcode.com/problems/kth-smallest-element-in-a-bst do it myself
