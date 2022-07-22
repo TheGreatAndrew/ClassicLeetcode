@@ -23,6 +23,14 @@ https://leetcode.com/problems/jump-game/
 
 
 https://leetcode.com/problems/coin-change do it myself, unbounded knapsack
+https://leetcode.com/problems/coin-change-2/discuss/675089/PythonJSGoC%2B%2B-O(cn)-DP-Unbounded-Knapsack-w-Visualization
+    very good explanation 
+    time -> O(coins*amount)
+    space -> O(amount)
+    https://leetcode.com/problems/coin-change-2/discuss/99210/python-O(n)-space-dp-solution 
+        scroll down to "What if they asked for the total number of permutations that sum to an amount, rather than just the number of combinations"
+
+
 https://leetcode.com/problems/minimum-path-sum/ do it myself 
     how to do -> update matrix in-place with previous 
     https://leetcode.com/problems/minimum-path-sum/discuss/825410/Python3-Dynamic-Programming-90-w-Explaination small things but can improve big O

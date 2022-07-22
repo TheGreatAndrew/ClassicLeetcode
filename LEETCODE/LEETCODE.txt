@@ -3,7 +3,7 @@ comfortable with the code
 
 ############################################# NEW 
 Google 
-    https://leetcode.com/discuss/interview-experience/1173240/google-interview-in-2-weeks-advice-please a lot of Google topics (graph, union find, dijkstra, tree)
+    https://leetcode.com/discuss/interview-experience/1173240/google-interview-in-2-weeks-advice-please a lot of Google topics 
     https://leetcode.com/discuss/interview-question/1260092/Google-Phone-Screen-graph-question/967274
     https://leetcode.com/discuss/interview-question/1333963/googlephone-screenusswe this guy better than me 
     https://leetcode.com/discuss/interview-question/algorithms/1361977/Google-or-SDE-2-or-Onsite-or-Shortest-Path-with-twist/1028017

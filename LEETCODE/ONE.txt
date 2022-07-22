@@ -350,11 +350,7 @@ https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-pr
     complete path : there are direct edges betwee any pairs of vertices  
     connected graph : can get from every vertices to another vertices through a series of edges (path)
     weighted graph : edges with number (weight)
-    Dijkstra's algorithm : finding the shortest paths between nodes in a graph
     union-find : check ### -> help find numbers of connected components
-    minimum spanning tree : check ###
-    topological sort : linear ordering from vertext u to v, and u comes first
-    Bellman Ford : for weighted graph, calculate shortest path from a single source vertext to all others
     Floyd Warshall : for directed weighted graph, finding shortest paths with positive of negative edge weights 
     Eulearian Path : finds a path that uses every edge in a graph only once.
     maximum network flows 
@@ -831,17 +827,47 @@ https://leetcode.com/problems/number-of-1-bits/discuss/1044775/Python-n-and-(n-1
 
 
 ############### TRIE 
-### GUIDE 
+### guide  
 trie (prefix tree) is type of tree, often for characters
 store 'character' by storing as 'key' or  
 
 
-### TRIE 
+### general  
 https://leetcode.com/problems/implement-trie-prefix-tree/ solve half of it myself
 https://leetcode.com/problems/design-add-and-search-words-data-structure/
 https://leetcode.com/problems/replace-words/ do it myself 
     what's cool -> finally learn how to use Trie 
     
+
+############### QUICKSELECT
+guide 
+    principals 
+        left partition will have smaller or equal value to right partition 
+        average O(n)
+        worst O(n**2)
+        n+n/2+n/4 = 2n which is n
+    algo 
+        (for kth-largest-element-in-an-array)
+
+    
+
+https://leetcode.com/problems/kth-largest-element-in-an-array do it myself with heap 
+    how to do ->
+        with heap 
+        k is capacity 
+        time O(nlogk) -> loop through all elements O(n) and pushpop O(logk)
+        space O(k) -> O(k)
+    https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/762174/4-python-solutions-with-step-by-step-optimization-plus-time-and-space-analysis
+        how to do -> 
+    https://www.youtube.com/watch?v=XEmy13g1Qxc
+        heap is O(n + klogn) -> if heapify all, then pop k times 
+        quick select 
+            a 
+
+
+
+
+
 
 
 ### CONTEST
@@ -852,3 +878,5 @@ https://leetcode.com/problems/most-common-word/solution/
 https://leetcode.com/problems/group-anagrams/
 https://leetcode.com/problems/valid-anagram/ do it myself
 https://leetcode.com/problems/longest-repeating-character-replacement don't understand 
+
+

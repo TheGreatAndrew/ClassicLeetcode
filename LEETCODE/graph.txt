@@ -51,7 +51,7 @@ guide
         pick starting node 
         check shortest among neighbor nodes (not among all nodes)
         plus the cost from C if go indirect A->C->B
-        O(E+VlogV) if a heap is used
+        O(ElogV) if a heap is used
     algo 
         use min heap for shortest 
         add the costs of the edges in heap A->B or A->C->B
