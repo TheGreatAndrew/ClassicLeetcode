@@ -805,8 +805,29 @@ technique
     n&(n-1) will remove the rightmost
 operator overloading : same symbol, different meanings in different classes 
 
-https://leetcode.com/problems/subsets/solution/
-    how to do -> bitmask
+https://leetcode.com/problems/subsets/
+    speed ->
+        input [1,3,2]
+        000: []
+        001: [2]
+        010: [3]
+        011: [3,2]
+        100: [1]
+        101: [1,2]
+    bit manipulation ->
+        N = 3
+        Cap = 8
+        Mask: 0, 1, 2, 3, 4, 5, 6, 7
+        mask: 000, 001, 010, 011,100, 101, … 111
+        Bit = 001, 010, 100,
+        0: []
+        1 = 001: [1]
+        2 = 010: [3]
+        3 = 011: [1,3]
+        4 = 100: [2]
+        …
+        7 = 111 : [1,3,2]
+
 
 https://leetcode.com/problems/reverse-bits/
     https://www.youtube.com/watch?v=UcoN6UjAI64
@@ -842,12 +863,20 @@ https://leetcode.com/problems/replace-words/ do it myself
 ############### QUICKSELECT
 guide 
     principals 
-        left partition will have smaller or equal value to right partition 
+        keep partition into 2 half based on 'last pivot' 
+        keep track of 'inflection pivot'
+        if 'inflection pivot = target' we are good 
+
+    algo 
+        (for kth-largest-element-in-an-array)
+        pivot for last, p is the spot between smaller and bigger partition 
+        update k because for k = 2, k is 2nd index from behind 
+
+
+    big O    
         average O(n)
         worst O(n**2)
         n+n/2+n/4 = 2n which is n
-    algo 
-        (for kth-largest-element-in-an-array)
 
     
 
@@ -879,4 +908,42 @@ https://leetcode.com/problems/group-anagrams/
 https://leetcode.com/problems/valid-anagram/ do it myself
 https://leetcode.com/problems/longest-repeating-character-replacement don't understand 
 
+
+
+
+
+
+
+
+############# SIMULATION 
+https://leetcode.com/problems/robot-bounded-in-circle/ SIMULATION 
+    https://leetcode.com/problems/robot-bounded-in-circle/discuss/850464/Python-3-or-Simulation-or-Explanation
+        how to do ->
+            north 0 
+            west 1 
+
+
+
+
+https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/894031/Python-O(logn)-Detailed-Explanation     
+    how to do ->
+        split into 2 normal arrays, the others are 2 abnormal arrays 
+    
+https://leetcode.com/problems/largest-rectangle-in-histogram/
+    how to come up with this solution ->
+    how to do ->
+        monotonic stack increasing 
+        if we meet a smaller 'height'
+        then we trace back, area = width * height. width is 'index', and height is smallest bar, which is the first one since this is monotonic stack
+
+    https://leetcode.com/problems/largest-rectangle-in-histogram/discuss/28917/AC-Python-clean-solution-using-stack-76ms
+        how to do -> same as above 
+
+https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/ 
+    what's cool -> sliding window SUM but have negative
+    how to do ->
+        (monotonic queue)
+        don't use 'nums' input directly, use PrefixSum
+        think about it, if >= k then we will make it <k for adding new number
+        ....
 

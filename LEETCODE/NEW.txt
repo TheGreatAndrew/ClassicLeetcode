@@ -1,0 +1,12 @@
+############### FOR STUDYING, LATER WILL TURN IT INTO GUIDE  
+OTHER
+    Tarjan's strongly connected component algorithm : detect if there are cycles
+
+https://www.educative.io/answers/what-is-a-segment-tree
+    (look at the illustrations)
+
+https://stackoverflow.com/questions/17466218/what-are-the-differences-between-segment-trees-interval-trees-binary-indexed-t#:~:text=Segment%20tree%20stores%20intervals%2C%20and,queries%20%2D%20similar%20to%20segment%20tree.
+    a 
+
+https://favtutor.com/blogs/floyd-warshall-algorithm
+    All-pairs shortest path problems is used to determine a matrix A such that A(i,j) is the length of a shortest path from i to j.
