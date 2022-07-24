@@ -198,10 +198,11 @@ https://leetcode.com/problems/container-with-most-water/ do it myself
     time -> O(n) to walk all of them
     space -> O(1) no data 
 
-https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+https://leetcode.com/problems/remove-nth-node-from-end-of-list/ do it myself 
     # thought process
     # fast reaches the end
     # slow reaches size-n
+    
 #### sliding window
 https://leetcode.com/problems/find-all-anagrams-in-a-string/
 https://leetcode.com/problems/minimum-window-substring/ hard
@@ -860,7 +861,7 @@ https://leetcode.com/problems/replace-words/ do it myself
     what's cool -> finally learn how to use Trie 
     
 
-############### QUICKSELECT
+############### QUICK SELECT
 guide 
     principals 
         keep partition into 2 half based on 'last pivot' 

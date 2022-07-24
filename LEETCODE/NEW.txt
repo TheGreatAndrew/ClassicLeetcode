@@ -10,3 +10,24 @@ https://stackoverflow.com/questions/17466218/what-are-the-differences-between-se
 
 https://favtutor.com/blogs/floyd-warshall-algorithm
     All-pairs shortest path problems is used to determine a matrix A such that A(i,j) is the length of a shortest path from i to j.
+
+
+
+
+
+https://leetcode.com/problems/remove-duplicate-letters/discuss/1859515/Python-oror-O(n)-Beats-98-oror-Stack-oror-Detailed-Explanation-oror-Simple
+    lexicographical ->
+        just normal dictionary order, but last occurence exception
+    how to do ->
+        (lexicographical)
+        (monotonic increasing stack, think about the last occurences) 
+        store the last occurences 
+        keep adding to stack
+        if new letter is smaller, and the letter before still occur later -> remove previous letter
+        why remove from the right -> "bcab" outputs "bca" because c no recurring
+
+    time ->
+        stack will contain max 26 character, so its 26N max, but in terms of time-complexity, it is O(M*N) where M is number of distinct characters.
+
+
+
