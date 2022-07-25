@@ -222,6 +222,15 @@ gridTraveller memoization
 longest common subsequence
 
 
+
+### GREEDY 
+https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/ do it myself
+    how to do ->
+        greedy get maxH and get maxW 
+        tricks are put [0] and ending 
+
+
+
 ### articles 
 https://www.quora.com/Are-there-any-good-resources-or-tutorials-for-dynamic-programming-DP-besides-the-TopCoder-tutorial 
     iteration is much faster than recursion
@@ -247,10 +256,6 @@ https://www.topcoder.com/thrive/articles/Dynamic%20Programming:%20From%20Novice%
 
 
     Advanced
-
-
-
-
 
 
 

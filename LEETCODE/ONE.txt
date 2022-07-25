@@ -20,6 +20,19 @@ https://leetcode.com/problems/happy-number
     approach 2 -> niche. Floyd's Cycle-Finding Algorithm. 
 https://leetcode.com/problems/count-asterisks/ do it myself 
     how to do -> 
+https://leetcode.com/problems/maximum-units-on-a-truck/
+    how to do -> 
+        totalBox = elements of list * total boxes
+        heap push totalBox O(totalBox * logn) 
+        heap pop O(TruckSize * logn)
+    https://leetcode.com/problems/maximum-units-on-a-truck/discuss/1272564/Short-and-Easy-Solution-w-Explanation-or-Greedily-Select-Max-UnitsBox-Ratio
+        solution 1 ->
+            n elements of list 
+            sorting O(nlogn)
+            boxTypes.sort(key=lambda a:-a[1])
+        solution 2 ->
+            couting sort 
+            time O(n)
 
 
 
@@ -199,9 +212,12 @@ https://leetcode.com/problems/container-with-most-water/ do it myself
     space -> O(1) no data 
 
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/ do it myself 
-    # thought process
-    # fast reaches the end
-    # slow reaches size-n
+    how to do -> fast reaches the ene, slow reaches size-n
+    how to do -> fast go n, then fast slow go together 
+
+https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list do it myself 
+    how to do -> even, odd cases
+
     
 #### sliding window
 https://leetcode.com/problems/find-all-anagrams-in-a-string/
@@ -268,12 +284,11 @@ https://leetcode.com/problems/string-to-integer-atoi/solution/ redo
     TOC (Theory Of Computation) -> state machines either transition to new stay or stay the same. 
 
 
-
 ############### BINARY SEARCH 
 a
 
 ### general 
-https://leetcode.com/problems/binary-search/ 
+https://leetcode.com/problems/binary-search/ do it myself
 https://leetcode.com/problems/search-a-2d-matrix/ do it myself 1 hours with failed submissions 
     how to do -> binary search which row, and later binary search which column of that row 
     https://leetcode.com/problems/search-a-2d-matrix/discuss/26201/A-Python-binary-search-solution-O(logn)
@@ -861,6 +876,24 @@ https://leetcode.com/problems/replace-words/ do it myself
     what's cool -> finally learn how to use Trie 
     
 
+https://leetcode.com/problems/search-suggestions-system
+    my trie ->
+        standard trie 
+        for searchPrefix(), i keep going and return all the words 
+    https://leetcode.com/problems/search-suggestions-system/discuss/864637/Python-3-or-Two-Methods-(Sort-Trie)-or-Explanation
+        how to do ->
+            binary search 
+
+        how to do ->
+            trie
+            sort before anything. TrieNode has words 
+    
+        how to do ->
+            trie but don't go from beginning everytime 
+            self.node = self.root
+
+
+
 ############### QUICK SELECT
 guide 
     principals 
@@ -917,11 +950,12 @@ https://leetcode.com/problems/longest-repeating-character-replacement don't unde
 
 
 ############# SIMULATION 
-https://leetcode.com/problems/robot-bounded-in-circle/ SIMULATION 
+https://leetcode.com/problems/robot-bounded-in-circle/ SIMULATION, do it myself 
     https://leetcode.com/problems/robot-bounded-in-circle/discuss/850464/Python-3-or-Simulation-or-Explanation
         how to do ->
-            north 0 
-            west 1 
+            direction 0 1 2 3 
+            coor 
+            2 success case
 
 
 

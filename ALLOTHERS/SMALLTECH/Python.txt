@@ -19,6 +19,14 @@ mul()
 set : unchangable, but can add and remove items
 
 
+## pass arguments
+call by object reference or call by assignment
+    immutable is call by value
+    mutable is call by reference
+variable 
+    assign a var -> is binding a name (var) to an object    
+
+
 
 
 ### regex
@@ -41,8 +49,6 @@ for match in matches :
 why use -> anoymous lambda function to used with higher-order function (like filter or map)
 
 
-
-## pass arguments
 
 
 

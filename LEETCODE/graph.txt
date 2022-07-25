@@ -23,6 +23,19 @@ https://leetcode.com/problems/is-graph-bipartite/ do it myself in 30+ minutes
         depth first search can be level order traversal 
     how to do -> 
 
+https://leetcode.com/problems/number-of-provinces adjacency matrix. do it myself. 
+    how to do ->
+        2 loop outside
+        loop whole row, if has 1 then rowHasOne is True 
+        dfs loop whole row 
+    https://leetcode.com/problems/number-of-provinces/discuss/303150/python-union-find-dfs-bfs
+    https://leetcode.com/problems/number-of-provinces/discuss/470456/Python-DFS-solution-with-explanation-beats-97
+        these 2 same dfs standard
+        how to do ->
+            1 loop all rows no check 
+            dfs loop all col in that 'row', if that 'col' is 1 and not 'seen' then dfs 
+
+
 
 
 
