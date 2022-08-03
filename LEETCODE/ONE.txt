@@ -708,7 +708,7 @@ https://leetcode.com/problems/car-fleet
 
 
 
-############### HEAP  
+###############HEAP  
 https://leetcode.com/problems/merge-k-sorted-lists do it myself. Only problem is Python 3 weird heap.  
     tuples are compared elementwise, so if there's a tie on the l.val, it then tries to compare the second elements
     do i use existing node or new node -> new node 
@@ -739,7 +739,9 @@ https://leetcode.com/problems/reorganize-string/ do it myself
         if 1 letter that is the majority, then it's impossible
         otherwise just build the string from most occurence char, 2nd most occurence char 
 
-
+https://leetcode.com/problems/least-number-of-unique-integers-after-k-removals/ do it myself 
+    how to do ->
+        counter then minheap 
 
 
 https://leetcode.com/problems/kth-largest-element-in-a-stream/discuss/482591/Simple-Python-Solution-or-Maintain-Min-Heap-whose-size-is-always-kept-at-k
@@ -851,7 +853,7 @@ https://leetcode.com/problems/palindrome-partitioning
 
 
 
-############### BITMASK and BIT MANIPULATION 
+##############BIT MANIPULATION
 guide
 The integers are first converted into binary and then operations are performed on bit by bit
 bitmas 
@@ -867,7 +869,20 @@ bitmas
 technique
     n&(n-1) will remove the rightmost
 operator overloading : same symbol, different meanings in different classes 
+https://www.youtube.com/watch?v=NLKQEOgBAnw&t=189s
+    negative -> two's complement
+        invert bits -> add 1 at the end -> add 1 for signs in the front 
+    logical and arithemetic shifting 
+        right shift : move evrything right. remove trash. divide by 2, rounding down 
+        logical right shift: fill in 0
+        arithemetic right shift : no fill in, rounding up 
+    mask : same length with input 
+    get ith bit -> ( input&(1<<i) ) !=0
+    set ith bit -> ( input|(1<<i) )
+    clear ith bit -> ( input& ~(1<<i) ) 
 
+
+### general 
 https://leetcode.com/problems/subsets/
     speed ->
         input [1,3,2]
@@ -1044,3 +1059,9 @@ https://www.youtube.com/watch?v=4VqmGXwpLqc
 https://www.programiz.com/dsa/merge-sort kind of similar merge sort 
 https://leetcode.com/problems/sort-an-array/ do it myself merge sort. 
  
+
+#############DESIGN 
+
+https://leetcode.com/problems/design-twitter do it myself in 45m
+    how to do ->
+        just look at the 3 data structures i have 

@@ -31,3 +31,27 @@ https://leetcode.com/problems/remove-duplicate-letters/discuss/1859515/Python-or
 
 
 
+##### Tarjan's Bridge-Finding Algorithm
+    principals 
+        a 
+    algo 
+        a 
+
+https://www.youtube.com/watch?v=wUgWX0nc4NY
+    Strongly Connected Component
+    bunch of connected component, if leave there is no way to go back 
+    low-link value : lowest node reachable by another node (root of union find)
+    use a stack to improve 
+    6:18 pseudo code 
+    if it's in the stack, that's the low-lin value 
+    12:00
+
+
+
+### general 
+https://leetcode.com/problems/critical-connections-in-a-network/discuss/1174196/JS-Python-Java-C%2B%2B-or-Tarjan's-Algorithm-Solution-w-Explanation
+    how to do ->
+        critical connection = bridge 
+        combination of DFS and union find 
+        DFS to keep track of earlist node 
+
