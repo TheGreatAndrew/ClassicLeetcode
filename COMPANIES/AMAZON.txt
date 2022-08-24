@@ -1,21 +1,16 @@
-### amazon technical interview 
-https://leetcode.com/discuss/interview-experience/2210092/amazon-sde-1-selected-full-time-interview-experience all
-    phone 
-    detecting cycle in linkedlist
-    sort 012 array
-
-    round 2 
-    container with most water
-    spiral Matrix
-
-    round 3 
-    behavior
-    Serialize and Deserialize Binary Tree
-
-
 ### tips 
 https://www.amazon.jobs/en/landing_pages/in-person-interview
-
+https://www.youtube.com/watch?v=Rl7zExiJSM0
+    first, 16 leaderships 
+    second, secondary important, system design 
+https://www.scarletink.com/interviewing-at-amazon-leadership-principles/
+    use LP on regular basic
+    We don’t need you to exhibit our leadership principles at your current job
+    
+https://interviewgenie.com/resources
+    a
+https://www.interviewkickstart.com/interview-questions/amazon-system-design-interview-questions 
+    system design  
 
 
 
@@ -44,3 +39,12 @@ public long findMaxProducts(List<Integer> products) {
 https://leetcode.com/discuss/interview-question/1031933/amazon-onsite-sde2-package-dependencies top sort 
 
 		
+
+
+
+phone is esy
+Only Amazon needs Leetcode, Behavior, OOD -> no neeed to prepare
+1 week of focusing on easy phone, no pressure < just apply for jobs 
+i haven't really prepared last week, or 2 weeks for leetcode 
+priority not finding Amazon job, it's normal job and startup
+Foster passed with less Leetcode 

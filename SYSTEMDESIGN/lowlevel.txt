@@ -1,0 +1,101 @@
+https://www.davidseek.com/ood/
+    ask questions
+    code : abstract, override 
+
+https://leetcode.com/discuss/interview-question/object-oriented-design/124744/Design-an-online-hotel-booking-system 
+    how to do ->
+        3 enums, 7 classes
+
+design Alexa devices 
+    https://leetcode.com/discuss/interview-question/object-oriented-design/1510642/OOP-Alexa-device-input-and-output.-help-me-design-it./1115825 
+    https://onecompiler.com/java/3ycknarrs
+
+https://leetcode.com/discuss/interview-question/object-oriented-design/1510642/OOP-Alexa-device-input-and-output.-help-me-design-it./1115825
+    a
+
+parking lot 
+    https://leetcode.com/discuss/interview-question/object-oriented-design/124739/Parking-Lot-Design-Using-OO-Design
+    design : 
+        ParkingStatus enum
+        VehicleType enum 
+        SlotSize enum
+            ??? 
+        
+        ParkingSlot class
+            String slotId 
+            ParkingStatus parkingStatus
+            SlotSize slotSize 
+            Vehicle vehicle
+            parkVehicle()
+            emptySlot()
+        Floor class 
+            String floorId
+            List<ParkingSlot> parkingSlots
+            emptyFloor()
+        Parking class
+            String parkingId
+            List<Floor> floors
+            String address
+            emptyWholeParkingLot()
+
+        Vehicle interface
+            VehicleType getType()
+        Bike class implements Vehicle 
+            String bikeNumber
+            override getType() 
+        HatchBackCar implements Vehicle
+            String carNumber
+            override getType()
+        SedanCar implements Vehicle
+            String carNumber
+            override getType()  
+
+        FareController class
+            Map<Vehicle, ParkingDetails>
+            onVehicleEntry()
+            onVehicleExit()
+            getFare()
+            getFare() to calculate fare but it's empty cause unneccessary 
+        ParkingDetails class
+            Vehicle vehicle
+            Parking parking
+            Date entryTime
+            Date exitTime
+            STATIC OCCUPIED_PARKING_SLOT 
+
+book my show 
+    https://leetcode.com/discuss/interview-question/object-oriented-design/1320604/Book-My-Show-or-Low-Level-Design abstract 
+    design : 
+        SeatStatus enum 
+        Gender enum 
+        Genre enum
+        MovieRating enum
+        BookingStatus enum
+
+        BMS class
+            List<Theater> theaters
+            List<Movie> getMovies()
+            List<Theater> getTheaters()
+
+        Theater class
+            Address adress
+            List<Audi> audi
+            Map<Date, Movie> getMovie()
+
+        Address class
+        Show class
+        Seat class 
+        Person abstract class 
+        Actor class extends Person 
+        Customer class extends Person 
+        Movie class 
+        Booking class
+        Payment class 
+
+
+
+
+
+vending machine 
+    https://leetcode.com/discuss/interview-question/object-oriented-design/125218/Design-a-vending-machine
+    abstract 

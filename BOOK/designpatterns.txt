@@ -1,25 +1,29 @@
 Software Design Patterns (book)
 terms
-a
+wrapper : is decorator
 
-SOLID Principles
+
+############### SOLID Principles
 hardly any successful software uses all those 5
-Single Responsibility Principle
-class responsible for one thing, with hidden/ encapsulated logics
-Open/Close Principle
-a class is open for extends, but close for modification 
-final -> the class is no longer open
+Single Responsibility Principle : 
+    class responsible for one thing, with hidden/ encapsulated logics
+Open/Close Principle : 
+    a class is open for extends, but close for modification 
+    final -> the class is no longer open
 Liskov Substitution Principle
-in subclass, when override a method. Extend the behavior rather than replacing with something else entirely. So subclass’s object can replace parent’s object without breaking client’s code
+    Subclass’s object can replace parent’s object without breaking client’s code -> in subclass, when override a method. Extend the behavior rather than replacing with something else entirely. 
 has a checklist
-Interface Segregation Principle
-make your interfaces narrow enough, so that the client classes don’t need to implement the behaviors they don’t need
+Interface Segregation Principle : 
+    make your interfaces narrow enough, so that the client classes don’t need to implement the behaviors they don’t need
 Dependency Inversion Principle
-low-level class : basic engine
-low-level class depends on high-level 
- 
+    dependency : no specific meaning 
+    dependency inversion : dependency injection, decoupling of software modules  
+    class Computer has class RedKeyboard and class RedMonitor -> what if we want to use BlueKeyboard
+    create interface Keyboard so that RedKeyboard and BlueKeyboard can implemeent them
 
-Creational Design Pattern
+
+
+############### Creational Design Pattern
 creational design pattern -> object creation. help with resuablity. 
 
 Factory Method
@@ -29,7 +33,6 @@ interface [Interface] for superclass [Creator], and allows subclass [ConcreteCre
 const factory = new ButtonFactory();
 const iosButton = factory.createButton(ios)
 const androidButton = factory.createButton(android)
-
 
 
 <>Abstract Factory
@@ -46,11 +49,10 @@ normally object inherits from class, but clone object from Object.create(oldObje
 ‘prototype’ in JS is its constructor
 
 
-
 <>Singleton
 class only has 1 object with global access point 
 
-Structural Design Pattern
+############### Structural Design Pattern
 <>adapter
 convert the interface of one object so that another object can understand it
 <><>
@@ -62,7 +64,17 @@ split a closely related classes -> into two separate hierarchies abstraction and
 let you compose objects to tree structure
 
 <>decorator
-wrapper object to wrap the objects, these wrappers contain the new behaviors
+a 'wrapper' would add more functionality to 'object'. Like a file can be Compressed() and Decrypted() so we can send it to another person.
+why use -> Notifier class with SMSNotifier, FacebookNotifier, EmailNotifier. If house fire how to call all of them at the same time
+Aggregation or Composition -> An object can use the behavior of various classes, having references to multiple objects and delegating them all kinds of work
+how to do ->
+    // last of the code for code, ignore other parts
+    DataSource is interface to both wrapper and object 
+    FileDataObject is object 
+    DataSourceDecoder is wrapper and parent for CompressionDecorator and EncryptionDecorator 
+    so a File < can have Compression < and Encryption 
+
+
 
 <>facade
 the details of ElectricalSystem -> House simplified wrapper hide the details -> for the Client
@@ -75,7 +87,7 @@ fit more objects into available RAM by sharing common state
 <>proxy (substitute) 
 create a proxy copy from the original, whenever the proxy is changed, the function with it is changed 
 
-Behavioral Design Pattern
+############### Behavioral Design Pattern
 <>chain of responsibility 
 pass requests along chain of handlers
 
@@ -86,11 +98,9 @@ turn request into object with all info about the request, this wll add functiona
 to iterate a collections 
 
 
-
 <>mediator
 restrict direct communications between objects, and can only collaborate through mediator
 middleware 
-
 
 
 <>memento
@@ -119,3 +129,5 @@ superclass defines skeleton, subclass can override it but not the structure
 
 
 
+
+############### EXTRA NOT IN THE BOOK

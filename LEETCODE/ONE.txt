@@ -59,13 +59,18 @@ https://leetcode.com/problems/min-stack/
 
 
 
-############### STRING 
+###############STRING 
 general
     subsequence -> add or remove letters -> 
     anagram -> same letters, different orders -> 
     palindrom -> reverse string and it is the same -> 
     permutation, palindrome, superset -> 
     can be 2 pointers, sliding window
+
+https://leetcode.com/problems/zigzag-conversion/
+    how to do ->
+        first row and last row increment by -> 2 * (numRows - 1)
+        but those middoe rows we will increment -> increment and also get additional next to each other letter 
 
 
 https://leetcode.com/problems/reverse-string/
@@ -80,7 +85,16 @@ https://leetcode.com/problems/group-anagrams do it myself
     https://leetcode.com/problems/group-anagrams/discuss/664252/Python-3-solution-detailed-explanation-faster-than-97.5 exatly same solution, but faster and cool technique, and look at comment    
 
 
-############### REGEX 
+###############ARRAY 
+https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/ do it myself 
+    how to do -> 
+        dict to store last occurences 
+        speed O(n) 
+        space O(unique)
+
+
+
+###############REGEX 
 ###guide 
 aa
 ###general 
@@ -358,6 +372,15 @@ https://leetcode.com/problems/spiral-matrix/
 
 
 ### general
+https://leetcode.com/problems/rotate-image/
+    approach 1 -> move forward 4 corners. from 4 corners move inward.
+    approach 2 -> transpose than reverse left-to-right 
+        transpose -> the right-side of diagnoal
+        left-to-right -> switch first-half through n//2 
+    https://leetcode.com/problems/rotate-image/discuss/18884/Seven-Short-Solutions-(1-to-7-lines)
+        solution 1 -> why A[:]
+
+
 https://leetcode.com/problems/valid-sudoku/ do it myself in 30 minutes
     how to do -> brute force check 3 different things
     what's cool -> i douby myself and don't even think my brute force will work 
@@ -484,7 +507,7 @@ https://www.youtube.com/watch?v=wU6udHRIkcc
 
 
 
-############### BINARY TREE
+###############BINARY TREE
 ### guide
     strategy
         really good at recursion
@@ -590,9 +613,6 @@ https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to
             (then BFS)
 
 
-
-
-
 ###############BINARY SEARCH TREE
 ### basic 
 https://leetcode.com/problems/validate-binary-search-tree do it myself
@@ -630,6 +650,14 @@ https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76731/
 
 
 
+###############NARRAY TREE 
+### guide 
+a
+
+### general 
+https://leetcode.com/problems/n-ary-tree-level-order-traversal/ do it myself 
+    how to do ->
+        BFS each level
 
 
 

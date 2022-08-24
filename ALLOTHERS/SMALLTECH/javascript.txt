@@ -1,0 +1,23 @@
+#####interview questions 
+data type 
+    primitive data types can store only a single value
+    undefine - 
+    null - 
+    non-primitive -> object, list 
+=== compare type also 
+hoisting : var declaration will be moved to the top 
+var scope
+let block scope 
+implicit type coercion
+    string -> for + is string appending, for - is subtracting 
+    ...
+NaN : not a number 
+Immediately Invoked Function ...
+strict mode -> make debug strict 
+call() : another object to call function of another object 
+apply() : same as call, but takes arguments as array 
+bind() : this will be bound to newer object 
+currying : 
+
+
+

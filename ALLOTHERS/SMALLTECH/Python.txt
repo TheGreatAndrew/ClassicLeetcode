@@ -26,6 +26,7 @@ call by object reference or call by assignment
 variable 
     assign a var -> is binding a name (var) to an object    
 
+python reassign list, will have different id 
 
 
 
@@ -73,6 +74,23 @@ star
 
 ### bisect
 bisect : binary search algorithm
+
+
+### IO 
+try open finally close 
+w : overwrite 
+f.write() 
+read(5) : read 5 char 
+tell() : get current file position
+seek(0) : go to location 0 
+for line in f : print(line, end = '')
+
+
+#timestamp
+time, date, calendar
+
+
+
 
 
 ### dict
