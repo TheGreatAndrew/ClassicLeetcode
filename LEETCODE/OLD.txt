@@ -1,0 +1,75 @@
+############### HOW MANY LEETCODE IS ENOUGH
+https://www.reddit.com/r/cscareerquestionsEU/comments/g7bc48/how_much_leetcode_practice_is_enough_for_fang/
+    doing a couple of related problems like this for 8 weeks should be enough for FAANG
+    20 easy, 70 medium and 10 hard are enough for FAANG internships
+    It depends greatly, but 100 is a good rough approximation.
+    FB's interview format is 2 medium-ish problems in 45 minutes and besides coding you need some spare time for chit chat
+
+
+https://www.teamblind.com/post/Average-number-of-leetcode-for-FANG-gWXKiKNf
+    it's mostly luck that you don't get some kuck with a huge ego interviewing you
+    For Amazon -> 2, For FG -> 400+
+    Like someone else said, it’s 110% the kind of interviewer you get, as long as you can easily solve LC medium
+
+
+### articles
+https://www.quora.com/What-graph-topics-should-I-study-in-order-to-be-adequately-prepared-for-a-Google-software-engineer-interview-Would-it-be-worthwhile-to-also-study-algorithms-for-minimum-spanning-trees-maximum-network-flows-bipartite-matching-etc/answer/Gayle-Laakmann-McDowell
+only BFS and DFS. no advanced graph. higher standards about your ability to solve new problems with basic CS knowledge.
+
+
+### Sliding Window
+# when -> subarray in array satisfying some conditions
+# how -> window resize and move that window
+# subset of DP 
+# https://medium.com/leetcode-patterns/leetcode-pattern-2-sliding-windows-for-strings-e19af105316b
+# question 1 -> calculate firstWindow, then move forward. Instead of brute force. 
+# https://leetcode.com/problems/minimum-window-substring/ Counter(t). get first window satisfys condition, then resize, then move
+
+
+
+
+#### WERID CODE
+# https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/discuss/64963/3-lines-with-O(1)-space-1-Liners-Alternatives
+root = (root.left, root.right)[p.val > root.val]
+
+#### SPEED
+# https://www.geeksforgeeks.org/analysis-of-different-sorting-techniques/ remember this
+# buble sort, insertion sort -> worst O(n^2) when array is reversed sorted 
+# selection sort -> all O(n^2)
+# merge sort -> all O(nlogn), but space is n
+# heap sort -> all O(nlogn)
+# quick sort (divide conquer) -> 
+# radix sort -> nk
+# count sort -> n+k
+# bucket sort -> best n+k, worst nk if all elements n same bucket 
+
+# quicksort
+# pick pivot random (but avoid first or last element), then left pointer-right pointer compare and switch place. then compare [0, pivot] [pivot, n]
+# O(nlogn) go through n element, with logn swap
+
+
+
+# tabulation 
+# https://leetcode.com/problems/coin-change/discuss/2058537/Python-Easy-2-DP-approaches
+
+# memo 
+# https://leetcode.com/problems/coin-change/discuss/2058537/Python-Easy-2-DP-approaches
+
+# heap
+# insert -> insert next element top-bottom, left-right. then heapify up
+# pop -> pop min root, swapped with last added element. then heapify down
+# heapify -> bubble up until parent is no longer smaller. or bubble down the element 
+# can be array  
+
+# https://stackoverflow.com/questions/38806202/whats-the-time-complexity-of-functions-in-heapq-library speed
+    # https://leetcode.com/problems/k-closest-points-to-origin/discuss/294389/Easy-to-read-Python-min-heap-solution-(-beat-99-python-solutions-) redo
+
+# DFS
+# https://structy.net/problems/undirected-path DFS, graph, adjacency list 
+# https://leetcode.com/problems/accounts-merge/ DFS, graph, adjacency list 
+# https://leetcode.com/problems/pacific-atlantic-water-flow sea inward, need to redot
+    # https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/543988/Easy-understand-DFS-solution-beat-97
+    # my solution brute force, check each coor to see if it can reach both oceans
+    # better solution is from water to land
+    # step 1 -> from 4-sides of seaside, dfs all possible coor where seaHeight < coorHeight
+    #  

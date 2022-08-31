@@ -1,0 +1,52 @@
+Identify 
+    general
+        if sorted array -> binary search, two pointers
+        if tree -> recursion, 2 pointers, recursion 
+        if graph -> bfs, dfs 
+        if recursion is banned -> stack 
+        top/ least K items -> heap
+        common string -> dictionary, trie 
+
+    weird like DP 
+        if permutation, subset -> backtracking 
+        solve in-place -> swap correspending value, store one or more different values in the same pointer
+        maximum/minimum subarray/subset/options -> dynamic programming 
+        DP is simply optimization technique to solve subproblem, and to store result
+        # step 1 -> changing params
+        # step 2 -> recurrence relation
+        # step 3 -> base cases
+        # step 4 -> tabulation or memo
+
+    for matrix,
+        if directions allowed are left, right, up, down then bfs/dfs. 
+        If minimum path, then bfs. 
+        If a path has a value associated with it, then djask.
+        If directions allowed are (left and up) or (right and down), then dp.
+        If direction is either horizontal or vertical, then 2 pointers or just a loop going row by row and col by col!
+
+    for graph,
+        Height: Imagine measuring a person's height, we do it from toe to head (leaf to root)
+        Depth: Imagine measuring depth of a sea, we do it from earth's surface to ocean bed (root to leaf)
+        depth first search : use stack (recursion stack, or stack)
+            # inorder traversal (Left-Root-Right)
+            # preorder traversal (Root-Left-Right)
+            # postorder traversal (Left-Right-Root)
+            # best for path finding, building path, determing path
+        breath first search (level order traversal) : use queue 
+        # https://leetcode.com/discuss/study-guide/1326900/graph-algorithms-problems-to-practice
+        # Union–find data structure or disjoint-set data structure or merge–find set, is a data structure that stores a collection of disjoint (non-overlapping) sets. Equivalently, it stores a partition of a set into disjoint subsets.
+        # minimum spanning tree (MST) : is a subset of the edges of a connected, edge-weighted undirected graph that connects all the vertices together, without any cycles and with the minimum possible total edge weight.
+        # Bellman Ford : Is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph.
+        # Floyd Warshall : Is an algorithm for finding shortest paths in a directed weighted graph with positive or negative edge weights.
+        # Eulearian Path : Is an algorithm that finds a path that uses every edge in a graph only once.
+
+    more, 
+        https://docs.google.com/spreadsheets/u/0/d/1A2PaQKcdwO_lwxz9bAnxXnIQayCouZP6d-ENrBz_NXc/htmlview
+
+        
+
+
+
+
+
+

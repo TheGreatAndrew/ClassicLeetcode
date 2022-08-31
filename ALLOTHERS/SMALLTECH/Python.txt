@@ -17,6 +17,7 @@ generator
 reduce()
 mul()
 set : unchangable, but can add and remove items
+* asterisk is multiply list, unpacking list, *args for any arguments
 
 
 ## pass arguments
@@ -96,3 +97,19 @@ time, date, calendar
 ### dict
 max(lst,key=lst.count) : 
 max(word_count.items(), key=operator.itemgetter(1))[0] : get items() key-value, then sort by 'value', and return first one 
+
+### rebind
+# assign (in other languages) : assign 5 to variable a -> variable b is a different box
+# name/ identifier (in Python) : variable a, b bound to same object. can reassign
+# assign : var will refer to another object value. assignment never copies value
+# assign/ binding/ reassign/ rebinding
+# Immutable values : numbers, strings, and tuples -> it doesn’t change, it creates a new value 
+# Mutable : the rest, including lists, dicts, and user-defined objects
+# assignment for immutable values will return new value, so there won't be any surprise
+
+
+### function 
+# default paramter values -> function default value is evaluated at function definition time, not everytime you call a function -> solution is to create initial value inside function at runtime
+# argument are passed by assignment
+    # mutable : can mutate, can rebind but not outer scope
+    # immutable : can rebind but not outer scope  

@@ -307,9 +307,25 @@ https://leetcode.com/problems/string-to-integer-atoi/solution/ redo
 
 
 ###############BINARY SEARCH 
-a
+### knowledge 
+bisect_left vs bisect_right is difference if there already exist identical value -> 
+bisect.bisect_left([1,2,3], 2) -> return 1
+bisect.bisect_right([1,2,3], 2) -> return 2
+insort_left -> it runs bisect_left O(logn), then insert O(n) -> overall its O(n)
+from sortedcontainers import SortedList -> SortedList is maybe a tree, that's why insert it's O(logn)
+
 
 ### general 
+https://leetcode.com/problems/my-calendar-i/ do it myself 
+    https://leetcode.com/problems/my-calendar-i/solution
+        search O(logn) + sorted insert O(logn0)
+        is faster than insort_left O(n)
+        with (10,20) and (15,20) -> (15,20) will be behind, and if [idx-1][1] > start then it's false  
+        if it's the first or the last in the list, we just add it 
+
+
+
+
 https://leetcode.com/problems/binary-search/ do it myself
 https://leetcode.com/problems/search-a-2d-matrix/ do it myself 1 hours with failed submissions 
     how to do -> binary search which row, and later binary search which column of that row 
@@ -399,8 +415,6 @@ https://leetcode.com/problems/rotting-oranges do it myself
 
 
 
-
-
 ############### Graph
 
 ### guide 
@@ -473,6 +487,21 @@ https://leetcode.com/problems/word-search/ nearly do it myself. interview others
     space : O(s )
     time : O(N⋅3^L) with N = mxn 
 
+
+
+#dfs 
+# https://structy.net/problems/depth-first-values why '*', basic dfs
+# https://structy.net/problems/max-root-to-leaf-path-sum sum of path is root.val
+# https://leetcode.com/problems/diameter-of-binary-tree/ do 2 tasks inside recursion
+# https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree interesting recursion 
+# https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/ medium but actually hard. redo
+
+
+#bfs
+# https://structy.net/problems/breadth-first-values basic bfs
+# https://leetcode.com/problems/invert-binary-tree/ bfs 
+# https://leetcode.com/problems/balanced-binary-tree/ recursion
+# https://leetcode.com/problems/invert-binary-tree/submissions/ my two submission has different speed
 
 
 
@@ -888,14 +917,12 @@ bitmas
     & AND 
     | OR 
     ~ NOT one complement 
-    ^ XOR 
+    ^ XOR true only if its different 
         if same, then it's 0 (false)
-        if different, then it's 1
+        if different, then it's 1 (true). If it's 0 ^ 2, it's 2. If it's 0 ^ 3, it's 3. 
         if both are integer, XOR will compare each bit
     100 >> n right shift divide by 2**n
     100 << n left shift multiple by 2**n
-technique
-    n&(n-1) will remove the rightmost
 operator overloading : same symbol, different meanings in different classes 
 https://www.youtube.com/watch?v=NLKQEOgBAnw&t=189s
     negative -> two's complement
@@ -905,34 +932,36 @@ https://www.youtube.com/watch?v=NLKQEOgBAnw&t=189s
         logical right shift: fill in 0
         arithemetic right shift : no fill in, rounding up 
     mask : same length with input 
-    get ith bit -> ( input&(1<<i) ) !=0
+    get ith bit ---> ( input&(1<<i) ) !=0
     set ith bit -> ( input|(1<<i) )
     clear ith bit -> ( input& ~(1<<i) ) 
-
+technique
+    n&(n-1) will remove the rightmost
+    bin(number)[3:]
 
 ### general 
 https://leetcode.com/problems/subsets/
-    speed ->
-        input [1,3,2]
-        000: []
-        001: [2]
-        010: [3]
-        011: [3,2]
-        100: [1]
-        101: [1,2]
-    bit manipulation ->
-        N = 3
-        Cap = 8
-        Mask: 0, 1, 2, 3, 4, 5, 6, 7
-        mask: 000, 001, 010, 011,100, 101, … 111
-        Bit = 001, 010, 100,
-        0: []
-        1 = 001: [1]
-        2 = 010: [3]
-        3 = 011: [1,3]
-        4 = 100: [2]
-        …
-        7 = 111 : [1,3,2]
+    how to do 
+        1 mean presence 
+        zero left padding -> because of how bin() works, we want 001 not just 1, so we use a trick with 1001 and remove the first 1  
+        bitmask = bin(i)[3:]
+        
+https://leetcode.com/problems/single-number/ do it myself
+    how to do -> 
+        x^0 = x
+        x^x = 0 
+        x^y^x = (x^x)^y = 0^y = y
+        4^3 = 7 because it compares each bit 
+        since everything start at 0, we XOR index 0 and value 0, and so on. The one left is missing. 
+
+
+
+https://leetcode.com/problems/missing-number/discuss/1585333/Python-THE-Best-explanation-bitwise-and-sum
+    https://leetcode.com/problems/missing-number/discuss/1585333/Python-THE-Best-explanation-bitwise-and-sum
+        how to do ->
+            XOR operations are commutative -> 1^1^2 == (1^1)^2 == (2^1)^1 == 2
+            Order does not mater  
+
 
 
 https://leetcode.com/problems/reverse-bits/
