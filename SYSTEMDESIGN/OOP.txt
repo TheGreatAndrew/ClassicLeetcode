@@ -1,4 +1,4 @@
-### OOP with Java 
+##### OOP with Java 
 abstraction : exposing only the relevant details
     example -> abstract class, interface  
 encapsulation : superclass hides sensitive data 
@@ -11,8 +11,24 @@ polymorphism : existing in many form
     run time polymorphism -> overriding is same name same params in superclass and child.
         dynamic binding -> map method. speed is high. 
 
-### topics and articles
+##### topics and articles
 instance : object is called instance sometimes
+functional 
+    Functional programming provides advantages like efficiency, lazy evaluation, nested functions, bug-free code, parallel programming 
+    1. High Order Functions (HOF). 2. Pure functions. 3. Recursion. 4. Strict and Non-strict Evaluation. 5. Type systems. 6. Referential Transparency
+
+functional vs object 
+    functional use immutable data ^^^ 
+    functional follows declarative ^^^ OOP follows imperative -> declarative you say what you want [x for x in range(20) if x < 5], imperative you explain steps by steps 
+    functional supports parallel programming ^^^ OOP doesn't support parallel 
+    funcitonal can be executed in any order ^^^ 
+    basic are var and func ^^^ object and method 
+    no side effects means it does not impact code running on multiple processors ^^^ 
+    support big data processing ^^^ 
+    
+
+
+
 interface 
     usage -> unrelated classes cause you can implement multi interfaces 
     https://www.geeksforgeeks.org/interfaces-in-java 
@@ -85,19 +101,5 @@ UML
     Search interface, Catalog implements Search 
 
 
-
-### real-life cases 
-Elavator System Design 
-    My Design 
-    Elavator has 3 states, so we can use enum cause it's more stable 
-
-    https://www.youtube.com/watch?v=siqiJAJWUVg 7
-    don't overcomplicate the system 
-    Description
-        can be single elevator
-        3 states : go up, down, idle enum 
-        from 1 floor to another 
-        open door when idle 
-        200 floors 
-        minimize wait time 
+##### OOP Java code 
 

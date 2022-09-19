@@ -23,8 +23,6 @@ public long findMaxProducts(List<Integer> products) {
 https://leetcode.com/discuss/interview-question/1031933/amazon-onsite-sde2-package-dependencies top sort 
 
 	
-
-
 phone is esy
 Only Amazon needs Leetcode, Behavior, OOD -> no neeed to prepare
 1 week of focusing on easy phone, no pressure < just apply for jobs 
@@ -32,8 +30,49 @@ i haven't really prepared last week, or 2 weeks for leetcode
 priority not finding Amazon job, it's normal job and startup
 Foster passed with less Leetcode 
 
+
 Foster's Amazon 
 interview 1: GPS question
 Interview 2: SD / Component design question
 Interview 3: OOP/OOD "Design a class that does X, now implement logging and unit tests etc, what if we changed it to minimize X with Y constraint"
 Interview 4: Read this log file and do X
+
+Norm 
+all of them have Behavioral at beginning. 
+advices - be calm 
+interview 1 Coding -> she asks for resume, technical, dynamic programming bottom up. Matrix Word Search in matrix, how many ways. Follow-up, Shortest path. 
+interview 2 Coding -> hashmap very easily. Find palindrome, reverse.
+interview 3 System Design -> Very Easy. what classes you will be using. 
+interview 4 Coding -> String Manipulation. Greedy. Medium-Hard. giving a letter, find how many ways, rearrange words. No Behavioral. 
+
+
+Who Shall Be Nameless
+log info to analyze info -> how to read FILE
+question 1 : log aggregation, timestamp 
+    first part : log between each hours, 1 and 2 am 
+    second part : last 100 or last k log -> stream   
+    third part : get matrix and ranking -> get duration, get 5 slowest requests 
+    scalable question -> sometimes ask 2 questions, this is the only question, if finished first and MAYBE second -> L4 
+
+https://leetcode.com/discuss/interview-question/989768/amazon-oa-2020-transaction-logs
+https://www.geeksforgeeks.org/amazon-interview-experience-set-346-sde-1/ question 5 
+
+https://www.glassdoor.com/Interview/Given-a-log-of-users-visit-to-a-site-for-a-day-how-would-you-find-returning-users-given-the-log-visit-for-another-day-QTN_623964.htm
+https://www.careercup.com/question?id=13817668
+
+### LOGGING 
+https://leetcode.com/problems/reorder-data-in-log-files/
+    approach 2 ->
+        sort with order (0, 'art can', 'let1')
+        maxsplit -> split input to identifier and rest 
+        (0, 'art can', 'let1') -> 0 is letter so sort first, next sort lexicographically with 'art can', if still the same then sort by identifer
+https://leetcode.com/discuss/interview-question/989768/amazon-oa-2020-transaction-logs
+    question -> 
+        intput -> [user1, user2, transactions] and threshold
+        output -> return list of userId occurence that passed the threshold, if user1=user2 count as 1 
+    how to do ->
+        [345366 38239 23]
+        join them into string, already have space so no need for ' ' -> ''.join
+        from string split to list -> .split()
+        count the occurences 
+        later loop find the one > threshold 

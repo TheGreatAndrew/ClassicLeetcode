@@ -31,7 +31,16 @@ https://stackoverflow.com/questions/3953244/example-of-on
 
 
 ### AMORTIZE 
-    about amortized time Big O,
     for ArrayList in Java, if we keep appending element to the end, that's O(1). But if we reach the ArrayList length limit, it will copy and create another ArrayList with twice the size and copy old list into new list, so it will be O(n)
-    so amortized time is O(1)
-    and normal (worst) time is O(n) right ?
+    so amortized time is O(1) (worst time is O(n) right ?)
+    https://stackoverflow.com/questions/33044883/why-is-the-time-complexity-of-pythons-list-append-method-o1
+        initial size 8, push in 50 elements 
+        total 64 pushes O(1), 56 actions with 3 relocations -> asymptotically equals O(n)
+        if we amortize that per n elements -> O(n) / n = 1 
+
+    chat 
+    list in Python : dynamic array 
+
+    dynamic array : amortized O(1), contiguous memory
+    linked list : true O(1), not contiguous memory, more overhead, not cache friendly 
+    fixed array : overhead from unused space

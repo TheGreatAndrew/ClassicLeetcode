@@ -1,7 +1,4 @@
-
-### exercise and case
-Design OOP 
-
+### guide 
 Google Advices
     https://www.youtube.com/watch?v=Gg318hR5JY0 google
     no coding 
@@ -13,6 +10,12 @@ Google Advices
     solution patterns -> sharding data, replication types, write ahead logging, separateing data and metadata storage, load distrubiton 
     trade-offs
     best practices -> 
+
+### real-life example 
+My Coworking App
+    requirements 
+    client-side 
+    database schema 
 
 Design Reservation and Payment System for Parking Garage  
     https://www.youtube.com/watch?v=NtMvNh0WFVM
@@ -48,14 +51,7 @@ Design Reservation and Payment System for Parking Garage
             people love people with opinions
             say if you are not confident in some choice 
 
-
-My Coworking App
-    requirements 
-    client-side 
-    database schema 
-
-
-Facebook Messenger, Discord, Slack, Whatsapp
+Facebook Messenger
     https://www.youtube.com/watch?v=uzeJb7ZjoQ4
         Chat 
             API server normal will have many unncessary requests
@@ -77,16 +73,6 @@ Facebook Messenger, Discord, Slack, Whatsapp
             
 
 Tiktok
-    My Design 
-    Mobile App
-        a 
-    Functional  
-        Video -> NoSQL have a link to the video link. Store in Object Storage of Amazon s3. Cache CDN.
-    Schema 
-        Video -> title (string), url (video url), description (string), like (array of users id), commentId, timestamp
-        Comment -> commentId (string), authorId (string), timestamp
-    API
-        getVideo -> get from cache, if miss we go S3 
     https://www.youtube.com/watch?v=Z-0g_aJL5Fw
     Takeaway : ask lot of questions, use time to think, when answer can be vague 
     Description
@@ -125,21 +111,19 @@ Tiktok
         redis clustering, queueing, analytics using nosql 
 
 
-
 Discord
-    https://www.youtube.com/watch?v=S3tLp_eKjbk bad video stop at 5
-    WebRTC is standard and free, vehicle for WebRTC is socket
-    TURN server 
+    https://www.youtube.com/watch?v=S3tLp_eKjbk 13 
+    WebRTC -> 
+        is standard and free, vehicle for WebRTC is socket. 
+        TURN server for when more than 5 people 
     Session Description Protocol -> to negotiate audio/ video info between peers
+
  
 Google
     https://www.youtube.com/watch?v=q0KGYwNbf-0 stop at 4 
     design global, fast code deployment System -> design a system that builds code into binary and deploy it globally 
     2 parts building and testing 
     
-
-Slack 
-    https://www.youtube.com/watch?v=WE9c9AZe-DY 1:50
 
 System Design Mock Interview: Design Instagram
     scale -> how many data per year

@@ -1,0 +1,57 @@
+### CHOOSE DATABASE 
+https://www.youtube.com/watch?v=W2Z7fbCLSTw
+    00:45 Key-value -> redis, memcache
+        keep data on machine memory, most databases keep on the disk
+        very fast 
+        limited models 
+        best for -> cache, pub/sub, message queue
+    01:48 Wide Column
+        schemaless 
+        can't join
+        best for -> time-serise data, high-write low-read      
+    02:47 Document -> MongoDB, Firestore 
+        collection -> document -> key-value
+        schemaless
+        read fast write slow 
+        not ideal -> graph cause they usually need to 'joined'
+        best for -> general purpose 
+    04:05 Relational -> MySQL 
+        organize data in smallest forms
+        ACID compliance 
+        best for -> 
+    06:21 Graph -> GraphQL, DGraph 
+        best for -> recommendation system 
+    07:22 Search Engine -> elasticsearch 
+        best for -> search suggestion  
+    08:27 Multi-model
+        best for -> best for multipurpose 
+
+https://www.youtube.com/watch?v=cODCpXtPHbQ
+    https://www.codekarle.com/system-design/Database-system-design.html
+    cache -> Redis 
+        Redis (Redis is a modern version of Memcache). Redis understands data structures like list etc, so performing list append is faster in Redis wrt Memcache which sees all values as a blob.
+    File Storage Options (Blob storage)-> AWS S3 is quite cheap 
+        data store to stores image, video 
+        Content Delivery Network is for distributing same images in same geography 
+    Text Search Engine -> Elastic Search and Solr 
+    Fuzzy Text Search -> 
+        Edit Distance like in the word 'airprot'
+    Timeseries database -> influexdb 
+        These are kinds of RDBMS with some customization. In it, a user will write always in append-only mode and won't edit old data. Also, queries will be bulk queries on a time range. So, optimized for that.
+    Data warehouse/ Big Data -> Hadoop
+        when -> a lot of data. need to do analtytics 
+    RDBMS
+        Why? When information is structured. And when we need ACID guarantees. For eg, in banking, an amount is debited but not credited, different account balance for different queries etc
+        Options: MySQL, PostgreSQL, Oracle
+    NoSQL (Document DB) -> MongoDB, CouchBase
+        A catalogue can have different types of items with different attributes. Eg, T-shirt, Washing machine, Refrigerator, Milk, Medicine etc. This can be stored as JSON in RDBMS but NoSQL DBs are designed to handle such kinds of queries in a more optimized manner.
+
+    NoSQL (Columnar DB) -> Cassandra, Hbase
+        Why? When data is ever increasing. Eg, Uber drivers keep sending their location data every few minutes. And if drivers keep increasing, data will keep growing exponentially. But queries will be low only on this huge data, like what locations for a given driver id.
+
+    in Amazon -> purchased product will go from MySQL to permanent store Cassandra 
+    buy sugar, many sugar product -> MongoDB 
+
+
+
+### Practice Exercises 

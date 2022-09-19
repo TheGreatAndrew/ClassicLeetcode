@@ -1,12 +1,11 @@
 ############### GUIDE 
-A monotonic stack is a stack whose elements are monotonically increasing or descreasing.
 format
     what's hard 
     my try 
     why this pattern 
     how to do
     what's cool about this 
-Array, Trie, Union Find, sparse table, seg tree, Fenwick tree, Vectors, bit manipulation
+Union Find, sparse table, seg tree, Fenwick tree, Vectors, bit manipulation
 
 ############### GENERAL
 https://leetcode.com/problems/task-scheduler
@@ -35,6 +34,72 @@ https://leetcode.com/problems/maximum-units-on-a-truck/
             time O(n)
 
 
+https://leetcode.com/problems/verifying-an-alien-dictionary/ facebook  
+    how to do -> 
+        dict index of the alphabet 
+        verify if is sorted -> simply compare 2 adjacent input 
+
+https://leetcode.com/problems/longest-common-prefix/ do it myself 
+    how to do -> get common of first, second; use that common for second and third 
+    https://leetcode.com/problems/longest-common-prefix/solution/ should revisit in the futuer 
+        approach 1 horizontal -> same as mine 
+            time O(all letters)
+        approach 2 vertical -> 
+        approach 3 divide conquer -> 
+
+
+https://leetcode.com/problems/toeplitz-matrix facebook do it myself
+    what's cool -> interesting follow-up 
+    how to do -> 
+        brute force row+1, col+1 
+    https://leetcode.com/problems/toeplitz-matrix/solution/
+        approach 1 ->
+            memorize r1 - c1 == r2 - c2 is diagnonal 
+    https://leetcode.com/problems/toeplitz-matrix/discuss/271388/Java-Solution-for-Follow-Up-1-and-2
+        follow up 1 ->
+            [1,2,3,4],
+            [5,1,2,3],
+            [9,5,1,2]
+            buffer 1-d array 
+            buffer [1,2,3,4] remove last 4, and insert first 5 
+        follow up 2 -> 
+            just divide to multiple matrix 
+
+https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/ facebook 
+
+https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/ facebook
+    https://www.youtube.com/watch?v=FTo1kDyE-h4
+        how to do ->
+            beautiful solution 
+            with Stack of "(", if abudant ")" then remove it 
+            later use that Stack to remove abundant "("
+        what's cool ->  
+            remove character S[i] is not very efficient, instead we S[i] = ""
+
+https://www.educative.io/answers/what-is-a-segment-tree
+    (look at the illustrations)
+
+https://stackoverflow.com/questions/17466218/what-are-the-differences-between-segment-trees-interval-trees-binary-indexed-t#:~:text=Segment%20tree%20stores%20intervals%2C%20and,queries%20%2D%20similar%20to%20segment%20tree.
+    a 
+
+https://favtutor.com/blogs/floyd-warshall-algorithm
+    All-pairs shortest path problems is used to determine a matrix A such that A(i,j) is the length of a shortest path from i to j.
+
+
+https://leetcode.com/problems/remove-duplicate-letters/discuss/1859515/Python-oror-O(n)-Beats-98-oror-Stack-oror-Detailed-Explanation-oror-Simple
+    lexicographical ->
+        just normal dictionary order, but last occurence exception
+    how to do ->
+        (lexicographical)
+        (monotonic increasing stack, think about the last occurences) 
+        store the last occurences 
+        keep adding to stack
+        if new letter is smaller, and the letter before still occur later -> remove previous letter
+        why remove from the right -> "bcab" outputs "bca" because c no recurring
+
+    time ->
+        stack will contain max 26 character, so its 26N max, but in terms of time-complexity, it is O(M*N) where M is number of distinct characters.
+
 
 ############### BIG O
 https://stackoverflow.com/questions/8929284/what-makes-sets-faster-than-lists 
@@ -59,13 +124,11 @@ https://leetcode.com/problems/min-stack/
 
 
 
+
 ###############STRING 
 general
     subsequence -> add or remove letters -> 
     anagram -> same letters, different orders -> 
-    palindrom -> reverse string and it is the same -> 
-    permutation, palindrome, superset -> 
-    can be 2 pointers, sliding window
 
 https://leetcode.com/problems/zigzag-conversion/
     how to do ->
@@ -85,6 +148,22 @@ https://leetcode.com/problems/group-anagrams do it myself
     https://leetcode.com/problems/group-anagrams/discuss/664252/Python-3-solution-detailed-explanation-faster-than-97.5 exatly same solution, but faster and cool technique, and look at comment    
 
 
+###############PALINDROME  
+### guide 
+s=s[::-1]
+
+###general
+https://leetcode.com/problems/valid-palindrome-ii/ facebok, do it myself 
+    how to do -> if 2 characters doesn't match, the we either remove the 1st or 2nd, and just check the rest 
+    https://leetcode.com/problems/valid-palindrome-ii/discuss/632647/Python-Readable-and-Intuitive-Solution-(Generalizable-to-n-deletes)
+        how to do -> same idea but better 
+
+https://leetcode.com/problems/valid-palindrome/
+    how to do -> isalnum, or two pointers 
+    https://leetcode.com/problems/valid-palindrome/discuss/350929/Solution-in-Python-3-(beats-~100)-(two-lines)-(-O(1)-solution-as-well-)
+        solution 2 -> two pointers ...
+
+
 ###############ARRAY 
 https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/ do it myself 
     how to do -> 
@@ -98,11 +177,7 @@ https://leetcode.com/problems/minimum-consecutive-cards-to-pick-up/ do it myself
 ###guide 
 aa
 ###general 
-https://leetcode.com/problems/valid-palindrome/
-    how to do -> isalnum, or two pointers 
-    https://leetcode.com/problems/valid-palindrome/discuss/350929/Solution-in-Python-3-(beats-~100)-(two-lines)-(-O(1)-solution-as-well-)
-        solution 2 -> two pointers ...
-
+b
 
 ############### INTERVAL 
 ### interval guide 
@@ -547,6 +622,10 @@ https://www.youtube.com/watch?v=wU6udHRIkcc
         serialize -> 
 
 ### general
+https://leetcode.com/problems/path-sum/ do it myself å
+    edge case [1,2] 1 will be wrong because it will go null right 
+
+
 https://leetcode.com/problems/delete-nodes-and-return-forest/discuss/345009/Python-BFS-Solution
     how to do ->
         'hasParent' for when to create another linked list
@@ -645,37 +724,26 @@ https://leetcode.com/problems/step-by-step-directions-from-a-binary-tree-node-to
 ###############BINARY SEARCH TREE
 ### basic 
 https://leetcode.com/problems/validate-binary-search-tree do it myself
+
 https://leetcode.com/problems/kth-smallest-element-in-a-bst do it myself
-    # approach 1 : use Stack for traversal, and also stop at k -> Speed is O(H+k), H can be balanced tree or skewed tree
-    # approach optimized : (do it late) 
-
-https://leetcode.com/problems/kth-smallest-element-in-a-bst/ do it myself optimized way in 20 minutes 
-    speed O(logn) : run height of a tree
-        time complexity of these operations is O(H), where H is a height of the binary tree. H = logN for the balanced tree and H = N for a skewed tree.
-    space O(1)
-    follow up 
-        how to do -> 
-
-
-
-
-
+    how to do ->
+        approach 1 : use Stack for traversal, and also stop at k -> Speed is O(H+k), H can be balanced tree or skewed tree
+        approach optimized : (do it late) 
+    how to do -> 
+        speed O(logn) : run height of a tree
+            time complexity of these operations is O(H), where H is a height of the binary tree. H = logN for the balanced tree and H = N for a skewed tree.
+        space O(1)
+    how to do ->
+        left-root-right 
+        local var TIME, if TIME = k return that node
+        worst case O(n) or O(k) k=n 
+        space O(1)
 
 
-###############BINARY INDEXED TREE (FENWICK TREE)
-### guide
-    principals
-        
-https://www.youtube.com/watch?v=CWDQJGaN1gY explain 
-    10:00 
-    prefix sum 
-    flip rightmost bit and it's the parent 
-    value -> splice 
-https://brilliant.org/wiki/fenwick-tree/
-    easy to understand text
-
-### general 
-https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76731/Nlogn-Python-solution-binary-indexed-tree-160-ms
+###############DIVIDE AND CONQUER
+https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
+    how to do ->
+        very easy solution, i need to practice more of this 
 
 
 
@@ -692,7 +760,7 @@ https://leetcode.com/problems/n-ary-tree-level-order-traversal/ do it myself
 
 
 
-############### DICTIONARY
+###############DICTIONARY
 https://leetcode.com/problems/lru-cache/ do it myself, do it myself dict and queue
     how to do -> OrderedDict which tracks the orders of inserted key
     OrderedDict popitem(last=False) .move_to_end(key)
@@ -701,7 +769,7 @@ https://leetcode.com/problems/lru-cache/ do it myself, do it myself dict and que
 
         
 
-############### STACK 
+###############STACK 
 ###guide
 can implemented with list, collections.deque, queue.LifoQueue
 
@@ -921,8 +989,8 @@ bitmas
         if same, then it's 0 (false)
         if different, then it's 1 (true). If it's 0 ^ 2, it's 2. If it's 0 ^ 3, it's 3. 
         if both are integer, XOR will compare each bit
-    100 >> n right shift divide by 2**n
-    100 << n left shift multiple by 2**n
+    100 >> n will be 10 -> right shift divide by 2**n
+    100 << n will be 1000 -> left shift multiple by 2**n
 operator overloading : same symbol, different meanings in different classes 
 https://www.youtube.com/watch?v=NLKQEOgBAnw&t=189s
     negative -> two's complement
@@ -1013,41 +1081,6 @@ https://leetcode.com/problems/search-suggestions-system
 
 
 
-############### QUICK SELECT
-guide 
-    principals 
-        keep partition into 2 half based on 'last pivot' 
-        keep track of 'inflection pivot'
-        if 'inflection pivot = target' we are good 
-
-    algo 
-        (for kth-largest-element-in-an-array)
-        pivot for last, p is the spot between smaller and bigger partition 
-        update k because for k = 2, k is 2nd index from behind 
-
-
-    big O    
-        average O(n)
-        worst O(n**2)
-        n+n/2+n/4 = 2n which is n
-
-    
-
-https://leetcode.com/problems/kth-largest-element-in-an-array do it myself with heap 
-    how to do ->
-        with heap 
-        k is capacity 
-        time O(nlogk) -> loop through all elements O(n) and pushpop O(logk)
-        space O(k) -> O(k)
-    https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/762174/4-python-solutions-with-step-by-step-optimization-plus-time-and-space-analysis
-        how to do -> 
-    https://www.youtube.com/watch?v=XEmy13g1Qxc
-        heap is O(n + klogn) -> if heapify all, then pop k times 
-        quick select 
-            a 
-
-
-
 
 
 
@@ -1063,11 +1096,6 @@ https://leetcode.com/problems/longest-repeating-character-replacement don't unde
 
 
 
-
-
-
-
-
 ############# SIMULATION 
 https://leetcode.com/problems/robot-bounded-in-circle/ SIMULATION, do it myself 
     https://leetcode.com/problems/robot-bounded-in-circle/discuss/850464/Python-3-or-Simulation-or-Explanation
@@ -1075,8 +1103,6 @@ https://leetcode.com/problems/robot-bounded-in-circle/ SIMULATION, do it myself
             direction 0 1 2 3 
             coor 
             2 success case
-
-
 
 
 https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/894031/Python-O(logn)-Detailed-Explanation     
@@ -1117,8 +1143,100 @@ https://www.programiz.com/dsa/merge-sort kind of similar merge sort
 https://leetcode.com/problems/sort-an-array/ do it myself merge sort. 
  
 
-#############DESIGN 
 
-https://leetcode.com/problems/design-twitter do it myself in 45m
+
+############### QUICK SELECT
+guide 
+    principals 
+        keep partition into 2 half based on 'last pivot' 
+        keep track of 'inflection pivot'
+        if 'inflection pivot = target' we are good 
+
+    algo 
+        (for kth-largest-element-in-an-array)
+        pivot for last, p is the spot between smaller and bigger partition 
+        update k because for k = 2, k is 2nd index from behind 
+
+
+    big O    
+        average O(n)
+        worst O(n**2)
+        n+n/2+n/4 = 2n which is n
+
+    
+
+https://leetcode.com/problems/kth-largest-element-in-an-array do it myself with heap 
     how to do ->
-        just look at the 3 data structures i have 
+        with heap 
+        k is capacity 
+        time O(nlogk) -> loop through all elements O(n) and pushpop O(logk)
+        space O(k) -> O(k)
+    https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/762174/4-python-solutions-with-step-by-step-optimization-plus-time-and-space-analysis
+        how to do -> 
+    https://www.youtube.com/watch?v=XEmy13g1Qxc
+        heap is O(n + klogn) -> if heapify all, then pop k times 
+        quick select 
+            a 
+
+
+
+###############BINARY INDEXED TREE (FENWICK TREE)
+### guide
+    principals
+        
+https://www.youtube.com/watch?v=CWDQJGaN1gY explain 
+    use -> to get prefix sum 
+    flip the rightmost bit 
+    femwick by parent index + next - 1 
+
+https://www.youtube.com/watch?v=uSFzHCZ4E-8 
+    allow to do range calculation 
+    sum(5,10) = sum[10] - sum[4]
+
+https://www.hackerearth.com/practice/notes/binary-indexed-tree-or-fenwick-tree/
+    bbb 
+
+
+### general 
+https://leetcode.com/problems/count-of-smaller-numbers-after-self/
+    https://www.youtube.com/watch?v=wWrprKyQmE4 
+        appproach 1->
+            we go from right-to-left. use SortedList and binary search to see how many smaller elements. 
+            time -> O(nlogn) cause loop, inside bisect and insert
+        appproach 2->
+            binary indexed tree -> 
+            time -> O(nlogn)
+
+    https://leetcode.com/problems/count-of-smaller-numbers-after-self/discuss/76731/Nlogn-Python-solution-binary-indexed-tree-160-ms
+
+
+
+
+
+###############Tarjan's Bridge-Finding Algorithm
+    when to use 
+        Tarjan's strongly connected component algorithm : detect if there are cycles
+    principals 
+        
+    algo 
+        a 
+
+https://www.youtube.com/watch?v=wUgWX0nc4NY
+    Strongly Connected Component
+    bunch of connected component, if leave there is no way to go back 
+    low-link value : lowest node reachable by another node (root of union find)
+    use a stack to improve 
+    6:18 pseudo code 
+    if it's in the stack, that's the low-lin value 
+    12:00
+
+### general 
+https://leetcode.com/problems/critical-connections-in-a-network/discuss/1174196/JS-Python-Java-C%2B%2B-or-Tarjan's-Algorithm-Solution-w-Explanation
+    how to do ->
+        critical connection = bridge 
+        combination of DFS and union find 
+        DFS to keep track of earlist node 
+
+
+
+https://leetcode.com/problems/find-duplicate-file-in-system/

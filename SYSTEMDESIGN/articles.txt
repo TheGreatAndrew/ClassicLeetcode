@@ -22,43 +22,6 @@ https://www.youtube.com/watch?v=8zX0rue2Hic
     single source of truth 
 
 
-### Database 
-https://www.youtube.com/watch?v=W2Z7fbCLSTw
-    00:45 Key-value -> redis, memcache
-        keep data on machine memory, most databases keep on the disk
-        very fast 
-        limited models 
-        best for -> cache, pub/sub, message queue
-    01:48 Wide Column
-        schemaless 
-        can't join
-        best for -> time-serise data, high-write low-read      
-    02:47 Document -> MongoDB, Firestore 
-        collection -> document -> key-value
-        schemaless
-        read fast write slow 
-        not ideal -> graph cause they usually need to 'joined'
-        best for -> general purpose 
-    04:05 Relational -> MySQL 
-        organize data in smallest forms
-        ACID compliance 
-    06:21 Graph -> GraphQL, DGraph 
-        best for -> recommendation system 
-    07:22 Search Engine -> elasticsearch 
-        best for -> search suggestion  
-    08:27 Multi-model
-        multi 
-
-
-
-############### OOP vs Functional
-OOP has state 
-language paradigm : remove and constraint some of our freedom 
-https://www.youtube.com/watch?v=wyABTfR9UTU
-structured programming : constraint the flow of control 
-function programming ->
-    constrains assignment, write code with no side effects (from input to output, no changing anything)
-OOP ->
 
 
 ############### articles 

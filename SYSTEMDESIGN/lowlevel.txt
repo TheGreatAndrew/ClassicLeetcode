@@ -13,6 +13,35 @@ design Alexa devices
 https://leetcode.com/discuss/interview-question/object-oriented-design/1510642/OOP-Alexa-device-input-and-output.-help-me-design-it./1115825
     a
 
+
+https://leetcode.com/problems/design-twitter do it myself in 45m
+    how to do ->
+        just look at the 3 data structures i have 
+
+https://leetcode.com/problems/design-underground-system/ do it myself 
+    how to do -> 
+        in_dict = { uid : [start, startTime]  }
+        in_out_dict = { (start, end) : [time1, time2] }
+        need to have checkIn then checkOut to log to result 
+
+
+
+
+
+elavator system 
+    My Design 
+    Elavator has 3 states, so we can use enum cause it's more stable 
+
+    https://www.youtube.com/watch?v=siqiJAJWUVg 7
+    don't overcomplicate the system 
+    Description
+        can be single elevator
+        3 states : go up, down, idle enum 
+        from 1 floor to another 
+        open door when idle 
+        200 floors 
+        minimize wait time 
+
 parking lot 
     https://leetcode.com/discuss/interview-question/object-oriented-design/124739/Parking-Lot-Design-Using-OO-Design
     design : 
@@ -65,34 +94,50 @@ parking lot
 
 book my show 
     https://leetcode.com/discuss/interview-question/object-oriented-design/1320604/Book-My-Show-or-Low-Level-Design abstract 
-    design : 
+    question : 
+        book my show, movie with theater 
+    design but only with List<>, Map<> and extends: 
         SeatStatus enum 
         Gender enum 
         Genre enum
         MovieRating enum
         BookingStatus enum
 
-        BMS class
+        BMS abstract class
             List<Theater> theaters
             List<Movie> getMovies()
             List<Theater> getTheaters()
 
-        Theater class
+        Theater abstract class
             Address adress
             List<Audi> audi
             Map<Date, Movie> getMovie()
 
+        Theater/Standup/Speech class extends Theater
+
+        Audi class 
+            ...
+
         Address class
         Show class
         Seat class 
+        SilverSeat/ GoldSeat class 
         Person abstract class 
         Actor class extends Person 
         Customer class extends Person 
         Movie class 
         Booking class
         Payment class 
+    design recommendations 
+        BoxSeat/GoldSeat as decorator pattern -> Seat is object, SilverSeat and 
+        A factory method or abstract factory to create the objects needs to be added -> 
+        An abstract class for Theater because BMS also sells or would want to sell tickets for other events like IPL/Theater/Standup-comedy -> BMS still use List<Theater> to manage 
+        Would prefer abstract class for BMS also -> but its useless here ... 
+        Proxy pattern(to handle auth) could be used for payment class -> CheckAuth(){go to person to check ID with API}
 
 
+https://leetcode.com/discuss/interview-question/609070/Amazon-OOD-Design-Unix-File-Search-API
+        
 
 
 

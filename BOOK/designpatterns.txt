@@ -1,6 +1,8 @@
 Software Design Patterns (book)
 terms
 wrapper : is decorator
+Aggregation or Composition -> An object can use the behavior of various classes, having references to multiple objects and delegating them all kinds of work
+
 
 
 ############### SOLID Principles
@@ -16,32 +18,57 @@ has a checklist
 Interface Segregation Principle : 
     make your interfaces narrow enough, so that the client classes don’t need to implement the behaviors they don’t need
 Dependency Inversion Principle
-    dependency : no specific meaning 
     dependency inversion : dependency injection, decoupling of software modules  
-    class Computer has class RedKeyboard and class RedMonitor -> what if we want to use BlueKeyboard
-    create interface Keyboard so that RedKeyboard and BlueKeyboard can implemeent them
+    what is dependencies -> 
+        if an object A needs to call a method in object B, then object A depends on object B. In other words, object B is a dependency of object A.
+    what is dependency inversion -> 
+        With dependency injection, the logging class will be "injected" into the classes that need to log things, for example by passing the logging class via the constructor.
+        example -> Manage Class needs to log(), log() is from Logging Class, Logging Class is a dependency of Manage Class 
+        
+        And you can make the classes depend on an interface instead so that it's easy to swap logging libraries (which may require wrappers to conform to your interface) or perhaps for testing purposes.
+        example -> 
+        And if you have Logging Interface you can have LoggingPhone Class or LoggingComputer Class
 
 
 
 ############### Creational Design Pattern
 creational design pattern -> object creation. help with resuablity. 
 
-Factory Method
-factory method
-interface [Interface] for superclass [Creator], and allows subclass [ConcreteCreator] to alter the type of objects [ConcreteProduct]
-[UIFrameWork] uses the new subclass instead of the default one -> create [UIRoundButtons] from base framework class, this will return [RoundButton]. While [UIFramework] will return Button 
-const factory = new ButtonFactory();
-const iosButton = factory.createButton(ios)
-const androidButton = factory.createButton(android)
+<>Factory Method
+https://refactoring.guru/design-patterns/factory-method
+    when to use ->
+        to add new product type 
+    factory method -> 
+        The Factory Method separates product construction code from the code that actually uses the product.
+        to add a new product type to the app, you’ll only need to create a new creator subclass and override the factory method in it.
+        example to add new product -> create PhoneDialog that overrides Factory Method, and have PhoneButton
+    code -> 
+        class Dialog : creator, with createButton() as Factory Method 
+        class WindowsDialog, class WebDialog : creator sublass or concrete creator
+        interface Button : product
+        class WindowsButton, class HTMLButton
+        Application -> Dialog.render() -> render() createButton() -> WindowsDialog -> WindowsButton
+ 
 
 
 <>Abstract Factory
-produce families of related objects without specifying their concrete classes
+https://refactoring.guru/design-patterns/abstract-factory
+    when to use ->
+        Macbook family 
+    abstract factory ->
+        produce families of related objects without specifying their concrete classes
+        RedButton, BlueButton would extends from abstract. But MacButton, MacCheckbox would be in Macbook family 
+    code -> 
+        interface GUIFactory : abstract factory interface 
+        class WinFactory, class MacFactory : concrete factory 
+        interface Button, class WinButton, class MacButton 
+        ApplicationConfigurator with Application(new MacFactory) -> Application with constructor(GUiFactory)
+
+
 
 <>Builder
 rather than constructor, use construction method to add properties 
 myLunch().addMeat().addVegetable() 
-
 
 
 <>Prototype (clone)
@@ -64,15 +91,17 @@ split a closely related classes -> into two separate hierarchies abstraction and
 let you compose objects to tree structure
 
 <>decorator
-a 'wrapper' would add more functionality to 'object'. Like a file can be Compressed() and Decrypted() so we can send it to another person.
-why use -> Notifier class with SMSNotifier, FacebookNotifier, EmailNotifier. If house fire how to call all of them at the same time
-Aggregation or Composition -> An object can use the behavior of various classes, having references to multiple objects and delegating them all kinds of work
-how to do ->
-    // last of the code for code, ignore other parts
-    DataSource is interface to both wrapper and object 
-    FileDataObject is object 
-    DataSourceDecoder is wrapper and parent for CompressionDecorator and EncryptionDecorator 
-    so a File < can have Compression < and Encryption 
+https://refactoring.guru/design-patterns/decorator 
+    when to use -> 
+        attach new behaviors to objects by placing these objects inside special wrapper objects
+    decorator ->
+        attach new behaviors to objects by placing these objects inside special wrapper objects
+    how to do ->
+        DataSource is interface to both wrapper (decorator) and object 
+        class FileDataObject : object 
+        DataSourceDecoder : base decorator 
+        CompressionDecorator, EncryptionDecorator : concrete decorator 
+        Application new FileDataSource, new CompresionDecorator, EncryptionDecorator -> DataSource interface 
 
 
 
@@ -80,12 +109,20 @@ how to do ->
 the details of ElectricalSystem -> House simplified wrapper hide the details -> for the Client
 
 
-
 <>flyweight
 fit more objects into available RAM by sharing common state
 
 <>proxy (substitute) 
-create a proxy copy from the original, whenever the proxy is changed, the function with it is changed 
+https://refactoring.guru/design-patterns/proxy
+    proxy control access to the original object (can also for cache)
+    -> example CachedYouTubeClass  
+    if (listCache == null)
+        listCache = service.listVideos()
+
+book
+    create a proxy copy from the original, whenever the proxy is changed, the function with it is changed 
+
+
 
 ############### Behavioral Design Pattern
 <>chain of responsibility 
